@@ -15,8 +15,9 @@ tags:
 title: 'Hardening web apps: 5. Reactive security and monitoring'
 ---
 
+# Hardening web apps: 5. Reactive security and monitoring
 
-The fifth post in the [blog series](/1-hardening-web-apps-introduction/) covers practical measures for actively defending against malicious users.
+The fifth post in the [blog series](../1-hardening-web-apps-introduction/) covers practical measures for actively defending against malicious users.
 
 ## Reactive security measures 
 
@@ -38,5 +39,5 @@ A low hanging fruit is enabling standard IIS logging on your web front to trace 
 
 Your app’s code can include an additional custom log of request parameters, and smarter logic for detecting irrational user behavior.
 
->Read the next and final chapter about [operations practices](/operations-practices-and-conclusion/).
+>Read the next and final chapter about [operations practices](../operations-practices-and-conclusion/).
 

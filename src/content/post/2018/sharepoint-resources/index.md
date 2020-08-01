@@ -14,6 +14,7 @@ tags:
 title: Most awesome SharePoint resources
 ---
 
+# Most awesome SharePoint resources
 
 SharePoint has been around for more than 15 years and has grown into a highly complex <s>beast</s> product with an incredibly wide range of use. 
 

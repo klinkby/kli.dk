@@ -11,8 +11,9 @@ tags:
 title: 'Hardening web apps: 3. Authentication'
 ---
 
+# Hardening web apps: 3. Authentication
 
-This third post in the [blog series](/2016/03/06/1-hardening-web-apps-introduction) goes into detail about authenticating users but first<span>, let's agree there is no sane way of implementing authentication without an underlying transport encryption.</span>
+This third post in the [blog series](../1-hardening-web-apps-introduction) goes into detail about authenticating users but first<span>, let's agree there is no sane way of implementing authentication without an underlying transport encryption.</span>
 
 ## Transport security
 
@@ -38,5 +39,5 @@ Always generate secrets using a strong random number generator (i.e. from the `S
 
 Microsoft currently have [Azure AD B2C](https://azure.microsoft.com/en-us/services/active-director-b2c/) in preview. Built on Azure AD that handles billions of sign-ins per day, but targeted towards consumers it looks promising with advanced features like multi factor authentication, however still in preview and has [some shortcomings](https://azure.microsoft.com/en-us/documentation/articles/active-directory-b2c-limitations/).
 
->Read the next post in the blog series about mitigating [cross site attacks](/4-browser-headers/).
+>Read the next post in the blog series about mitigating [cross site attacks](../4-browser-headers/).
 

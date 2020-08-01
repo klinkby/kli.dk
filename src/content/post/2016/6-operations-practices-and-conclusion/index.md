@@ -7,7 +7,7 @@ categories:
 date: "2016-05-02T17:27:30Z"
 description: ""
 draft: false
-slug: operations-practices-and-conclusion
+slug: 6-operations-practices-and-conclusion
 tags:
 - azure
 - hardening
@@ -15,8 +15,9 @@ tags:
 title: 'Hardening web apps: 6. Operations practices and conclusion'
 ---
 
+# Hardening web apps: 6. Operations practices and conclusion
 
-The previous posts in this [blog series](/1-hardening-web-apps-introduction/) mostly dealt with systemic weaknesses and misconfiguration. Last but not least, this post focus on the system administration practices. This is the part that involves humans, which may be the soft spot in your app’s perimeter. 
+The previous posts in this [blog series](../1-hardening-web-apps-introduction/) mostly dealt with systemic weaknesses and misconfiguration. Last but not least, this post focus on the system administration practices. This is the part that involves humans, which may be the soft spot in your app’s perimeter. 
 
 ## Passwords as evil
 A recent [survey](http://fortune.com/2016/03/30/passwords-sell-poor-sailpoint/) revealed that 65 % of respondents use a single same password among applications. That means a breach in any of the crazy applications those users may use on or off work will affect your application. The same survey shows that 27 % of the US (and 20 % of the German) respondents would actually be willing to sell the password to their work email. Just about half of those would even sell it for less than $1,000.  It would probably take a very disgruntled sysadm to do that, but I guess at least it shows morality has a price tag.
@@ -40,7 +41,7 @@ Consider regularly hiring a team of penetration testers to find the holes in you
 
 ## The end
 
-I really hope you enjoyed reading this [blog series](/1-hardening-web-apps-introduction/) and would love to [hear your thoughts and comments](https://twitter.com/klinkby).
+I really hope you enjoyed reading this [blog series](../1-hardening-web-apps-introduction/) and would love to [hear your thoughts and comments](https://twitter.com/klinkby).
  
 Thank you!
 

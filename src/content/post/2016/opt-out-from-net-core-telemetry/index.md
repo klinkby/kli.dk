@@ -18,6 +18,7 @@ tags:
 title: Opt out from .NET Core telemetry
 ---
 
+# Opt out from .NET Core telemetry
 
 So Microsoft decided that the [.NET Core](https://github.com/dotnet/core) Tools should "phone home" with [telemetry](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/telemetry) data it gathers while using the tools to e.g. run or build applications using .NET Core. 
    

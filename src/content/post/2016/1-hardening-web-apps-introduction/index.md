@@ -16,6 +16,7 @@ tags:
 title: 'Hardening web apps: 1. Introduction'
 ---
 
+# Hardening web apps: 1. Introduction
 
 It's okay. Exposing your latest web app implementation on the big bad internet should leave you somewhat anxious. While browsers have grown up to be more secure lately we are still a long way from secure-by-default, and [the list](https://www.owasp.org/index.php/Category:Attack) <span>of possible attack vectors against web apps is long enough to give *Chuck Norris* the shivers.</span>
 
@@ -28,13 +29,13 @@ In this blog series I will explain the most common threats and a provide practic
 
 ## Posts in the series:
 
-1.  [Introduction](/1-hardening-web-apps-introduction) (this post)
-2.  [Architecture and infrastructure](/2-architecture-infrastructure)
-3.  [Authentication and authorization](/3-authentication)
-4.  [Browser cross site attacks](/4-browser-headers)
-5.  [Reactive security and monitoring](/5-reactive-security-and-monitoring)
-6.  [Operations practices and conclusion](/operations-practices-and-conclusion/) 
+1.  [Introduction](../1-hardening-web-apps-introduction) (this post)
+2.  [Architecture and infrastructure](../2-architecture-infrastructure)
+3.  [Authentication and authorization](../3-authentication)
+4.  [Browser cross site attacks](../4-browser-headers)
+5.  [Reactive security and monitoring](../5-reactive-security-and-monitoring)
+6.  [Operations practices and conclusion](../6-operations-practices-and-conclusion/) 
 
 
-> Read the next post in the blog series about [designing the infrastructure](/2-architecture-infrastructure/).
+> Read the next post in the blog series about [designing the infrastructure](../2-architecture-infrastructure/).
 

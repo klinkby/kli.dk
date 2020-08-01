@@ -15,6 +15,7 @@ tags:
 title: Ghost blogging platform
 ---
 
+# Ghost blogging platform
 
 Moved my blog to the open source [Ghost](https://ghost.org/) platform. Notable features are the use of markdown to format articles, and being based on the asynchronous I/O web server NodeJS. 
 

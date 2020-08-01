@@ -13,8 +13,9 @@ tags:
 title: 'Hardening web apps: 4. Browser cross site attacks'
 ---
 
+# Hardening web apps: 4. Browser cross site attacks
 
-This fourth post in the</span> [blog series](http://www.kli.dk/2016/03/06/1-hardening-web-apps-introduction)<span> goes into detail about safeguarding the browser against malicious users and cross site attacks</span><span>.
+This fourth post in the</span> [blog series](../1-hardening-web-apps-introduction)<span> goes into detail about safeguarding the browser against malicious users and cross site attacks</span><span>.
 
 ## XSS (cross site scripting)
 
@@ -52,5 +53,5 @@ Clickjacking attacks where a malicious site iframe your site, and trick users to
 
 You should **really** have a look at Scott Helme's [securityheaders.io](https://securityheaders.io), which will help you examine and rate your site's security header settings.
 
-> Read the next post in the blog series about [reactive security and monitoring](/5-reactive-security-and-monitoring/).
+> Read the next post in the blog series about [reactive security and monitoring](../5-reactive-security-and-monitoring/).
 

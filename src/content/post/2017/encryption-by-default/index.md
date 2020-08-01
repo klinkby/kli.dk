@@ -18,6 +18,7 @@ tags:
 title: Encryption by default
 ---
 
+# Encryption by default
 
 *Google is on the brink of releasing the next version of Chrome that marks the first of a number of changes to the security UX in the browser.*
 

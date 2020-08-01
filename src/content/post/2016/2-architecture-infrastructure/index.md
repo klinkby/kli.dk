@@ -15,8 +15,9 @@ tags:
 title: 'Hardening web apps: 2. Architecture+infrastructure'
 ---
 
+# Hardening web apps: 2. Architecture+infrastructure
 
-This second post in the [ blog series](http://www.kli.dk/2016/03/06/1-hardening-web-apps-introduction) goes into detail about the infrastructure your app is running on, designing a secure physical architecture and securing your site against DNS attacks.
+This second post in the [ blog series](../1-hardening-web-apps-introduction) goes into detail about the infrastructure your app is running on, designing a secure physical architecture and securing your site against DNS attacks.
 
 ## Infrastructure
 
@@ -44,5 +45,5 @@ An exploit known as [ DNS cache poisoning](http://www.networkworld.com/article/2
 
 Verisign provides an online [DNSSEC debugger](http://dnssec-debugger.verisignlabs.com/) that verifies the DNSSEC configuration for your domain.
 
->Read the next post in the blog series about [transport security and authentication](/3-authentication/).
+>Read the next post in the blog series about [transport security and authentication](../3-authentication/).
 

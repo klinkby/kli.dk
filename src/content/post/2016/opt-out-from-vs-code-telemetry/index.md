@@ -16,6 +16,7 @@ tags:
 title: Opt out from VS Code telemetry
 ---
 
+# Opt out from VS Code telemetry
 
 [Visual Studio Code](https://code.visualstudio.com/) defaults to automatically gather information about how you use the cross platform open source code editor, and send it back to Microsoft. 
 
