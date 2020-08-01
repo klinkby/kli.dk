@@ -4,9 +4,10 @@ date: "2020-04-11T19:01:30Z"
 description: ""
 draft: false
 slug: contribute-to-a-cure-for-novel-corona-virus
-title: A cure for novel corona virus
+title: Contribute to a cure for novel corona virus
 ---
 
+# Contribute to a cure for novel corona virus
 
 So you are following the current government guidelines of keeping your distance to minimize the risk of spreading the novel corona virus. Is there more you can do that staying at home?
 
