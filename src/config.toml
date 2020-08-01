@@ -8,10 +8,10 @@ copyright = "Klinkby"
 [params]
 
   colortheme = "light"
-  description = "Independent Enterprise + Office 365 Solution Architect & full stack dev with head in the cloud and feet on the ground."
+  description = "Independent Enterprise- + Office 365 Solution Architect & full stack dev with head in the cloud and feet on the ground."
   mainSection = "posts"
   showAllPostsOnHomePage = false
-  postsOnHomePage = 5
+  postsOnHomePage = 10
  # tagsOverview = true
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
@@ -29,3 +29,47 @@ copyright = "Klinkby"
   name = "linkedin"
   link = "https://www.linkedin.com/in/klinkby/"
 
+
+[deployment]
+# By default, files are uploaded in an arbitrary order.
+# Files that match the regular expressions in the "Order" list
+# will be uploaded first, in the listed order.
+order = [".jpg$", ".gif$"]
+
+
+[[deployment.targets]]
+name = "blob"
+
+# Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
+URL = "azblob://$web"
+
+# Optionally, you can include or exclude specific files.
+# See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.
+# If non-empty, the pattern is matched against the local path.
+# All paths are matched against in their filepath.ToSlash form.
+# If exclude is non-empty, and a local or remote file's path matches it, that file is not synced.
+# If include is non-empty, and a local or remote file's path does not match it, that file is not synced.
+# As a result, local files that don't pass the include/exclude filters are not uploaded to remote,
+# and remote files that don't pass the include/exclude filters are not deleted.
+# include = "**.html" # would only include files with ".html" suffix
+# exclude = "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
+
+
+# [[deployment.matchers]] configure behavior for files that match the Pattern.
+# Samples:
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+cacheControl = "max-age=86400, no-transform, public"
+gzip = true
