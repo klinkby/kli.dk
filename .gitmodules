@@ -1,0 +1,9 @@
+[submodule "themes/ghostwriter"]
+	path = themes/ghostwriter
+	url = git@github.com:jbub/ghostwriter.git
+[submodule "themes/hugo-theme-codex"]
+	path = themes/hugo-theme-codex
+	url = https://github.com/jakewies/hugo-theme-codex.git
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
