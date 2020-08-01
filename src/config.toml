@@ -59,14 +59,14 @@ URL = "azblob://$web"
 # Samples:
 
 [[deployment.matchers]]
-#  Cache static assets for 1 year.
+#  Cache static assets for 1 day.
 pattern = "^.+\\.(js|css|svg|ttf)$"
-cacheControl = "max-age=31536000, no-transform, public"
+cacheControl = "max-age=86400, no-transform, public"
 gzip = true
 
 [[deployment.matchers]]
 pattern = "^.+\\.(png|jpg)$"
-cacheControl = "max-age=31536000, no-transform, public"
+cacheControl = "max-age=86400, no-transform, public"
 gzip = false
 
 [[deployment.matchers]]
