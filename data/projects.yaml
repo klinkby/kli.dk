@@ -1,0 +1,19 @@
+{
+   "list": [
+      {
+         "name":"FeedReader",
+         "url":"https://bitbucket.org/klinkby/spapp-feedreader",
+         "desc":"SharePoint 2013 App that contains a simple and efficient App Part for displaying an RSS/Atom feed."
+      },
+      {
+         "name":"VTec",
+         "url":"https://bitbucket.org/klinkby/vtec/src/develop/",
+         "desc":"Malware scanner as-a-service for Azure."
+      },
+      {
+         "name":"Frickr",
+         "url":"https://github.com/klinkby/Frickr",
+         "desc":"Unwrap Flickr data dump to album folder structure with embedded EXIF metdata."
+      },
+   ]
+}
