@@ -9,13 +9,14 @@ copyright = "Klinkby"
 
   colortheme = "light"
   description = "Independent Enterprise- + Office 365 Solution Architect & full stack dev with head in the cloud and feet on the ground."
-  mainSection = "posts"
+  mainSection = "post"
   showAllPostsOnHomePage = false
   postsOnHomePage = 10
  # tagsOverview = true
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
   rss = true
+  themeVersion = "v1"
 
   [[params.social]]
   name = "twitter"
@@ -59,17 +60,23 @@ URL = "azblob://$web"
 # Samples:
 
 [[deployment.matchers]]
-#  Cache static assets for 1 day.
-pattern = "^.+\\.(js|css|svg|ttf)$"
-cacheControl = "max-age=86400, no-transform, public"
+#  Cache static assets for 180 days
+pattern = "^.+\\.(js|css)$"
+cacheControl = "max-age=15552000, public"
 gzip = true
 
 [[deployment.matchers]]
-pattern = "^.+\\.(png|jpg)$"
-cacheControl = "max-age=86400, no-transform, public"
-gzip = false
+pattern = "^.+\\.(svg|ttf|woff|woff2|png|eot|png|ico)$"
+cacheControl = "max-age=15552000, no-transform, public"
+gzip = true
 
 [[deployment.matchers]]
+pattern = "^.+\\.(jpg)$"
+cacheControl = "max-age=15552000, no-transform, public"
+gzip = false
+
+#  Cache content-assets for 1 day
+[[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
-cacheControl = "max-age=86400, no-transform, public"
+cacheControl = "max-age=86400, public"
 gzip = true
