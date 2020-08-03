@@ -1,4 +1,4 @@
 
 [submodule "src/themes/cactus"]
 	path = src/themes/cactus
-	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
+	url = https://github.com/klinkby/hugo-theme-cactus.git
