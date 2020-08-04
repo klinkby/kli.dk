@@ -11,7 +11,7 @@ copyright = "Klinkby"
   description = "Independent Enterprise- + Office 365 Solution Architect & full stack dev with head in the cloud and feet on the ground."
   mainSection = "post"
   showAllPostsOnHomePage = false
-  postsOnHomePage = 10
+  postsOnHomePage = 3
  # tagsOverview = true
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
@@ -30,6 +30,32 @@ copyright = "Klinkby"
   name = "linkedin"
   link = "https://www.linkedin.com/in/klinkby/"
 
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Writings"
+url = "/post/"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 4
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
 
 [deployment]
 # By default, files are uploaded in an arbitrary order.
