@@ -7,11 +7,11 @@ draft: false
 
 # About me
 
-Since Gradualizing B.Sc in 1999, I have had the pleasure of creating digitization solutions with exciting companies such as Ørsted, Microsoft, GN and public institutions.
+Since Gradualizing B.Sc in 1999, I have had the pleasure of creating digitization solutions with exciting companies such as Ørsted, Microsoft, GN and various public institutions.
 
-Recent 11 years as an independent, self-employed consultant with focus on enterprise- and solution architecture and advising on cloud-based collaboration solutions like Office 365 or enterprise architecture.
+Recent 12 years as an independent, self-employed consultant with focus on enterprise- and solution architecture and advising on cloud-based collaboration solutions like Office 365 or enterprise architecture.
 
-Often, I participate in communication with the business on analysis and documentation of processes and agile requirements specification, and either have an enterprise architect / strategic technical lead, or as solution architect that translate requirements into solid design decisions in a final solution. 
+Often, I participate in communication with the business on analysis and documentation of processes and agile requirements specification, and either have an enterprise architect / strategic technical lead, or as solution architect that translate requirements into solid design decisions in a final solution.
 
 I am a big fan of agile processes like scrum and devops, and prefer lightweight architecture with a focus on creating business value. Incidentally, I belong to the group of architects who can roll up their sleeves, and code complex logic. Although this is rarely my primary task, I believe that it is an important competence in order to understand the consequences of design decisions that may unintentionally be putting brakes on developers.
 
