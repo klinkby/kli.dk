@@ -25,7 +25,7 @@ components, and to have a safer repository that does not require backing up page
 content on the VM.
 
 ## Now meet...
-![HUGO](hugo-logo-wide.svg)
+![HUGO](/post/2020/hugo/hugo-logo-wide.svg)
 
 
 The new setup is based on maintaining the content pages as markdown files in Git.

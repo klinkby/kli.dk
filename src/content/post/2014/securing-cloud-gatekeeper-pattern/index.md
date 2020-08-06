@@ -32,8 +32,6 @@ Below is the most common pattern for modern web applications  that provides good
 
 ![](http://static.getya.net/013/images/web-1.jpg/m.jpg)  
 
-<v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">   <v:stroke joinstyle="miter">   <v:formulas>    <v:f eqn="if lineDrawn pixelLineWidth 0">    <v:f eqn="sum @0 1 0">    <v:f eqn="sum 0 0 @1">    <v:f eqn="prod @2 1 2">    <v:f eqn="prod @3 21600 pixelWidth">    <v:f eqn="prod @3 21600 pixelHeight">    <v:f eqn="sum @0 0 1">    <v:f eqn="prod @6 1 2">    <v:f eqn="prod @7 21600 pixelWidth">    <v:f eqn="sum @8 21600 0">    <v:f eqn="prod @7 21600 pixelHeight">    <v:f eqn="sum @10 21600 0">   </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">   <o:lock v:ext="edit" aspectratio="t">  </o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75">   <v:imagedata src="file:///C:\Users\Mads\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg" o:title="WIN_20140706_124438">  </v:imagedata></v:shape><o:p></o:p>
-
 Requests from an internet user hit the web server. A web  service running on the server processes the request on behalf of the user and  accesses the specific data on the database backend, which in turn the  application responds to the user. <o:p></o:p>
 
 Let us for a moment replace the user with a hacker. The  hacker knows there are [bugs  in the application software](http://queue.acm.org/detail.cfm?id=2602816), the web server or the server operating system.  By carefully constructing specific requests to that exploits software bugs the  web server opens up a backdoor to escalation of privileges or remote code  execution, which enables the hacker to tap unrestricted information from the  database. <o:p></o:p>
@@ -49,8 +47,6 @@ One way to harden the application would be to move the  application logic off to
 Have a look at this special case of the [Gatekeeper  Pattern](https://blogs.msdn.com/b/sdl/archive/2010/06/16/10024587.aspx?Redirected=true) that I propose: <o:p></o:p>
 
 ![](http://static.getya.net/013/images/web-2.jpg/m.jpg)  
-
-<v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75">   <v:imagedata src="file:///C:\Users\Mads\AppData\Local\Temp\msohtmlclip1\01\clip_image002.jpg" o:title="WIN_20140706_124427">  </v:imagedata></v:shape><o:p></o:p>
 
 Again, requests from a user hit the public web server. It  returns all static content like html and scripts directly as in the above  diagram. Dynamic requests to the application’s web service however, the deployed  [Application  Request Routing](http://www.iis.net/downloads/microsoft/application-request-routing) IIS extension, forwards to an internal endpoint on a  backend web server, which is running the custom application logic that communicates  with the database. In a HTML5 application e.g.  that could be all requests to the path */api/**. Moving the application logic off  the public web server greatly reduces the attack surface of that server, and in  case it should get compromised, the server contains no secrets at all. <o:p></o:p>
 
