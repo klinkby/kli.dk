@@ -39,9 +39,11 @@ Well, it does.
 
 The global namespace (this) in a browser is the window object that itself defines lots of members that allows you to control the view and behavior of the browser. Make it a habit to always start your JavaScript files with the following:
 
-<pre class="csharpcode"><code> (<span class="kwrd">function</span> () {
+```JS
+ (function () {
     // your code goes here
- }()); </code></pre>
+ }()); 
+ ```
 
 It is a self invoking function, which means your code gets its own scope and will not litter all your variables and methods in the global namespace.
 
@@ -51,17 +53,21 @@ The first line in the example below adds a new empty object to a field called ac
 
 The second line adds a your new calculator object (that has an add method) to your acme object. And you can add all kinds of advanced application modules in this way without every getting in conflict with 3rd party libraries. 
 
-<pre class="csharpcode"><code> window.acme = window.acme || {}; window.acme.calculator = {
-     add: <span class="kwrd">function</span> (a, b) {
-        <span class="kwrd">return</span> a + b;
+```JS
+ window.acme = window.acme || {}; window.acme.calculator = {
+     add: function (a, b) {
+        return a + b;
      }
- }; </code></pre>
+ }; 
+ ```
 
 One of the worst examples of not doing this is SharePoint, that defines more than 2000 global members. 
 
 <span>You can check this by opening the browser dev console on</span> [ a SP site](http://www.wssdemo.com/) <span>and run:</span>
 
-<pre class="csharpcode"><code> <span class="kwrd">Object</span>.keys(window).length </code></pre>
+```JS
+ Object.keys(window).length 
+ ```
 
 As a consequence SharePoint 2010 [conflicts](http://blogs.msdn.com/b/carloshm/archive/2009/11/18/jquery-and-sharepoint-2010-javascript-conflict.aspx) with even jQuery.
 
@@ -71,10 +77,12 @@ As a consequence SharePoint 2010 [conflicts](http://blogs.msdn.com/b/carloshm/ar
 
 By adding the "use strict", to the top of your scope you intentionally restrict the language capabilities in that scope, making it much easier to write secure code of higher quality. Any former Visual Basic coder will recognise the strict option like [meeting an old friend](http://msdn.microsoft.com/en-us/library/zcd4xwzs.aspx).
 
-<pre class="csharpcode"><code> (<span class="kwrd">function</span> () {
-    <span class="str">"use strict"</span>;
+```JS
+ (function () {
+    "use strict";
      // your quality code goes here
- }()); </code></pre>
+ }()); 
+ ```
 
 [This MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode) tells exactly what *use strict* does. <span>Tools like</span>[ JsLint](http://jslint.com/)<span> can analyse your code against dogmas that prevents common mistakes in your code.</span>
 
@@ -84,12 +92,19 @@ By adding the "use strict", to the top of your scope you intentionally restrict 
 
   <div>Did you know in JavaScript the operators <code>==</code> and <code>!=</code> will perform implicit type conversions, which can lead to unexpected results?  
  </div>  
-<pre class="csharpcode"><code> 1 != "1" // false  
- 0 == ""  // true </code></pre>
+
+```JS
+ 1 != "1" // false  
+ 0 == ""  // true 
+ ```
+
+
   <div>What you propably meant was to compares values without performing type conversion, i.e.<span> the operators <code>===</code> and !==</span> <span>so make it a habit to use those by default:</span></div>  <div> 
 
-<pre class="csharpcode"><code> 1 !== "1" // false  
- 0 === ""  // true </code></pre>
+```JS
+ 1 !== "1" // false  
+ 0 === ""  // true 
+ ```
  </div>  
 
 ## Polyfills
@@ -108,9 +123,11 @@ You can argue that jQuery is a polyfill. Among lots of other things, it's a very
 
 In fact if you always use jQuery instead of accessing the DOM directly your application performance will suffer by an order of magnutude. You will propably never notice that on your development Core i7 workstation, but smartphones running your web application will. <span>Here is an example:</span>
 
-<pre class="csharpcode"><code> $('.test') // jQuery version  
+```JS
+ $('.test') // jQuery version  
 // vs  
-document.getElementsByClassName('test') // DOM version </code></pre>
+document.getElementsByClassName('test') // DOM version 
+```
 
 The jQuery-version is around [90% slower](https://twitter.com/__DavidFlanagan "@__DavidFlanagan") that simply calling getElementsByClassName. 
 
@@ -126,33 +143,35 @@ The following code shows a Vehicle base type that is inherited by the Car type. 
 
 <span>The line with *Object.create* is almost like callinng *new Vehicle* except it doesn't call the constructor, it just sets Vehicle as the prototype. The new constructor is set in the line below.</span>
 
-<pre class="csharpcode"><code> <span class="kwrd">function</span> Vehicle(topSpeed) {
+```JS
+function Vehicle(topSpeed) {
      var topSpeed;
      Object.defineProperties(this, {
-         <span class="str">"topSpeed"</span>: {
-               get: <span class="kwrd">function</span> () {
-                 <span class="kwrd">return</span> topSpeed + <span class="str">" km/h"</span>;
+         "topSpeed": {
+               get: function () {
+                 return topSpeed + " km/h";
              }
          },
-         <span class="str">"color"</span>: { writable: true }
+         "color": { writable: true }
      });
-     this.drive = <span class="kwrd">function</span> () {
-         console.log(<span class="str">"I'm driving"</span>);
+     this.drive = function () {
+         console.log("I'm driving");
      }
  }
- <span class="kwrd">function</span> Car(topSpeed, brand) {
+ function Car(topSpeed, brand) {
      Vehicle.call(this, topSpeed);
      Object.defineProperties(this, {
-         <span class="str">"brand"</span>: { value: brand }
+         "brand": { value: brand }
      }); 
  }
  Car.prototype = Object.create(Vehicle); 
  Car.prototype.constructor = Car;
- var c = new Car(250, <span class="str">"Porsche"</span>);
- c.color = <span class="str">"magenta"</span>;
- c.drive(); </code></pre>
+ var c = new Car(250, "Porsche");
+ c.color = "magenta";
+ c.drive(); 
+ ```
 
-There are other many new helpful features in the ECMAScript 5 specification that you would expect to find in a programming language today. See e.g [@__DavidFlanagan](https://twitter.com/__DavidFlanagan)'s [ JavaScript: The Definitive Guide](http://www.amazon.com/gp/product/B00IG2CS04/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00IG2CS04&linkCode=as2&tag=klinkby-20)![](http://ir-na.amazon-adsystem.com/e/ir?t=klinkby-20&l=as2&o=1&a=B00IG2CS04) for an in depth coverage of the new language features.
+There are other many new helpful features in the ECMAScript 5 specification that you would expect to find in a programming language today. See e.g [@__DavidFlanagan](https://twitter.com/__DavidFlanagan)'s [JavaScript: The Definitive Guide](http://www.amazon.com/gp/product/B00IG2CS04/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00IG2CS04&linkCode=as2&tag=klinkby-20) for an in depth coverage of the new language features.
 
 ## Inline scripts
 
@@ -160,11 +179,15 @@ Dont. Just don't. 
 
 And yes, that includes
 
-<pre class="csharpcode"><code> <span class="kwrd"><</span><span class="html">img</span> <span class="attr">onclick</span><span class="kwrd">="pictureSelected()"</span> <span class="attr">src</span><span class="kwrd">="funnyfeline.jpg"</span> <span class="kwrd">/></span> </code></pre>
+```HTML
+ <img onclick="pictureSelected()" src="funnyfeline.jpg" /> 
+ ```
 
 and 
 
-<pre class="csharpcode"><code> <span class="kwrd"><</span><span class="html">a</span> <span class="attr">href</span><span class="kwrd">="javascript:goOn()<span class="kwrd">"</span></span> <span>class</span><span class="kwrd"><span class="kwrd">="</span></span><span class="kwrd">acme-next"</span><span class="kwrd">></span><span>Next</span><span class="kwrd"></</span><span class="html">a</span><span class="kwrd">></span> </code></pre>
+```HTML
+ <a href="javascript:goOn()" class="acme-next">Next</a> 
+ ```
 
 Because you want the view to describe a document, not an interactive process. It's simply separation of concerns. <span>Instead bind your event handlers from script by referenceing element class names:</span>
 
@@ -180,12 +203,14 @@ One notable exception to this is if you use a two way databinding framework - re
 
 <span>A view template is written using a kind of augmented HTML markup. The following simple example shows a label and an input field, and below that is a line of text that automatically will be updated by the framework as the user fills in her name. The "name" value can be a field on your JavaScript object, as is the save() function.</span>
 
-<pre class="csharpcode"><code> <span class="kwrd"><</span><span class="html">div</span><span class="kwrd">></span>
-  <span class="kwrd"><</span><span class="html">label</span><span class="kwrd">></span>Enter your name:<span class="kwrd"></</span><span class="html">label</span><span class="kwrd">></span>
-  <span class="kwrd"><</span><span class="html">input</span> <span class="attr">type</span><span class="kwrd">="text"</span> <span class="attr">ng-model</span><span class="kwrd">="name"</span> <span class="kwrd">/></span>
- <span class="kwrd"></</span><span class="html">div</span><span class="kwrd">></span>
- <span class="kwrd"><</span><span class="html">div</span><span class="kwrd">></span>Your name is {{name}}<span class="kwrd"></</span><span class="html">div</span><span class="kwrd">>
- </span><span class="kwrd"><</span><span class="html">input</span> <span class="attr">type</span><span class="kwrd">="button"</span> <span class="attr">ng-click</span><span class="kwrd">="save()"</span> <span class="attr">value</span><span class="kwrd">="Save"</span>  <span class="kwrd">/></span> </code></pre> 
+```HTML
+ <div>
+  <label>Enter your name:label>
+  <input type="text" ng-model="name" />
+ div>
+ <div>Your name is {{name}}div>
+ <input type="button" ng-click="save()" value="Save"  /> 
+ ```
 
 It may not seem like a big deal in this example. But the real power of this becomes apparent if underlying model is more complex, event based, the view <span>may have a few sub-forms</span><span> </span> <span>and need to load data asynchronous from a server endpoint. </span>
 
@@ -202,12 +227,18 @@ You can then add the defer" attribute to your script tags. It means it can load 
 
 <span>The optimal solution to add an "async" attribute to script tags, which will prevent the blocking, by telling the browser it can load the script in the background and execute it whenever it like. You will gain the same effect by including a script with a:</span>
 
-<pre class="csharpcode"><code> document.write(<span class="str">'&lt;script type="text/javascript" src="foo.js">&lt;/script>'</span>);</code></pre> 
+```JS
+document.write('<script type="text/javascript" src="foo.js"></script>');
+```
+
   <div>If you have several scripts that loads, or your script uses the DOM you have a potential race condition. The scripts load out-of-order, and they may execute before the DOM is fully </div>  <div>loaded. So some synchronization is propably needed if you would like to take full advantage of async loading. <span>For example you add this to your html file:</span></div>  <div>  
  </div>   
 
-<pre class="csharpcode"><code> <span class="kwrd"><</span><span class="html">script</span> <span class="attr">src</span><span class="kwrd">="lib/jquery.js"</span> <span class="attr">async</span> <span class="kwrd">/></span>
- <span class="kwrd"><</span><span class="html">script</span> <span class="attr">src</span><span class="kwrd">="myapp.js"</span> <span class="attr">async</span> <span class="kwrd">/></span></code></pre> 
+```HTML
+ <script src="lib/jquery.js" async />
+ <script src="myapp.js" async />
+ ```
+
   <div>You can be absolutely sure that jQuery will NOT be available every time your script executes.</div>  <div>To take care of that the<span> </span> [ asynchronous module definition](https://en.wikipedia.org/wiki/Asynchronous_Module_Definition)<span> </span> <span>(AMD) enables each javascript files to specify its dependencies, and a module loader like</span><span> </span> [ RequireJS](http://www.requirejs.org/)<span> </span> <span>will make sure they are executed in correct order. </span></div>  
 
 ## Epilogue

@@ -16,5 +16,5 @@ title: Computerworld article
 
 Today Danish IT-magazine Computerworld published [this interview](http://su.pr/2M1Fx3) with me. The article focuses on how to develop and maintain skills that are in demand. 
 
-[![Article](http://static.getya.net/013/images/cw.jpg?w=710)](http://su.pr/2M1Fx3)
+[![Article](/images/2013/cw.jpg)](http://su.pr/2M1Fx3)
 

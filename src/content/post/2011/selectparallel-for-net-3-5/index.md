@@ -26,61 +26,62 @@ A simple method that does exactly what Select LINQ function does, except the ite
 
 Please note this implementation is very different from how the Parallel LINQ library works, and I would always recommend using the implementation in NET 4.0 if your application can take dependency of that.   
 
-<pre class="csharpcode"><code><span class="kwrd">static</span> IEnumerable&lt;TD&gt; SelectParallel&lt;TS, TD&gt;(
-    <span class="kwrd">this</span> IEnumerable&lt;TS&gt; coll,
-    Func&lt;TS, TD&gt; func)
+```C#
+static IEnumerable<TD> SelectParallel<TS, TD>(
+    this IEnumerable<TS> coll,
+    Func<TS, TD> func)
 {
-    var results = <span class="kwrd">new</span> Queue&lt;TD&gt;();
-    <span class="kwrd">int</span> processed = 0;
-    Exception ex = <span class="kwrd">null</span>;
-    <span class="kwrd">using</span> (var evt = <span class="kwrd">new</span> AutoResetEvent(<span class="kwrd">false</span>))
+    var results = new Queue<TD>();
+    int processed = 0;
+    Exception ex = null;
+    using (var evt = new AutoResetEvent(false))
     {
-        <span class="kwrd">int</span> count = 0;
-        <span class="kwrd">foreach</span> (var s <span class="kwrd">in</span> coll)
+        int count = 0;
+        foreach (var s in coll)
         {
-            <span class="kwrd">int</span> index = count++;
+            int index = count++;
             TS t = s;
-            ThreadPool.QueueUserWorkItem(o =&gt;
+            ThreadPool.QueueUserWorkItem(o =>
             {
-                <span class="kwrd">try</span>
+                try
                 {
                     TD result = func(t);
-                    <span class="kwrd">while</span> (processed != index)
+                    while (processed != index)
                     {
                         evt.WaitOne(10);
-                        <span class="kwrd">if</span> (ex != <span class="kwrd">null</span>)
-                            <span class="kwrd">return</span>;
+                        if (ex != null)
+                            return;
                     }
-                    <span class="kwrd">lock</span>(evt)
+                    lock(evt)
                     {
                         results.Enqueue(func(t));
-                        Interlocked.Increment(<span class="kwrd">ref</span> processed);
+                        Interlocked.Increment(ref processed);
                     }
                     evt.Set();
                 }
-                <span class="kwrd">catch</span> (Exception e)
+                catch (Exception e)
                 {
                     ex = e;
                 }
             });
         }
-        <span class="kwrd">int</span> resultCount = 0;
-        <span class="kwrd">while</span> (resultCount &lt; count &amp;&amp; ex == <span class="kwrd">null</span>)
+        int resultCount = 0;
+        while (resultCount < count && ex == null)
         {
             evt.WaitOne(10);
-            <span class="kwrd">while</span> (resultCount &lt; processed &amp;&amp; ex == <span class="kwrd">null</span>)
+            while (resultCount < processed && ex == null)
             {
                 TD item;
-                <span class="kwrd">lock</span> (evt)
+                lock (evt)
                 {
                     item = results.Dequeue();
                 }
-                <span class="kwrd">yield</span> <span class="kwrd">return</span> item;
+                yield return item;
                 resultCount++;
             }
         }
     }
-    <span class="kwrd">if</span> (ex != <span class="kwrd">null</span>)
-        <span class="kwrd">throw</span> ex;
-}</code></pre>
-
+    if (ex != null)
+        throw ex;
+}
+```

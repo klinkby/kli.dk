@@ -20,47 +20,48 @@ title: Read from WebClient with the right encoding
 
 I've had some encoding trouble with the [DownloadString](http://msdn.microsoft.com/en-us/library/fhd1f0sw.aspx)(Async) method on the [ WebClient class](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx), so I wrote my own encoding detection to get a string with the correct encoding.   
 
-<pre class="csharpcode"><code><span class="kwrd">readonly</span> <span class="kwrd">static</span> Regex m_enc = <span class="kwrd">new</span> Regex(
-    <span class="str">@"charset=(?'encoding'[^\s]+)"</span>,
+```C#
+readonly static Regex m_enc = new Regex(
+    @"charset=(?'encoding'[^\s]+)",
     RegexOptions.Compiled | RegexOptions.CultureInvariant
         | RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase);
 
-<span class="kwrd">static</span> <span class="kwrd">string</span> GetString(WebHeaderCollection responseHeaders, <span class="kwrd">byte</span>[] data)
+static string GetString(WebHeaderCollection responseHeaders, byte[] data)
 {
-    <span class="kwrd">string</span> html;
-    Encoding encoding = <span class="kwrd">null</span>;
-    <span class="kwrd">try</span>
+    string html;
+    Encoding encoding = null;
+    try
     {
-        <span class="kwrd">string</span> contentEncoding = responseHeaders[HttpResponseHeader.ContentEncoding];
-        <span class="kwrd">if</span> (<span class="kwrd">string</span>.IsNullOrEmpty(contentEncoding))
+        string contentEncoding = responseHeaders[HttpResponseHeader.ContentEncoding];
+        if (string.IsNullOrEmpty(contentEncoding))
             contentEncoding 
                 = m_enc.Match(responseHeaders[HttpResponseHeader.ContentType])
-                        .Groups[<span class="str">"encoding"</span>]
+                        .Groups["encoding"]
                         .Value;
         encoding = Encoding.GetEncoding(contentEncoding);
     }
-    <span class="kwrd">catch</span> (Exception)
+    catch (Exception)
     {
-        <span class="kwrd">try</span>
+        try
         {
-            <span class="kwrd">using</span> (var ms = <span class="kwrd">new</span> MemoryStream(data))
+            using (var ms = new MemoryStream(data))
             {
-                <span class="kwrd">using</span> (var xmlreader = <span class="kwrd">new</span> XmlTextReader(ms))
+                using (var xmlreader = new XmlTextReader(ms))
                 {
                     xmlreader.MoveToContent();
                     encoding = xmlreader.Encoding;
                 }
             }
         }
-        <span class="kwrd">catch</span> (Exception)
+        catch (Exception)
         {
         }
     }
-    <span class="kwrd">using</span> (var ms = <span class="kwrd">new</span> MemoryStream(data))
-    <span class="kwrd">using</span> (var sr = encoding != <span class="kwrd">null</span> 
-        ? <span class="kwrd">new</span> StreamReader(ms, encoding) 
-        : <span class="kwrd">new</span> StreamReader(ms, <span class="kwrd">true</span>))
+    using (var ms = new MemoryStream(data))
+    using (var sr = encoding != null 
+        ? new StreamReader(ms, encoding) 
+        : new StreamReader(ms, true))
         html = sr.ReadToEnd();
-    <span class="kwrd">return</span> html;
-}</code></pre>
+    return html;
+}```
 

@@ -22,8 +22,10 @@ title: Opt out from VS Code telemetry
 
 If you like to opt out from this, add the following to your user preferences (File > Preferences > User).
 
-`{
+```JS
+{
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-}`
+}
+```
 

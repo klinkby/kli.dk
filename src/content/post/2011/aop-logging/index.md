@@ -22,95 +22,97 @@ It you have yet to look into aspect oriented programming (AOP) I will encouraged
 
 Very handy thingy for the occational bug hunting.
 
-<pre class="csharpcode"><code><span class="kwrd">class</span> TracingInterceptor : IInterceptor
+```C#
+class TracingInterceptor : IInterceptor
 {
     Logger m_logger;
-    <span class="kwrd">string</span> m_targetMethodName;
+    string m_targetMethodName;
     Stopwatch m_stopwatch;
 
-    <span class="kwrd">public</span> <span class="kwrd">void</span> Intercept(IInvocation invocation)
+    public void Intercept(IInvocation invocation)
     {
-        <span class="kwrd">try</span>
+        try
         {
             BeforeInvoke(invocation);
             invocation.Proceed();
             AfterInvoke(invocation);
         }
-        <span class="kwrd">catch</span> (Exception ex)
+        catch (Exception ex)
         {
             OnError(invocation, ex);
-            <span class="kwrd">throw</span>;
+            throw;
         }
     }
 
-    <span class="kwrd">protected</span> <span class="kwrd">virtual</span> <span class="kwrd">void</span> BeforeInvoke(IInvocation invocation)
+    protected virtual void BeforeInvoke(IInvocation invocation)
     {
-        <span class="kwrd">string</span> targetTypeName = invocation.TargetType.FullName;
+        string targetTypeName = invocation.TargetType.FullName;
         m_targetMethodName = invocation.Method.Name;
         m_logger = LogManager.GetLogger(targetTypeName);
-        <span class="kwrd">if</span> (m_logger.IsDebugEnabled)
+        if (m_logger.IsDebugEnabled)
             m_logger.Debug(
-                m_targetMethodName + <span class="str">" [enter]"</span> + GetParameters(invocation));
-        <span class="kwrd">if</span> (m_logger.IsInfoEnabled)
+                m_targetMethodName + " [enter]" + GetParameters(invocation));
+        if (m_logger.IsInfoEnabled)
         {
-            m_stopwatch = <span class="kwrd">new</span> Stopwatch();
+            m_stopwatch = new Stopwatch();
             m_stopwatch.Start();
         }
     }
 
-    <span class="kwrd">protected</span> <span class="kwrd">virtual</span> <span class="kwrd">void</span> AfterInvoke(IInvocation invocation)
+    protected virtual void AfterInvoke(IInvocation invocation)
     {
-        <span class="kwrd">if</span> (m_logger.IsInfoEnabled)
-            m_logger.Info(m_targetMethodName + <span class="str">" [ok]"</span> + GetElapsed());
-        <span class="kwrd">if</span> (m_logger.IsDebugEnabled)
+        if (m_logger.IsInfoEnabled)
+            m_logger.Info(m_targetMethodName + " [ok]" + GetElapsed());
+        if (m_logger.IsDebugEnabled)
         {
-            <span class="kwrd">if</span> (invocation.Method.ReturnType != <span class="kwrd">typeof</span>(<span class="kwrd">void</span>))
+            if (invocation.Method.ReturnType != typeof(void))
             {
                 m_logger.Debug(
-                    m_targetMethodName + <span class="str">" returned "</span> + GetReturnValue(invocation));
+                    m_targetMethodName + " returned " + GetReturnValue(invocation));
             }
         }
     }
 
-    <span class="kwrd">protected</span> <span class="kwrd">virtual</span> <span class="kwrd">void</span> OnError(IInvocation invocation, Exception exception)
+    protected virtual void OnError(IInvocation invocation, Exception exception)
     {
         m_logger.ErrorException(
-            m_targetMethodName + <span class="str">" [fail]"</span> + GetElapsed(), 
+            m_targetMethodName + " [fail]" + GetElapsed(), 
             exception);
     }
 
-    <span class="kwrd">static</span> <span class="kwrd">string</span> GetParameters(IInvocation invocation)
+    static string GetParameters(IInvocation invocation)
     {
-        <span class="kwrd">string</span> par = <span class="kwrd">null</span>;
-        <span class="kwrd">if</span> (invocation.Arguments.Length &gt; 0)
+        string par = null;
+        if (invocation.Arguments.Length > 0)
         {
             par = invocation.Arguments.Aggregate(
-                <span class="kwrd">string</span>.Empty, 
-                (acc, x) =&gt; acc += x + <span class="str">","</span>);
-            par = <span class="str">" {"</span> + par.TrimEnd(<span class="str">','</span>) + <span class="str">"}"</span>;
+                string.Empty, 
+                (acc, x) => acc += x + ",");
+            par = " {" + par.TrimEnd(',') + "}";
         }
-        <span class="kwrd">return</span> par;
+        return par;
     }
 
-    <span class="kwrd">static</span> <span class="kwrd">string</span> GetReturnValue(IInvocation invocation)
+    static string GetReturnValue(IInvocation invocation)
     {
-        <span class="kwrd">object</span> ret = invocation.ReturnValue;
-        <span class="kwrd">if</span> (ret != <span class="kwrd">null</span>)
+        object ret = invocation.ReturnValue;
+        if (ret != null)
         {
-            <span class="kwrd">return</span> (invocation.Method.ReturnType.IsArray)
+            return (invocation.Method.ReturnType.IsArray)
                 ? ((Array)ret).Length.ToString(CultureInfo.InvariantCulture) 
-                    + <span class="str">" items"</span>
+                    + " items"
                 : ret.ToString();
         }
-        <span class="kwrd">else</span>
-            <span class="kwrd">return</span> <span class="str">"(null)"</span>;
+        else
+            return "(null)";
     }
 
-    <span class="kwrd">string</span> GetElapsed()
+    string GetElapsed()
     {
-        <span class="kwrd">return</span> <span class="str">" "</span> + m_stopwatch.ElapsedMilliseconds
+        return " " + m_stopwatch.ElapsedMilliseconds
                                 .ToString(CultureInfo.InvariantCulture) 
-                + <span class="str">" mS"</span>;
+                + " mS";
     }
-}</code></pre>
+}
+```
 

@@ -16,7 +16,7 @@ copyright = "Klinkby"
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
   rss = true
-  themeVersion = "v1"
+  themeVersion = "v2"
 
   [[params.social]]
   name = "twitter"

@@ -26,24 +26,25 @@ A friendly XHR always requests data with the header *Accept: application/json, 
 
 With this information it is quite easy to extend the QueryableAttribute to perform this simple validation:
 
-<pre class="csharpcode"><code> <span class="kwrd">using</span> System.Net;
- <span class="kwrd">using</span> System.Net.Http;
- <span class="kwrd">using</span> System.Net.Http.Headers;
- <span class="kwrd">using</span> System.Web.Http;
- <span class="kwrd">using</span> System.Web.Http.Filters;
- <span class="kwrd">public</span> <span class="kwrd">class</span> SafeQueryableAttribute : QueryableAttribute
- {
-     <span class="kwrd">private</span> <span class="kwrd">static</span> <span class="kwrd">readonly</span> MediaTypeWithQualityHeaderValue ApplicationJson =         MediaTypeWithQualityHeaderValue.Parse(<span class="str">"application/json"</span>);
-      <span class="kwrd">public</span> <span class="kwrd">override</span> <span class="kwrd">void</span> OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
-     {
-         <span class="kwrd">var</span> res = actionExecutedContext.Response;
-         <span class="kwrd">if</span> (res.StatusCode < HttpStatusCode.BadRequest
-             && !actionExecutedContext.Request.Headers.Accept.Contains(ApplicationJson))
-         {
-             actionExecutedContext.Response = <span class="kwrd">new</span> HttpResponseMessage(HttpStatusCode.Forbidden);
-         }
-         <span class="kwrd">base</span>.OnActionExecuted(actionExecutedContext);
-     }
- } </code></pre>
-  <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled"></div>
+```C#
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Web.Http;
+using System.Web.Http.Filters;
 
+public class SafeQueryableAttribute : QueryableAttribute
+{
+    private static readonly MediaTypeWithQualityHeaderValue ApplicationJson =         MediaTypeWithQualityHeaderValue.Parse("application/json");
+    public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
+    {
+        var res = actionExecutedContext.Response;
+        if (res.StatusCode < HttpStatusCode.BadRequest
+            && !actionExecutedContext.Request.Headers.Accept.Contains(ApplicationJson))
+        {
+            actionExecutedContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
+        }
+        base.OnActionExecuted(actionExecutedContext);
+    }
+} 
+ ```

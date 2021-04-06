@@ -18,43 +18,44 @@ title: Iterate folders non-recursively
 
 Here are a few methods to help iterate complete directory trees and the files in them without using recursive method calls. The directories are read one at a time to keep memory usage at a minimum. These restrictions enables iterating trees in very large file shares.   
 
-<pre class="csharpcode"><code><span class="kwrd">static</span> IEnumerable&lt;<span class="kwrd">string</span>&gt; GetDirectories(<span class="kwrd">string</span> startDirectory)
+```C#
+static IEnumerable<string> GetDirectories(string startDirectory)
 {
-    var dirsToVisit = <span class="kwrd">new</span> Stack&lt;<span class="kwrd">string</span>&gt;();
+    var dirsToVisit = new Stack<string>();
     dirsToVisit.Push(startDirectory);
-    <span class="kwrd">while</span> (dirsToVisit.Count &gt; 0)
+    while (dirsToVisit.Count > 0)
     {
-        <span class="kwrd">string</span> dir = dirsToVisit.Pop();
-        <span class="kwrd">yield</span> <span class="kwrd">return</span> dir;
-        <span class="kwrd">string</span>[] subDirs;
-        <span class="kwrd">try</span>
+        string dir = dirsToVisit.Pop();
+        yield return dir;
+        string[] subDirs;
+        try
         {
             subDirs = Directory.GetDirectories(dir);
         }
-        <span class="kwrd">catch</span> (UnauthorizedAccessException)
+        catch (UnauthorizedAccessException)
         {
-            subDirs = <span class="kwrd">new</span> <span class="kwrd">string</span>[0];
+            subDirs = new string[0];
         }
-        <span class="kwrd">foreach</span> (var subDir <span class="kwrd">in</span> subDirs)
+        foreach (var subDir in subDirs)
             dirsToVisit.Push(subDir);
     }
 }
 
-<span class="kwrd">static</span> IEnumerable&lt;<span class="kwrd">string</span>&gt; GetFiles(<span class="kwrd">string</span> startDirectory)
+static IEnumerable<string> GetFiles(string startDirectory)
 {
-    <span class="kwrd">foreach</span> (var dir <span class="kwrd">in</span> GetDirectories(startDirectory))
+    foreach (var dir in GetDirectories(startDirectory))
     {
-        <span class="kwrd">string</span>[] files;
-        <span class="kwrd">try</span>
+        string[] files;
+        try
         {
             files = Directory.GetFiles(dir);
         }
-        <span class="kwrd">catch</span> (UnauthorizedAccessException)
+        catch (UnauthorizedAccessException)
         {
-            files = <span class="kwrd">new</span> <span class="kwrd">string</span>[0];
+            files = new string[0];
         }
-        <span class="kwrd">foreach</span> (var file <span class="kwrd">in</span> files)
-            <span class="kwrd">yield</span> <span class="kwrd">return</span> file;
+        foreach (var file in files)
+            yield return file;
     }
-}</code></pre>
-
+}
+```

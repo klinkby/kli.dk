@@ -20,26 +20,27 @@ title: WCF Client Channel snippet
 
 Generally I use WCF client channels with the code snippet below that handles channel lifetime, failed channel states and context required for nested WCF calls.
 
-<pre class="csharpcode"><code><span class="kwrd">static</span> TReturn WithChannel&lt;TChannel, TReturn&gt;(Func&lt;TChannel, TReturn&gt; func)
-    <span class="kwrd">where</span> TChannel : IContextChannel
+```C#
+static TReturn WithChannel<TChannel, TReturn>(Func<TChannel, TReturn> func)
+    where TChannel : IContextChannel
 {
     TChannel channel = CreateChannel();
-    <span class="kwrd">try</span>
+    try
     {
-        <span class="kwrd">using</span> (<span class="kwrd">new</span> OperationContextScope(channel)) 
+        using (new OperationContextScope(channel)) 
         {
             TReturn ret = func(channel);
-            <span class="kwrd">return</span> ret;
+            return ret;
         }
     }
-    <span class="kwrd">finally</span>
+    finally
     {
-        <span class="kwrd">try</span>
+        try
         {
-            ((IDisposable)channel).Dispose(); <span class="rem">// ~= Close()</span>
+            ((IDisposable)channel).Dispose(); // ~= Close()
         }
-        <span class="kwrd">catch</span> (CommunicationException) { ((IChannel)channel).Abort(); }
-        <span class="kwrd">catch</span> (TimeoutException) { ((IChannel)channel).Abort(); }
+        catch (CommunicationException) { ((IChannel)channel).Abort(); }
+        catch (TimeoutException) { ((IChannel)channel).Abort(); }
     }
-}</code></pre>
-
+}
+```

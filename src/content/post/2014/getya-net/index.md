@@ -7,8 +7,9 @@ slug: getya-net
 title: getya•net
 ---
 
+![GETYA.NET](/images/2014/getyanet.png)
 
-<span style="float: right; margin 0 0 1em 1em"><amp-img style="padding:0" width="64" height="64" src="//static.getya.net/001/images/getyanet64.png"></amp-img></span>Over the last couple of years I have developed a multi tenant content management system with integrated online store and booking.
+Over the last couple of years I have developed a multi tenant content management system with integrated online store and booking.
 
 getya•net is currently used daily as a business critial system by e.g. alternative clinics and online retailers.
 

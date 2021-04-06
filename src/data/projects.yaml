@@ -1,9 +1,14 @@
 {
    "list": [
       {
-         "name":"VTec",
-         "url":"https://bitbucket.org/klinkby/vtec/src/develop/",
-         "desc":"Malware scanner as-a-service for Azure PAAS."
+         "name":"ClamdScan",
+         "url":"https://github.com/klinkby/clamdscan",
+         "desc":"Non-blocking .NET Standard client for ClamAV daemon."
+      },
+      {
+         "name":"ClamdScan-REST",
+         "url":"https://github.com/klinkby/clamdscan-rest",
+         "desc":"Using ClamdScan, a dockerized REST API with a single endpoint for on-demand anti-malware."
       },
       {
          "name":"Frickr",

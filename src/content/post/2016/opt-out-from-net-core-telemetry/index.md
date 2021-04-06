@@ -24,5 +24,7 @@ So Microsoft decided that the [.NET Core](https://github.com/dotnet/core) Tools 
    
 While it is an aggressive default for an open source project, it is easy to opt-out. Open a terminal in Linux and type the following to disable telemetry system-wide for good. 
 
-`echo DOTNET_CLI_TELEMETRY_OPTOUT=1 | sudo tee -a /etc/environment`
+```SH
+echo DOTNET_CLI_TELEMETRY_OPTOUT=1 | sudo tee -a /etc/environment
+```
 

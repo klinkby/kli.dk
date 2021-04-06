@@ -33,104 +33,105 @@ The idea is to send the user to a Facebook dialog for authentication and authori
 
 Merge the following code in the code behind, and replace the app key with the ones from your app registration.
 
-<pre class="csharpcode"><code><span class="kwrd">using</span> System;
-<span class="kwrd">using</span> System.Globalization;
-<span class="kwrd">using</span> System.IO;
-<span class="kwrd">using</span> System.Net;
-<span class="kwrd">using</span> System.Runtime.Serialization.Json;
-<span class="kwrd">using</span> System.Web.Security;
-<span class="kwrd">using</span> System.Web.UI.WebControls;
+```C#
+using System;
+using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Runtime.Serialization.Json;
+using System.Web.Security;
+using System.Web.UI.WebControls;
 
-<span class="kwrd">public</span> <span class="kwrd">partial</span> <span class="kwrd">class</span> _Default : System.Web.UI.Page
+public partial class _Default : System.Web.UI.Page
 {
-    <span class="kwrd">readonly</span> <span class="kwrd">static</span> <span class="kwrd">string</span> App_ID = <span class="str">"PLACE YOUR APP ID HERE"</span>;
-    <span class="kwrd">readonly</span> <span class="kwrd">static</span> <span class="kwrd">string</span> App_Secret = <span class="str">"PLACE YOUR APP SECRET HERE"</span>;
-    <span class="kwrd">readonly</span> <span class="kwrd">static</span> <span class="kwrd">string</span> scope = <span class="str">"email"</span>;
+    readonly static string App_ID = "PLACE YOUR APP ID HERE";
+    readonly static string App_Secret = "PLACE YOUR APP SECRET HERE";
+    readonly static string scope = "email";
 
-    <span class="kwrd">readonly</span> <span class="kwrd">static</span> DataContractJsonSerializer userSerializer
-        = <span class="kwrd">new</span> DataContractJsonSerializer(<span class="kwrd">typeof</span>(FacebookUser));
+    readonly static DataContractJsonSerializer userSerializer
+        = new DataContractJsonSerializer(typeof(FacebookUser));
 
-    <span class="kwrd">protected</span> <span class="kwrd">override</span> <span class="kwrd">void</span> OnLoad(EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
-        <span class="kwrd">base</span>.OnLoad(e);
-        <span class="kwrd">if</span> (!IsPostBack)
+        base.OnLoad(e);
+        if (!IsPostBack)
         {
-            <span class="kwrd">string</span> code = Request.QueryString[<span class="str">"code"</span>];
-            <span class="kwrd">string</span> error_description = Request.QueryString[<span class="str">"error_description"</span>];
-            <span class="kwrd">string</span> originalReturnUrl = Request.QueryString[<span class="str">"ReturnUrl"</span>]; <span class="rem">// asp.net logon param</span>
-            Uri backHereUri = Request.Url; <span class="rem">// modify for dev server</span>
-            <span class="kwrd">if</span> (!<span class="kwrd">string</span>.IsNullOrEmpty(code)) <span class="rem">// user is authenticated</span>
+            string code = Request.QueryString["code"];
+            string error_description = Request.QueryString["error_description"];
+            string originalReturnUrl = Request.QueryString["ReturnUrl"]; // asp.net logon param
+            Uri backHereUri = Request.Url; // modify for dev server
+            if (!string.IsNullOrEmpty(code)) // user is authenticated
             {
                 FacebookUser me = GetUserDetails(code, backHereUri);
-                FormsAuthentication.SetAuthCookie(me.email, <span class="kwrd">false</span>); <span class="rem">// authorize!</span>
-                <span class="kwrd">if</span> (!<span class="kwrd">string</span>.IsNullOrEmpty(originalReturnUrl))
+                FormsAuthentication.SetAuthCookie(me.email, false); // authorize!
+                if (!string.IsNullOrEmpty(originalReturnUrl))
                     Response.Redirect(originalReturnUrl);
             }
-            <span class="kwrd">if</span> (!<span class="kwrd">string</span>.IsNullOrEmpty(error_description)) <span class="rem">// user propably disallowed</span>
+            if (!string.IsNullOrEmpty(error_description)) // user propably disallowed
             {
                 OnError(error_description);
             }
             fbLogin.Visible = !User.Identity.IsAuthenticated;
-            fbLogin.NavigateUrl = <span class="kwrd">string</span>.Format(
+            fbLogin.NavigateUrl = string.Format(
                 CultureInfo.InvariantCulture,
-                <span class="str">"https://www.facebook.com/dialog/oauth?"</span>
-                + <span class="str">"client_id={0}&amp;scope={1}&amp;redirect_uri={2}"</span>,
+                "https://www.facebook.com/dialog/oauth?"
+                + "client_id={0}&scope={1}&redirect_uri={2}",
                 App_ID,
                 scope,
                 Uri.EscapeDataString(backHereUri.OriginalString));
         }
     }
 
-    FacebookUser GetUserDetails(<span class="kwrd">string</span> code, Uri backHereUri)
+    FacebookUser GetUserDetails(string code, Uri backHereUri)
     {
-        Uri getTokenUri = <span class="kwrd">new</span> Uri(
-            <span class="kwrd">string</span>.Format(
+        Uri getTokenUri = new Uri(
+            string.Format(
             CultureInfo.InvariantCulture,
-            <span class="str">"https://graph.facebook.com/oauth/access_token?"</span>
-            + <span class="str">"client_id={0}&amp;client_secret={1}&amp;code={2}&amp;redirect_uri={3}"</span>,
+            "https://graph.facebook.com/oauth/access_token?"
+            + "client_id={0}&client_secret={1}&code={2}&redirect_uri={3}",
             App_ID,
             App_Secret,
             Uri.EscapeDataString(code),
             Uri.EscapeDataString(backHereUri.OriginalString))
             );
-        <span class="kwrd">using</span> (var wc = <span class="kwrd">new</span> WebClient())
+        using (var wc = new WebClient())
         {
-            <span class="kwrd">string</span> token = wc.DownloadString(getTokenUri);
-            Uri getMeUri = <span class="kwrd">new</span> Uri(
-                <span class="kwrd">string</span>.Format(
+            string token = wc.DownloadString(getTokenUri);
+            Uri getMeUri = new Uri(
+                string.Format(
                 CultureInfo.InvariantCulture,
-                <span class="str">"https://graph.facebook.com/me?{0}"</span>,
+                "https://graph.facebook.com/me?{0}",
                 token)
                 );
-            <span class="kwrd">using</span> (var ms = <span class="kwrd">new</span> MemoryStream(wc.DownloadData(getMeUri)))
+            using (var ms = new MemoryStream(wc.DownloadData(getMeUri)))
             {
                 var me = (FacebookUser)userSerializer.ReadObject(ms);
-                <span class="kwrd">return</span> me;
+                return me;
             }
         }
     }
 
-    <span class="kwrd">void</span> OnError(<span class="kwrd">string</span> error_description)
+    void OnError(string error_description)
     {
-        Controls.Add(<span class="kwrd">new</span> Label() { 
-            CssClass = <span class="str">"oauth-error"</span>, 
+        Controls.Add(new Label() { 
+            CssClass = "oauth-error", 
             Text = error_description 
         });
     }
 
     [Serializable]
-    <span class="kwrd">class</span> FacebookUser
+    class FacebookUser
     { 
-        <span class="kwrd">public</span> <span class="kwrd">long</span> id;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> name;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> first_name;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> last_name;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> link;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> email;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> timezone;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> locale;
-        <span class="kwrd">public</span> <span class="kwrd">bool</span> verified;
-        <span class="kwrd">public</span> <span class="kwrd">string</span> updated_time;        
+        public long id;
+        public string name;
+        public string first_name;
+        public string last_name;
+        public string link;
+        public string email;
+        public string timezone;
+        public string locale;
+        public bool verified;
+        public string updated_time;        
     }
-}</code></pre>
-
+}
+```

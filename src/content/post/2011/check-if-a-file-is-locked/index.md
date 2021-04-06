@@ -14,23 +14,24 @@ title: Check if a file is locked
 
 One notable feature that is missing from the IO section of the .NET base class library is a way to check if a file is locked. When opening a file the [ OpenFile](http://msdn.microsoft.com/en-us/library/aa365430(v=vs.85).aspx) et al API methods does actually provide the information, we just have to [ dig a little](http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.marshal.gethrforexception.aspx) to discover it.   
 
-<pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">bool</span> IsFileLocked(<span class="kwrd">string</span> filename)
+```C#
+static bool IsFileLocked(string filename)
 {
-    <span class="kwrd">bool</span> locked = <span class="kwrd">false</span>;
-    <span class="kwrd">try</span>
+    bool locked = false;
+    try
     {
         File.Open(filename, FileMode.Open, FileAccess.ReadWrite, FileShare.None).Dispose();
     }
-    <span class="kwrd">catch</span> (IOException e)
+    catch (IOException e)
     {
-        <span class="kwrd">const</span> <span class="kwrd">int</span> ERROR_SHARING_VIOLATION = 0x20;
-        <span class="kwrd">const</span> <span class="kwrd">int</span> ERROR_LOCK_VIOLATION = 0x21;
-        <span class="kwrd">int</span> errorCode = Marshal.GetHRForException(e) &amp; ((1 &lt;&lt; 16) - 1);
+        const int ERROR_SHARING_VIOLATION = 0x20;
+        const int ERROR_LOCK_VIOLATION = 0x21;
+        int errorCode = Marshal.GetHRForException(e) & ((1 << 16) - 1);
         locked = errorCode == ERROR_SHARING_VIOLATION
                || errorCode == ERROR_LOCK_VIOLATION;
-        <span class="kwrd">if</span> (!locked)
-            <span class="kwrd">throw</span>;                
+        if (!locked)
+            throw;                
     }
-    <span class="kwrd">return</span> locked;
-}</code></pre>
-
+    return locked;
+}
+```
