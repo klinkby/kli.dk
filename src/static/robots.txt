@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /lib/?
+Disallow: /js/?
+Disallow: /css/?
+Disallow: /404/
+Disallow: /post/.archive/?
+
+Sitemap: https://www.kli.dk/sitemap.xml
