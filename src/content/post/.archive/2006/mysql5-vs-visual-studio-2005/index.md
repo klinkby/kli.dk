@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: mysql5-vs-visual-studio-2005
 tags:
-- .net
+- dotnet
 title: MySQL5 vs Visual Studio 2005
 ---
 

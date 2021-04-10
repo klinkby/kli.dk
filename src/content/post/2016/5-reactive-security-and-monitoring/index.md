@@ -1,7 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
-- hardening
+author: "@klinkby"
+keywords:
 - monitor
 - security
 date: "2016-04-22T18:01:08Z"
@@ -9,7 +8,6 @@ description: ""
 draft: false
 slug: 5-reactive-security-and-monitoring
 tags:
-- hardening
 - monitor
 - security
 title: 'Hardening web apps: 5. Reactive security and monitoring'

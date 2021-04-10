@@ -1,21 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- code
+author: "@klinkby"
+keywords:
 - dotnet
-- programming
-- stream
 date: "2010-11-30T23:00:00Z"
 description: ""
 draft: false
 slug: stream-copyto-snippet
 tags:
-- .net
-- code
 - dotnet
-- programming
-- stream
 title: Stream.CopyTo
 ---
 

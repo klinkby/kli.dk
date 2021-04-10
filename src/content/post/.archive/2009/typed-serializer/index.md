@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-08-10T22:00:00Z"
 description: ""
 draft: false
 slug: typed-serializer
 tags:
-- .net
+- dotnet
 title: Typed binary stream reader/writer
 ---
 

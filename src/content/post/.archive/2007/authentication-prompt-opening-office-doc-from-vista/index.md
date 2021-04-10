@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-12-02T23:00:00Z"
 description: ""
 draft: false
 slug: authentication-prompt-opening-office-doc-from-vista
 tags:
-- .net
+- dotnet
 title: Office proxy
 ---
 

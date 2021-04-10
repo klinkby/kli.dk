@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-06-18T22:00:00Z"
 description: ""
 draft: false
 slug: windows-workstation-2008
 tags:
-- .net
+- dotnet
 title: Windows Workstation 2008
 ---
 

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-03-08T23:00:00Z"
 description: ""
 draft: false
 slug: certified-scrummaster
 tags:
-- .net
+- dotnet
 title: Certified ScrumMaster
 ---
 

@@ -1,17 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - pattern
-- stream
 date: "2011-09-21T22:00:00Z"
 description: ""
 draft: false
 slug: decorator-stream
 tags:
-- .net
+- dotnet
 - pattern
-- stream
 title: DecoratorStream
 ---
 

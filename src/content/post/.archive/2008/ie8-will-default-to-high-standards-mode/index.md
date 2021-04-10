@@ -1,7 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
-- ie
+author: "@klinkby"
+keywords:
 - microsoft
 - www
 date: "2008-03-09T23:00:00Z"
@@ -9,7 +8,6 @@ description: ""
 draft: false
 slug: ie8-will-default-to-high-standards-mode
 tags:
-- ie
 - microsoft
 - www
 title: IE8 will default to high standards mode

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-05-11T22:00:00Z"
 description: ""
 draft: false
 slug: linq-regex-pure-power
 tags:
-- .net
+- dotnet
 title: Linq + Regex = pure power
 ---
 

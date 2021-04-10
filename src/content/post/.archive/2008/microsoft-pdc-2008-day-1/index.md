@@ -1,17 +1,17 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - microsoft
-- pdc2008
+- soap
 date: "2008-10-26T23:00:00Z"
 description: ""
 draft: false
 slug: microsoft-pdc-2008-day-1
 tags:
-- .net
+- dotnet
 - microsoft
-- pdc2008
+- soap
 title: Microsoft PDC 2008 day 1
 ---
 

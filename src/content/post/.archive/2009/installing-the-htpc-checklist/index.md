@@ -1,7 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - gadgets
 - microsoft
 - technology
@@ -10,7 +10,7 @@ description: ""
 draft: false
 slug: installing-the-htpc-checklist
 tags:
-- .net
+- dotnet
 - gadgets
 - microsoft
 - technology

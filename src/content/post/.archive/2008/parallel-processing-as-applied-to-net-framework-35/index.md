@@ -1,17 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- parallel
-- threadpool
+author: "@klinkby"
+keywords:
+- dotnet
+- performance
 date: "2008-01-24T23:00:00Z"
 description: ""
 draft: false
 slug: parallel-processing-as-applied-to-net-framework-35
 tags:
-- .net
-- parallel
-- threadpool
+- dotnet
+- performance
 title: Parallel for 3.5
 ---
 

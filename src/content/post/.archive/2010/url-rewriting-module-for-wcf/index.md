@@ -1,23 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
-- httpmodule
-- ihttpmodule
-- iis
-- wcf
+author: "@klinkby"
+keywords:
+- dotnet
+- soap
 date: "2010-11-02T23:00:00Z"
 description: ""
 draft: false
 slug: url-rewriting-module-for-wcf
 tags:
-- .net
-- asp.net
-- httpmodule
-- ihttpmodule
-- iis
-- wcf
+- dotnet
+- soap
 title: URL Rewriting Module for WCF
 ---
 

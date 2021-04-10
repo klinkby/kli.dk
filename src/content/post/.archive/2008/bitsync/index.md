@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-01-18T23:00:00Z"
 description: ""
 draft: false
 slug: bitsync
 tags:
-- .net
+- dotnet
 title: BITSync
 ---
 

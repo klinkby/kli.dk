@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - security
 date: "2016-03-25T23:00:00Z"
 description: ""

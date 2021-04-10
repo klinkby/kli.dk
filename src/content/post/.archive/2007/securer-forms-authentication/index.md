@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-08-18T22:00:00Z"
 description: ""
 draft: false
 slug: securer-forms-authentication
 tags:
-- .net
+- dotnet
 title: Securer Forms authentication
 ---
 

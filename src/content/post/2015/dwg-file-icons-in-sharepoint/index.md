@@ -1,19 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- file
+author: "@klinkby"
+keywords:
 - sharepoint
-- sp
-- type
+- media
 date: "2015-07-01T22:00:00Z"
 description: ""
 draft: false
 slug: dwg-file-icons-in-sharepoint
 tags:
-- file
 - sharepoint
-- sp
-- type
+- media
 title: DWG File Icons in SharePoint
 ---
 

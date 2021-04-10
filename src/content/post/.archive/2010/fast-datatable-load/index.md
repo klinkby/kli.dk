@@ -1,19 +1,17 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - data
 - performance
-- reflection
 date: "2010-11-24T23:00:00Z"
 description: ""
 draft: false
 slug: fast-datatable-load
 tags:
-- .net
+- dotnet
 - data
 - performance
-- reflection
 title: Fast (dynamic) DataTable load
 ---
 

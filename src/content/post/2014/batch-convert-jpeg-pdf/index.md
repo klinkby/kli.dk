@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- convert
+author: "@klinkby"
+keywords:
+- media
 date: "2014-03-31T22:00:00Z"
 description: ""
 draft: false
 slug: batch-convert-jpeg-pdf
 tags:
-- convert
+- media
 title: Batch Convert JPGs to PDFs
 ---
 

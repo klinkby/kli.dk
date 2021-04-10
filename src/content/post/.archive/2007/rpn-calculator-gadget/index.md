@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-05-30T22:00:00Z"
 description: ""
 draft: false
 slug: rpn-calculator-gadget
 tags:
-- .net
+- dotnet
 title: RPN calculator gadget
 ---
 

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-06-05T22:00:00Z"
 description: ""
 draft: false
 slug: orcas-beta-1
 tags:
-- .net
+- dotnet
 title: Orcas Beta 1
 ---
 

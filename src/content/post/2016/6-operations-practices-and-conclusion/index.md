@@ -1,8 +1,8 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - azure
-- hardening
+- devops
 - security
 date: "2016-05-02T17:27:30Z"
 description: ""
@@ -10,7 +10,7 @@ draft: false
 slug: 6-operations-practices-and-conclusion
 tags:
 - azure
-- hardening
+- devops
 - security
 title: 'Hardening web apps: 6. Operations practices and conclusion'
 ---

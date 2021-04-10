@@ -1,13 +1,11 @@
 ---
-author: Mads Klinkby
-categories:
-- business
+author: "@klinkby"
+keywords:
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: gn-resound-and-otometrics-is-now-phonak
 tags:
-- business
 title: GN Resound and Otometrics is now Phonak
 ---
 

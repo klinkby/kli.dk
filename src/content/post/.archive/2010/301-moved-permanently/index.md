@@ -1,20 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
-- httpmodule
-- ihttpmodule
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 date: "2010-09-23T22:00:00Z"
 description: ""
 draft: false
 slug: 301-moved-permanently
 tags:
-- .net
-- asp.net
-- httpmodule
-- ihttpmodule
+- dotnet
 - www
 title: 301 Moved Permanently
 ---

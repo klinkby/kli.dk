@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-03-03T23:00:00Z"
 description: ""
 draft: false
 slug: events-a-la-c-30
 tags:
-- .net
+- dotnet
 title: Events a la C# 3.0
 ---
 

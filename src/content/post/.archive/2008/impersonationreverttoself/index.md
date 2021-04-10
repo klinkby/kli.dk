@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-09-08T22:00:00Z"
 description: ""
 draft: false
 slug: impersonationreverttoself
 tags:
-- .net
+- dotnet
 title: Impersonation.RevertToSelf()
 ---
 

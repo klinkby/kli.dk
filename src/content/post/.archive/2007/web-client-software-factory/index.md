@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-04-12T22:00:00Z"
 description: ""
 draft: false
 slug: web-client-software-factory
 tags:
-- .net
+- dotnet
 title: Web Client Software Factory
 ---
 

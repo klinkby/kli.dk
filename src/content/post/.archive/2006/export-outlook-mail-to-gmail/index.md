@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - gadgets
 - technology
 date: "2006-11-08T23:00:00Z"

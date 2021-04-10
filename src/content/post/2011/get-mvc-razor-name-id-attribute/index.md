@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 date: "2011-08-11T22:00:00Z"
 description: ""
 draft: false
 slug: get-mvc-razor-name-id-attribute
 tags:
-- .net
+- dotnet
 - www
 title: Getting Razor component id
 ---

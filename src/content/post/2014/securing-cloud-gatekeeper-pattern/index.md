@@ -1,8 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - azure
-- hacking
 - security
 date: "2014-07-05T22:00:00Z"
 description: ""
@@ -10,7 +9,6 @@ draft: false
 slug: securing-cloud-gatekeeper-pattern
 tags:
 - azure
-- hacking
 - security
 title: Securing cloud apps
 ---

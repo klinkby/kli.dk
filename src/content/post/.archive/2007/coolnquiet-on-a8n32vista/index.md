@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-03-16T23:00:00Z"
 description: ""
 draft: false
 slug: coolnquiet-on-a8n32vista
 tags:
-- .net
+- dotnet
 title: Cool’n’Quiet on A8N32/Vista
 ---
 

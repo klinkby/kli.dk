@@ -1,15 +1,11 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- configuration
+author: "@klinkby"
+keywords:
 date: "2011-06-29T22:00:00Z"
 description: ""
 draft: false
 slug: virtualbox-config-fix
 tags:
-- .net
-- configuration
 title: VirtualBox Config Workaround
 ---
 

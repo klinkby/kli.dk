@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-09-03T22:00:00Z"
 description: ""
 draft: false
 slug: visual-studio-t4
 tags:
-- .net
+- dotnet
 title: VS2008 template for immutables
 ---
 

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-03-26T22:00:00Z"
 description: ""
 draft: false
 slug: namespace-klinkbyxna
 tags:
-- .net
+- dotnet
 title: namespace Klinkby.Xna
 ---
 

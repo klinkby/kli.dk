@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2010-10-26T22:00:00Z"
 description: ""
 draft: false
 slug: changing-the-querystring-in-an-uri
 tags:
-- .net
+- dotnet
 title: Changing the querystring in an Uri
 ---
 

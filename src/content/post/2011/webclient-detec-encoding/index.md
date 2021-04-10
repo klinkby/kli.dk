@@ -1,18 +1,16 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
 - dotnet
-- download
+- dotnet
 - xml
 date: "2011-06-22T22:00:00Z"
 description: ""
 draft: false
 slug: webclient-detec-encoding
 tags:
-- .net
 - dotnet
-- download
+- dotnet
 - xml
 title: Read from WebClient with the right encoding
 ---

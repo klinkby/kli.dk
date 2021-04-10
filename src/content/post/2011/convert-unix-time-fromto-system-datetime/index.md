@@ -1,19 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- convert
+author: "@klinkby"
+keywords:
 - dotnet
-- programming
 date: "2011-04-25T22:00:00Z"
 description: ""
 draft: false
 slug: convert-unix-time-fromto-system-datetime
 tags:
-- .net
-- convert
 - dotnet
-- programming
 title: Convert Unix Time from/to System.DateTime
 ---
 

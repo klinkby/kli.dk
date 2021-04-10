@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: get-languages-spoken-by-an-assembly
 tags:
-- .net
+- dotnet
 title: Get languages spoken by an assembly
 ---
 

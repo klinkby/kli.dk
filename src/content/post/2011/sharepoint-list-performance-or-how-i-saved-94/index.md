@@ -1,7 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - performance
 - sharepoint
 date: "2011-10-12T22:00:00Z"
@@ -9,7 +9,7 @@ description: ""
 draft: false
 slug: sharepoint-list-performance-or-how-i-saved-94
 tags:
-- .net
+- dotnet
 - performance
 - sharepoint
 title: SharePoint List Performance

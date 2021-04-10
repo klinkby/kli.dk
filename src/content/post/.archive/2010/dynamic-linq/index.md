@@ -1,17 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- generic
-- linq
+author: "@klinkby"
+keywords:
+- dotnet
+- pattern
 date: "2010-01-18T23:00:00Z"
 description: ""
 draft: false
 slug: dynamic-linq
 tags:
-- .net
-- generic
-- linq
+- dotnet
+- pattern
 title: Validation rules engine
 ---
 

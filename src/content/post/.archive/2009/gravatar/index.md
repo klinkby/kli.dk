@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 date: "2009-04-29T22:00:00Z"
 description: ""
 draft: false
 slug: gravatar
 tags:
-- .net
+- dotnet
 - www
 title: Gravatar
 ---

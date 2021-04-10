@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-06-06T22:00:00Z"
 description: ""
 draft: false
 slug: environmental-issue
 tags:
-- .net
+- dotnet
 title: Environmental issue
 ---
 

@@ -1,16 +1,20 @@
 ---
-author: Mads Klinkby
+author: "@klinkby"
 date: "2020-08-01T19:01:30Z"
 description: "Moved my blog to Hugo static site"
 draft: false
 slug: hugo
 title: Hugo
 tags:
-- blog
 - www
-categories:
-- blog
+- cms
+- azure
+- devops
+keywords:
 - www
+- cms
+- azure
+- devops
 ---
 
 # Hugo

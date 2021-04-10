@@ -1,3 +1,3 @@
 pushd src
-..\hugo server
+..\hugo server --disableFastRender
 popd

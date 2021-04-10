@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-06-17T22:00:00Z"
 description: ""
 draft: false
 slug: nvraid-errors
 tags:
-- .net
+- dotnet
 title: nVRAID errors
 ---
 

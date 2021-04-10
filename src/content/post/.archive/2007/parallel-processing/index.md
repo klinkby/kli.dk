@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-07-02T22:00:00Z"
 description: ""
 draft: false
 slug: parallel-processing
 tags:
-- .net
+- dotnet
 title: Parallel processing
 ---
 

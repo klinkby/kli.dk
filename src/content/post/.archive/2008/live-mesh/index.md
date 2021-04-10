@@ -1,7 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - mesh
 - microsoft
 - www
@@ -10,7 +10,7 @@ description: ""
 draft: false
 slug: live-mesh
 tags:
-- .net
+- dotnet
 - mesh
 - microsoft
 - www

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-06-16T22:00:00Z"
 description: ""
 draft: false
 slug: substringbefore-and-substringafter-for-net
 tags:
-- .net
+- dotnet
 title: SubstringBefore and SubstringAfter for .NET
 ---
 

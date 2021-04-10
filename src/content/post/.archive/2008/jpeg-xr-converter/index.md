@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-03-28T23:00:00Z"
 description: ""
 draft: false
 slug: jpeg-xr-converter
 tags:
-- .net
+- dotnet
 title: JPEG XR converter
 ---
 

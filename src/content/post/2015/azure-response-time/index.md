@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - azure
 - performance
 date: "2015-09-30T22:00:00Z"

@@ -1,16 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 date: "2008-12-30T23:00:00Z"
 description: ""
 draft: false
 slug: site-refresh
 tags:
-- .net
-- asp.net
+- dotnet
 - www
 title: Site refresh
 ---

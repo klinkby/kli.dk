@@ -1,19 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
 - dotnet
-- generic
-- programming
+- pattern   
 date: "2011-07-18T22:00:00Z"
 description: ""
 draft: false
 slug: generic-iterator
 tags:
-- .net
 - dotnet
-- generic
-- programming
+- pattern
 title: Generic Iterator
 ---
 

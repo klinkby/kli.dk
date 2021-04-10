@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - music
 date: "2007-09-20T22:00:00Z"
 description: ""

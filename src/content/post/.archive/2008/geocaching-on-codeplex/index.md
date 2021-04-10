@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-12-27T23:00:00Z"
 description: ""
 draft: false
 slug: geocaching-on-codeplex
 tags:
-- .net
+- dotnet
 title: Geocaching on Codeplex
 ---
 

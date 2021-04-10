@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-02-01T23:00:00Z"
 description: ""
 draft: false
 slug: class-cached-part-1
 tags:
-- .net
+- dotnet
 title: class Cached - Part 1
 ---
 

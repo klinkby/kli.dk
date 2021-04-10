@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - microsoft
 date: "2008-11-18T23:00:00Z"
 description: ""
 draft: false
 slug: taking-up-modeling
 tags:
-- .net
+- dotnet
 - microsoft
 title: Taking up Modeling
 ---

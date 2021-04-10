@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-10-02T22:00:00Z"
 description: ""
 draft: false
 slug: pipes-and-filters
 tags:
-- .net
+- dotnet
 title: Pipes and Filters
 ---
 

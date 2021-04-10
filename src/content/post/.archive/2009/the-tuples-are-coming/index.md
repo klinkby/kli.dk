@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-08-08T22:00:00Z"
 description: ""
 draft: false
 slug: the-tuples-are-coming
 tags:
-- .net
+- dotnet
 title: The Tuples Are Coming
 ---
 

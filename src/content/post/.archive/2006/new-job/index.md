@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - business
 date: "2006-11-28T23:00:00Z"
 description: ""

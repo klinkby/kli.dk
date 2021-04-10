@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - dotnet
 - microsoft
 - monitor
@@ -8,7 +8,7 @@ categories:
 date: "2016-07-06T06:32:04Z"
 description: ""
 draft: false
-image: /images/2017/09/et-phone-home.gif
+image: /images/2017/09/et_phone_home_extra_terrestrial.jpg
 slug: opt-out-from-net-core-telemetry
 tags:
 - dotnet
@@ -17,7 +17,7 @@ tags:
 - security
 title: Opt out from .NET Core telemetry
 ---
-
+![image](/images/2017/09/et_phone_home_extra_terrestrial.jpg)
 # Opt out from .NET Core telemetry
 
 So Microsoft decided that the [.NET Core](https://github.com/dotnet/core) Tools should "phone home" with [telemetry](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/telemetry) data it gathers while using the tools to e.g. run or build applications using .NET Core. 

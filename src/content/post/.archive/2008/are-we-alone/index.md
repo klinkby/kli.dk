@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-09-10T22:00:00Z"
 description: ""
 draft: false
 slug: are-we-alone
 tags:
-- .net
+- dotnet
 title: Are we alone?
 ---
 

@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- hardening
+author: "@klinkby"
+keywords:
+- www
 - security
 date: "2016-04-11T22:00:00Z"
 description: ""
 draft: false
 slug: 4-browser-headers
 tags:
-- hardening
+- www
 - security
 title: 'Hardening web apps: 4. Browser cross site attacks'
 ---

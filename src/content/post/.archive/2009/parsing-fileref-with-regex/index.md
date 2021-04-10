@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-03-15T23:00:00Z"
 description: ""
 draft: false
 slug: parsing-fileref-with-regex
 tags:
-- .net
+- dotnet
 title: Parsing FileRef with Regex
 ---
 

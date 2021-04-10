@@ -1,7 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - type
 - xml
 date: "2007-10-04T22:00:00Z"
@@ -9,7 +9,7 @@ description: ""
 draft: false
 slug: transparent-and-type-safe-system-decoupling
 tags:
-- .net
+- dotnet
 - type
 - xml
 title: Transparent and type safe system decoupling

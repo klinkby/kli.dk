@@ -1,11 +1,8 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - javascript
-- quirks
 - sharepoint
-- sp
-- sp2010
 - www
 date: "2012-06-18T22:00:00Z"
 description: ""
@@ -13,10 +10,7 @@ draft: false
 slug: editing-a-sp2010-ent-wiki-page-in-ie9-standards-mode
 tags:
 - javascript
-- quirks
 - sharepoint
-- sp
-- sp2010
 - www
 title: SP2010 vs IE
 ---

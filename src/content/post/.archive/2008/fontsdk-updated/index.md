@@ -1,18 +1,16 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - business
-- download
 - www
 date: "2008-08-13T22:00:00Z"
 description: ""
 draft: false
 slug: fontsdk-updated
 tags:
-- .net
+- dotnet
 - business
-- download
 - www
 title: FoNTSdk updated
 ---

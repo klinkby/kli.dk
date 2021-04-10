@@ -1,23 +1,17 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
-- programming
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 - xml
-- xsl
 date: "2011-01-19T23:00:00Z"
 description: ""
 draft: false
 slug: asp-net-xslt-control
 tags:
-- .net
-- asp.net
-- programming
+- dotnet
 - www
 - xml
-- xsl
 title: ASP.NET XSLT Control
 ---
 

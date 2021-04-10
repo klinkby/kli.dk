@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - sharepoint
 - microsoft
 date: "2018-01-11T20:33:26Z"
@@ -13,7 +13,7 @@ tags:
 - microsoft
 title: Most awesome SharePoint resources
 ---
-
+![image](/images/2018/01/Sharepoint-Logo-Puzzle-Feature_1290x688_KL-e1481570115141.jpg)
 # Most awesome SharePoint resources
 
 SharePoint has been around for more than 15 years and has grown into a highly complex ~~~beast~~~ product with an incredibly wide range of use.

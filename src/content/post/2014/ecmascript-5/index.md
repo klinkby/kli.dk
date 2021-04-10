@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - javascript
 date: "2014-03-18T23:00:00Z"
 description: ""

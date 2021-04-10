@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: x2-overclocking-adventures
 tags:
-- .net
+- dotnet
 title: X2 overclocking adventures
 ---
 

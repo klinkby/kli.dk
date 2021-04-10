@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2008-02-25T23:00:00Z"
 description: ""
 draft: false
 slug: enumerable-stream
 tags:
-- .net
+- dotnet
 title: Enumerable stream
 ---
 

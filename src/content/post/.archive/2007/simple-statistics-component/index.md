@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-01-28T23:00:00Z"
 description: ""
 draft: false
 slug: simple-statistics-component
 tags:
-- .net
+- dotnet
 title: Simple statistics component
 ---
 

@@ -1,16 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
+author: "@klinkby"
+keywords:
+- dotnet
 - www
 date: "2011-10-24T22:00:00Z"
 description: ""
 draft: false
 slug: xcopy-asp-net-deployment
 tags:
-- .net
-- asp.net
+- dotnet
 - www
 title: Minimalist's build script for ASP.NET projects
 ---

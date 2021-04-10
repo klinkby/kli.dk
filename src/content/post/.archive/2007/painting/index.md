@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-03-25T22:00:00Z"
 description: ""
 draft: false
 slug: painting
 tags:
-- .net
+- dotnet
 title: Painting
 ---
 

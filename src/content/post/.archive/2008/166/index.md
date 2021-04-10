@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - powershell
 date: "2008-09-16T22:00:00Z"
 description: ""
 draft: false
 slug: "166"
 tags:
-- .net
+- dotnet
 - powershell
 title: LDAP query in PowerShell
 ---

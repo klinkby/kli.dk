@@ -1,18 +1,12 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
-- code
+author: "@klinkby"
+keywords:
 - dotnet
 date: "2013-01-22T23:00:00Z"
 description: ""
 draft: false
 slug: running-background-tasks
 tags:
-- .net
-- asp.net
-- code
 - dotnet
 title: Running background tasks
 ---

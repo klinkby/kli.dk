@@ -1,18 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- ie
+author: "@klinkby"
+keywords:
 - javascript
-- quirks
 - www
 date: "2011-09-20T22:00:00Z"
 description: ""
 draft: false
 slug: javascript-commas-in-ie
 tags:
-- ie
 - javascript
-- quirks
 - www
 title: JavaScript commas in IE
 ---

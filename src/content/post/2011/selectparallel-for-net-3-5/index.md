@@ -1,23 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- linq
-- parallel
+author: "@klinkby"
+keywords:
+- dotnet
 - performance
-- programming
-- threadpool
 date: "2011-03-14T23:00:00Z"
 description: ""
 draft: false
 slug: selectparallel-for-net-3-5
 tags:
-- .net
-- linq
-- parallel
+- dotnet
 - performance
-- programming
-- threadpool
 title: SelectParallel for .NET 3.5
 ---
 

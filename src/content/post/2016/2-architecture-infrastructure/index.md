@@ -1,16 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- guide
-- iis
+author: "@klinkby"
+keywords:
+- www
 - security
 date: "2016-03-19T23:00:00Z"
 description: ""
 draft: false
 slug: 2-architecture-infrastructure
 tags:
-- guide
-- iis
+- www
 - security
 title: 'Hardening web apps: 2. Architecture+infrastructure'
 ---

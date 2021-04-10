@@ -1,23 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- asp.net
-- code
+author: "@klinkby"
+keywords:
 - dotnet
-- programming
-- web
+- www
 date: "2011-02-02T23:00:00Z"
 description: ""
 draft: false
 slug: howto-simple-facebook-login-in-asp-net
 tags:
-- .net
-- asp.net
-- code
 - dotnet
-- programming
-- web
+- www
 title: 'How to: Simple Facebook login in ASP.NET'
 ---
 

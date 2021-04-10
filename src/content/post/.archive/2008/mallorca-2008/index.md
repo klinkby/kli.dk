@@ -1,5 +1,5 @@
 ---
-author: Mads Klinkby
+author: "@klinkby"
 date: "2008-07-15T22:00:00Z"
 description: ""
 draft: false

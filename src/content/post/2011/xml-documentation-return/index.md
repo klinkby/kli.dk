@@ -1,17 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - xml
-- xsl
 date: "2011-05-02T22:00:00Z"
 description: ""
 draft: false
 slug: xml-documentation-return
 tags:
-- .net
+- dotnet
 - xml
-- xsl
 title: Return value missing from xml doc
 ---
 

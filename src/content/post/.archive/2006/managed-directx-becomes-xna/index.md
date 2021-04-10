@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: managed-directx-becomes-xna
 tags:
-- .net
+- dotnet
 title: Managed DirectX becomes XNA
 ---
 

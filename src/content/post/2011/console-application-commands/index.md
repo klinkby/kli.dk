@@ -1,21 +1,17 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - dotnet
 - pattern
-- programming
-- reflection
 date: "2011-02-28T23:00:00Z"
 description: ""
 draft: false
 slug: console-application-commands
 tags:
-- .net
+- dotnet
 - dotnet
 - pattern
-- programming
-- reflection
 title: Commands in console application
 ---
 

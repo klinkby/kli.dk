@@ -1,17 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- log4net
-- nlog
+author: "@klinkby"
+keywords:
+- dotnet
+- monitor
 date: "2011-01-24T23:00:00Z"
 description: ""
 draft: false
 slug: aop-logging
 tags:
-- .net
-- log4net
-- nlog
+- dotnet
+- monitor
 title: AOP logging
 ---
 

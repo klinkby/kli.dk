@@ -1,8 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - microsoft
-- programming
 - sharepoint
 date: "2012-04-26T22:00:00Z"
 description: ""
@@ -10,7 +9,6 @@ draft: false
 slug: managing-sharepoint-feature-state-with-powershell
 tags:
 - microsoft
-- programming
 - sharepoint
 title: Managing SharePoint feature state
 ---

@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - sharepoint
 date: "2009-01-10T23:00:00Z"
 description: ""
 draft: false
 slug: recover-ws-hos
 tags:
-- .net
+- dotnet
 - sharepoint
 title: Recover from SharePoint HOS bug
 ---

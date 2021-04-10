@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2010-10-28T22:00:00Z"
 description: ""
 draft: false
 slug: exposing-ienumerables-and-events-via-idispatch
 tags:
-- .net
+- dotnet
 title: Exposing IEnumerables and events via IDispatch
 ---
 

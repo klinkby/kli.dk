@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-06-11T22:00:00Z"
 description: ""
 draft: false
 slug: mime-acts
 tags:
-- .net
+- dotnet
 title: Mime acts
 ---
 

@@ -1,16 +1,12 @@
 ---
-author: Mads Klinkby
-categories:
-- asp.net
-- hacking
+author: "@klinkby"
+keywords:
 - security
 date: "2014-01-02T23:00:00Z"
 description: ""
 draft: false
 slug: avoid-json-hijacking-with-web-api-odata
 tags:
-- asp.net
-- hacking
 - security
 title: Avoid JSON hijacking
 ---

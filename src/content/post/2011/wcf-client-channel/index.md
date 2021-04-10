@@ -1,19 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- code
-- programming
-- wcf
+author: "@klinkby"
+keywords:
+- dotnet
+- soap
 date: "2011-01-11T23:00:00Z"
 description: ""
 draft: false
 slug: wcf-client-channel
 tags:
-- .net
-- code
-- programming
-- wcf
+- dotnet
+- soap
 title: WCF Client Channel snippet
 ---
 

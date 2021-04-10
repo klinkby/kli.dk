@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-10-12T22:00:00Z"
 description: ""
 draft: false
 slug: microsoft-and-w3-standards-blues
 tags:
-- .net
+- dotnet
 title: Microsoft and W3 standards blues
 ---
 

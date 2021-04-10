@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - data
 date: "2011-11-09T23:00:00Z"
 description: ""

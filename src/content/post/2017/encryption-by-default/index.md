@@ -1,9 +1,8 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - security
 - docker
-- ghost
 - devops
 date: "2017-01-20T19:35:00Z"
 description: ""
@@ -13,11 +12,10 @@ slug: encryption-by-default
 tags:
 - security
 - docker
-- ghost
 - devops
 title: Encryption by default
 ---
-
+![image](/images/2017/09/chromesecurity_primary-100029482-large.jpg)
 # Encryption by default
 
 *Google is on the brink of releasing the next version of Chrome that marks the first of a number of changes to the security UX in the browser.*

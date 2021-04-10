@@ -1,15 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- computerworld
+author: "@klinkby"
+keywords:
+- media
 date: "2013-01-31T23:00:00Z"
 description: ""
 draft: false
 slug: computerworld-article
 tags:
-- .net
-- computerworld
+- media
 title: Computerworld article
 ---
 

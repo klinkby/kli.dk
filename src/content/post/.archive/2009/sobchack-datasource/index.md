@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-05-13T22:00:00Z"
 description: ""
 draft: false
 slug: sobchack-datasource
 tags:
-- .net
+- dotnet
 title: Sobchack.DataSource
 ---
 

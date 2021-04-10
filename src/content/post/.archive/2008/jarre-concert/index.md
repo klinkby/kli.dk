@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - music
 date: "2008-04-01T22:00:00Z"
 description: ""

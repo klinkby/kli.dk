@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-12-20T23:00:00Z"
 description: ""
 draft: false
 slug: reading-zip-files-from-net-20
 tags:
-- .net
+- dotnet
 title: Reading Zip files from .NET 2.0
 ---
 

@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - sharepoint
 date: "2009-03-31T22:00:00Z"
 description: ""
 draft: false
 slug: parsing-multivalued-sharepoint-fields-with-regex
 tags:
-- .net
+- dotnet
 - sharepoint
 title: Parsing multivalued SharePoint fields with Regex
 ---

@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - sharepoint
 date: "2009-01-19T23:00:00Z"
 description: ""

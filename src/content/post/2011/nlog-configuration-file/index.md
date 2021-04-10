@@ -1,19 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- log4net
+author: "@klinkby"
+keywords:
+- dotnet
 - monitor
-- nlog
 date: "2011-05-09T22:00:00Z"
 description: ""
 draft: false
 slug: nlog-configuration-file
 tags:
-- .net
-- log4net
+- dotnet
 - monitor
-- nlog
 title: NLog configuration file
 ---
 

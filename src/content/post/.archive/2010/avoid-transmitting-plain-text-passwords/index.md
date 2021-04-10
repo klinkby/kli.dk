@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2010-02-14T23:00:00Z"
 description: ""
 draft: false
 slug: avoid-transmitting-plain-text-passwords
 tags:
-- .net
+- dotnet
 title: Avoid transmitting plain text passwords
 ---
 

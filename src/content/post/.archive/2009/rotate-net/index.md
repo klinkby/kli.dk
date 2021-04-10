@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-05-18T22:00:00Z"
 description: ""
 draft: false
 slug: rotate-net
 tags:
-- .net
+- dotnet
 title: Rotate.NET
 ---
 

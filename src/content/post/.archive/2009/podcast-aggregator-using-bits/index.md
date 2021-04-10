@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2009-10-10T22:00:00Z"
 description: ""
 draft: false
 slug: podcast-aggregator-using-bits
 tags:
-- .net
+- dotnet
 title: Podcast aggregator using BITS
 ---
 

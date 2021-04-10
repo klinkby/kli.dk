@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2006-11-07T23:00:00Z"
 description: ""
 draft: false
 slug: outlook-2007-navigation-pane
 tags:
-- .net
+- dotnet
 title: Outlook 2007 Navigation Pane
 ---
 

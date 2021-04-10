@@ -1,16 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- file
+author: "@klinkby"
+keywords:
+- dotnet
 - performance
 date: "2011-05-24T22:00:00Z"
 description: ""
 draft: false
 slug: iterate-folders-non-recursively
 tags:
-- .net
-- file
+- dotnet
 - performance
 title: Iterate folders non-recursively
 ---

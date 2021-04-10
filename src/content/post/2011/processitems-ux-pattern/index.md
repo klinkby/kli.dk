@@ -1,19 +1,17 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - dotnet
 - pattern
-- programming
 date: "2011-07-21T22:00:00Z"
 description: ""
 draft: false
 slug: processitems-ux-pattern
 tags:
-- .net
+- dotnet
 - dotnet
 - pattern
-- programming
 title: ProcessItems UX pattern
 ---
 

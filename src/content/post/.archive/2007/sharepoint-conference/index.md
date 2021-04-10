@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-02-14T23:00:00Z"
 description: ""
 draft: false
 slug: sharepoint-conference
 tags:
-- .net
+- dotnet
 title: SharePoint Conference
 ---
 

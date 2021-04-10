@@ -1,23 +1,21 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- configuration
+author: "@klinkby"
+keywords:
+- dotnet
+- devops
 - sharepoint
-- sp
-- sp2010
-- web
+- www
+- soap
 date: "2010-12-09T23:00:00Z"
 description: ""
 draft: false
 slug: sharepoint-web-config-modifications
 tags:
-- .net
-- configuration
+- dotnet
+- devops
 - sharepoint
-- sp
-- sp2010
-- web
+- www
+- soap
 title: SharePoint web.config modifications
 ---
 

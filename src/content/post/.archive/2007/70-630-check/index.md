@@ -1,6 +1,6 @@
 ---
-author: Mads Klinkby
-categories:
+author: "@klinkby"
+keywords:
 - learning
 date: "2007-08-23T22:00:00Z"
 description: ""

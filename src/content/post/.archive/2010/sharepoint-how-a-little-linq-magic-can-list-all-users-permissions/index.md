@@ -1,14 +1,14 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 - sharepoint
 date: "2010-11-09T23:00:00Z"
 description: ""
 draft: false
 slug: sharepoint-how-a-little-linq-magic-can-list-all-users-permissions
 tags:
-- .net
+- dotnet
 - sharepoint
 title: Enumerate user's permissions
 ---

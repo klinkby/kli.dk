@@ -1,13 +1,15 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
+- soap
 date: "2007-05-26T22:00:00Z"
 description: ""
 draft: false
 slug: readyboost-monitor-gadget
 tags:
-- .net
+- dotnet
+- soap
 title: ReadyBoost Monitor Gadget
 ---
 

@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2011-04-13T22:00:00Z"
 description: ""
 draft: false
 slug: check-if-a-file-is-locked
 tags:
-- .net
+- dotnet
 title: Check if a file is locked
 ---
 

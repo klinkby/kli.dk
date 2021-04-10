@@ -1,13 +1,13 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
+- dotnet
 date: "2007-01-20T23:00:00Z"
 description: ""
 draft: false
 slug: skype-status-web-service
 tags:
-- .net
+- dotnet
 title: Skype status web service
 ---
 

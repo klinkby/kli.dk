@@ -1,21 +1,19 @@
 ---
-author: Mads Klinkby
-categories:
-- guide
-- iis
+author: "@klinkby"
+keywords:
+- www
 - security
 date: "2016-03-05T23:00:00Z"
 description: ""
 draft: false
-image: https://pbs.twimg.com/media/Cc4W711UEAE6HjT.jpg:large
+image: "/images/2016/hacker.jpg"
 slug: 1-hardening-web-apps-introduction
 tags:
-- guide
-- iis
+- www
 - security
 title: 'Hardening web apps: 1. Introduction'
 ---
-
+![image](/images/2016/hacker.jpg)
 # Hardening web apps: 1. Introduction
 
 It's okay. Exposing your latest web app implementation on the big bad internet should leave you somewhat anxious. While browsers have grown up to be more secure lately we are still a long way from secure-by-default, and [the list](https://www.owasp.org/index.php/Category:Attack) <span>of possible attack vectors against web apps is long enough to give *Chuck Norris* the shivers.</span>

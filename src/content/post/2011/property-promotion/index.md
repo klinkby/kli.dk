@@ -1,19 +1,16 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
+author: "@klinkby"
+keywords:
 - dotnet
 - sharepoint
-- sp2010
 date: "2011-05-23T22:00:00Z"
 description: ""
 draft: false
 slug: property-promotion
 tags:
-- .net
+- dotnet
 - dotnet
 - sharepoint
-- sp2010
 title: Document Property Promotion in SharePoint
 ---
 

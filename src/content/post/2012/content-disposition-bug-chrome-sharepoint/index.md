@@ -1,9 +1,7 @@
 ---
-author: Mads Klinkby
-categories:
-- .net
-- download
-- iis
+author: "@klinkby"
+keywords:
+- dotnet
 - sharepoint
 - www
 date: "2012-08-26T22:00:00Z"
@@ -11,9 +9,7 @@ description: ""
 draft: false
 slug: content-disposition-bug-chrome-sharepoint
 tags:
-- .net
-- download
-- iis
+- dotnet
 - sharepoint
 - www
 title: Comma SharePoint
