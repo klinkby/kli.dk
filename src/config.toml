@@ -7,7 +7,7 @@ copyright = "Klinkby"
 
 [params]
 
-  colortheme = "light"
+  colortheme = "dark"
   description = "Independent Enterprise- + Office 365 Solution Architect & full stack dev with head in the cloud and feet on the ground."
   mainSection = "post"
   showAllPostsOnHomePage = false

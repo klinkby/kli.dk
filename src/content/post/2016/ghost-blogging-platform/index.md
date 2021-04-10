@@ -34,3 +34,4 @@ You can git it from https://github.com/klinkby/ampsper
 My configuration file for Varnish redirects old Wordpress-style `/yyyy/mm/dd/slug` type URLs to `/slug`, and `/rss20.xml` to Ghost's feed endpoint `/rss/`. To speed up things it also allows 60 minutes cachability. Among others, it adds a specific Content Security Policy (CSP) HTTP header for AMP. On https://securityheaders.io/ it validates to A+ browser security. 
 See https://gist.github.com/klinkby/938759b66ba808e893b79a16e3ea1cab
 
+
