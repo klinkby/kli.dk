@@ -8,12 +8,12 @@ title: Hugo
 tags:
 - www
 - cms
-- azure
+- cloud
 - devops
 keywords:
 - www
 - cms
-- azure
+- cloud
 - devops
 ---
 

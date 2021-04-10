@@ -1,7 +1,7 @@
 ---
 author: "@klinkby"
 keywords:
-- azure
+- cloud
 - devops
 - security
 date: "2016-05-02T17:27:30Z"
@@ -9,7 +9,7 @@ description: ""
 draft: false
 slug: 6-operations-practices-and-conclusion
 tags:
-- azure
+- cloud
 - devops
 - security
 title: 'Hardening web apps: 6. Operations practices and conclusion'

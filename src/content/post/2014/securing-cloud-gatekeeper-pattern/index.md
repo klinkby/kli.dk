@@ -1,14 +1,14 @@
 ---
 author: "@klinkby"
 keywords:
-- azure
+- cloud
 - security
 date: "2014-07-05T22:00:00Z"
 description: ""
 draft: false
 slug: securing-cloud-gatekeeper-pattern
 tags:
-- azure
+- cloud
 - security
 title: Securing cloud apps
 ---

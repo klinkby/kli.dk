@@ -1,14 +1,14 @@
 ---
 author: "@klinkby"
 keywords:
-- azure
+- cloud
 - performance
 date: "2015-09-30T22:00:00Z"
 description: ""
 draft: false
 slug: azure-response-time
 tags:
-- azure
+- cloud
 - performance
 title: Azure Europe response times
 ---

@@ -3,13 +3,13 @@ author: "@klinkby"
 keywords:
 - www
 - cms
-- azure
+- cloud
 date: "2016-04-20T17:43:00Z"
 description: ""
 draft: false
 slug: ghost-blogging-platform
 tags:
-- azure
+- cloud
 - cms
 - www
 title: Ghost blogging platform
