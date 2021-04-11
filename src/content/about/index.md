@@ -3,6 +3,8 @@ author: "@klinkby"
 title: About me
 description: About me
 draft: false
+images:
+- "/images/klinkby.jpg"
 ---
 
 # About me

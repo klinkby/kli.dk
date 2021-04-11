@@ -17,6 +17,7 @@ copyright = "Klinkby"
   projectsUrl = "https://github.com/klinkby"
   rss = true
   themeVersion = "v2"
+  images = ["/images/logo.png"]
 
   [[params.social]]
   name = "twitter"

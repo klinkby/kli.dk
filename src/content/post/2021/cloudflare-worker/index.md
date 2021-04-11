@@ -1,15 +1,16 @@
 ---
-author: "@klinkby"
 date: "2021-04-08T20:00:00Z"
-description: "Cloudflare worker"
-slug: cloudflare-worker
 title: "Cloudflare Worker"
-draft: false
+description: "Can you add HTTP security headers and handle 404 responses properly in static websites? I use a 
+@Cloudflare Worker"
 tags:
 - www
 - cms
 - cloud
 - security
+images:
+- "/images/2021/cfw.jpg"
+
 ---
 
 # Adding a CloudFlare Worker 
