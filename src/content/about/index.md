@@ -1,7 +1,7 @@
 ---
 author: "@klinkby"
 title: About me
-description: About me
+description: "I'm an independent IT architect with my head in the cloud and feet on the ground."
 draft: false
 images:
 - "/images/klinkby.jpg"
@@ -32,6 +32,6 @@ You can reach me on twitter [@klinkby](https://twitter.com/klinkby) or email at
 
 ## Privacy policy
 
-This site adds no analytics or tracking cookies and does not collect information about you. Some "Strictly Necessary cookies" are set by CloudFlare CDN to serve the pages:
+This site adds no analytics or tracking cookies and [does not collect](https://2gdpr.com/705267172) information about you. Some "Strictly Necessary cookies" are set by CloudFlare CDN to serve the pages:
 
 > ...as part of our Services, we may place "`_cfduid`" cookies, bot detection cookies (such as "`_cf_bm`" and cookies for CAPTCHA), and a load balancing cookie (`_cflb`) on the computers of visitors to our Websites and of our End Users. We do this in order to identify malicious visitors to our Websites and our Customers’ websites, to assist with web-traffic filtration, and to reduce the chance of blocking legitimate users. You can learn more about these cookies [here](https://support.cloudflare.com/hc/en-us/articles/200170156-Understanding-the-Cloudflare-Cookies). You cannot turn off Strictly Necessary cookies.

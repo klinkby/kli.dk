@@ -12,6 +12,7 @@ tags:
 - cloud
 - cms
 - www
+- linux
 title: Ghost blogging platform
 ---
 

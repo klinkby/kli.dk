@@ -10,6 +10,7 @@ tags:
 - cms
 - cloud
 - devops
+- linux
 keywords:
 - www
 - cms

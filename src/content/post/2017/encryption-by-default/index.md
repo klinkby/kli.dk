@@ -13,6 +13,7 @@ tags:
 - security
 - docker
 - devops
+- linux
 title: Encryption by default
 ---
 ![image](/images/2017/09/chromesecurity_primary-100029482-large.jpg)

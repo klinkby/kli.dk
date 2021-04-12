@@ -8,7 +8,7 @@ copyright = "Klinkby"
 [params]
 
   colortheme = "dark"
-  description = "Independent IT architect with head in the cloud and feet on the ground."
+  description = "I'm an independent IT architect with my head in the cloud and feet on the ground."
   mainSection = "post"
   showAllPostsOnHomePage = false
   postsOnHomePage = 5
@@ -16,8 +16,9 @@ copyright = "Klinkby"
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
   rss = true
-  themeVersion = "v2"
-  images = ["/images/logo.png"]
+  themeVersion = "v3"
+#  images = ["/images/tw-def.png"]
+  authors = ["@klinkby"]
 
   [[params.social]]
   name = "twitter"
