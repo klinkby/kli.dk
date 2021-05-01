@@ -83,11 +83,25 @@ services:
     entrypoint: "tail -f /dev/null" 
 ```
 
-Your mileage may wary... For other middleware (that have as lousy documentation as Aspnet Core) running a `strace` command can help list open file descriptors for your service.   
+Your mileage may wary... For other middleware (that have as lousy documentation as Aspnet Core) running a `strace` 
+command can help list open file descriptors for your service. 
+
+If your service really need persistent data storage simply mount a volume from the host, like so:
+
+```yml
+version: '3.0'
+services:
+  ro_test:
+    image: alpine:3.13
+    read_only: true
+    volumes:                            # <==
+      - ./volumes/misc:/var/lib/misc    # <==
+    entrypoint: "tail -f /dev/null" 
+```
 
 ## Conclusion
 
 This blog post displayed some weaknesses with containers, and demonstrated how a read only filesystem can be a good step
 to reduce your container's runtime attack surface.  
 
-Next (upcoming) blog post will show how to reduce service account privileges. 
+[Next blog post](/post/2021/securing-docker-containers-2) will show how to reduce service account privileges. 
