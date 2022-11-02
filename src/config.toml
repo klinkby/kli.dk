@@ -22,7 +22,11 @@ copyright = "Klinkby"
 
   [[params.social]]
   name = "twitter"
-  link = "https://www.twitter.com/klinkby/"
+  link = "https://www.twitter.com/klinkby"
+
+  [[params.social]]
+  name = "mastodon"
+  link = "https://mastodon.social/@klinkby"
 
   [[params.social]]
   name = "github"
@@ -30,7 +34,7 @@ copyright = "Klinkby"
 
   [[params.social]]
   name = "linkedin"
-  link = "https://www.linkedin.com/in/klinkby/"
+  link = "https://www.linkedin.com/in/klinkby"
 
 # Main menu which appears below site header.
 [[menu.main]]
