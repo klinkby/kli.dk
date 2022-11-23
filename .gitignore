@@ -1,2 +1,4 @@
-src/public/**
-init.sh
+.dccache
+src/public/
+src/resources/
+src/themes/
