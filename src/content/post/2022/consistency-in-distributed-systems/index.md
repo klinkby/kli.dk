@@ -18,7 +18,7 @@ images:
 
 While distributed systems, in particular microservices have many obvious benefits, like the ability to deploy small contained units, scalability and so on, distributed systems also come at a cost. Some of which may not be obvious to developers that have more experience in monolithic- or client-side applications.
 
-Traditional monolithic applications usually come with a single ACID compliant database. That acronym's A is for Atomicity which means the database engine guarantees that a write transaction - event if it spans multiple entities and types of changes -  either completes in full or in rolls back to the starting point - there is no middle ground. Even if the monolithic application crash or server power outage at the very most critical moment, that database is consistent when the application restarts. Thank you, two-phase commit (2PC).
+Traditional monolithic applications usually come with a single ACID compliant database. That acronym's A is for Atomicity, which means the database engine guarantees that a write transaction - event if it spans multiple entities and types of changes -  either completes in full or in rolls back to the starting point - there is no middle ground. Even if the monolithic application crash or server power outage at the very most critical moment, that database is consistent when the application restarts. Thank you, two-phase commit (2PC).
 
 A unit of work in a single microservice should behave in exactly the same way. E.g. a PUT operation that change a resource cannot leave the resource in its persistent database in an inconsistent state. That is usually not too hard to achieve in simple operations, because locally, they can enjoy the same benefits as the monolithic application. 
 
@@ -38,7 +38,7 @@ Benefits of saga are low latency and no deadlocks, but because of the transactio
 
 ## Conclusion
 
-Changing data consistently across multiple distributed resource services requires careful design and implementation compared to its classic monolithic counterpart.
+Changing data consistently across multiple distributed resource services requires careful design and implementation compared to its classic monolithic counterpart. If strict atomicity is not required, consider using the [Saga-pattern](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga).
 
 ---
 
