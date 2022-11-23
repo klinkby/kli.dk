@@ -17,7 +17,7 @@ Recent 14 years as an independent, self-employed consultant with focus on enterp
 
 Often, I participate in communication with the business on analysis and documentation of processes and agile requirements specification, and either have an enterprise architect / strategic technical lead, or as solution architect that translate requirements into solid design decisions in a final solution.
 
-I am a big fan of agile processes like scrum and devops, and prefer lightweight architecture with a focus on creating business value. I value openness, secure-by-design and solid standards over products and vendor-specific frameworks or toolsets. 
+I am a big fan of agile processes like scrum and devops, and prefer lightweight architecture with a focus on creating business value. I value openness, secure-by-design and solid standards over products and vendor-specific frameworks or toolsets.
 
 Incidentally, I belong to the group of architects who can roll up their sleeves, and code complex logic. Although this is rarely my primary task, I often find it is useful in order to understand design decisions consequences that may unintentionally be putting brakes on developers.
 
@@ -26,7 +26,7 @@ See more on my [LinkedIn profile](https://linkedin.com/in/klinkby/), check out m
 
 ## Contact
 
-You can reach me on twitter [@klinkby](https://twitter.com/klinkby) or email at [m@kli.dk](mailto:m@kli.dk).
+You can reach me on [Twitter](https://twitter.com/klinkby), [Mastodon](https://fosstodon.org/@klinkby) or [email](mailto:m@kli.dk).
 
 ---
 

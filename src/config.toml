@@ -26,7 +26,7 @@ copyright = "Klinkby"
 
   [[params.social]]
   name = "mastodon"
-  link = "https://mastodon.social/@klinkby"
+  link = "https://fosstodon.org/@klinkby"
 
   [[params.social]]
   name = "github"
