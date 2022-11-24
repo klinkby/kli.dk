@@ -45,6 +45,6 @@ The following  helped me convert the site:
 
 - https://dwmkerr.com/migrating-from-ghost-to-hugo
 - https://github.com/jbarone/ghostToHugo
-- At some point I might add [CD like Andrew Connell suggests](https://www.andrewconnell.com/blog/automated-hugo-releases-with-github-actions/)
+- ~~At some point I might add [CD like Andrew Connell suggests](https://www.andrewconnell.com/blog/automated-hugo-releases-with-github-actions/)~~ That is now [built into Azure Static Webapps](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-hugo).
 
 Comments? Please reach me at [@klinkby](https://www.twitter.com/klinkby).
