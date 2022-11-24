@@ -34,7 +34,7 @@ For systems that can does not require guaranteed strict transactional integrity,
 
 Most commonly the "Saga"-pattern is implemented to achieve this. The saga handles the asynchronous execution of individual serivices, and may based on an event store or message bus for reliable execution. A simple saga can be fan-out or chain of service executions, which works well in handling transient faults, especially if the operation input can be reliably verified at initial reception. If a service fails deterministically, and the saga needs to be compensated to roll back, it clearly becomes more complex as the resource to compensate may be already changed by another transaction. Services that participate in sagas must be idempotent as operations might be retried.
 
-Benefits of saga are low latency and no deadlocks, but because of the transactions are distributed over systems and in time, they are hard to debug. Also for an appliation that observe state across multiple resources will see those transient inconsistencies.
+Benefits of saga are low latency and no deadlocks, but because of the transactions are distributed over systems and in time, they are hard to debug. An appliation that observe state across multiple resources will see those transient inconsistencies, which also affects backup/restore operations - let me know if I should go into that in a future post.
 
 ## Conclusion
 
