@@ -13,7 +13,7 @@
       {
          "name":"Frickr",
          "url":"https://github.com/klinkby/Frickr",
-         "desc":"Unwrap Flickr data dump to album folder structure with embedded EXIF metdata."
+         "desc":"Unwrap Flickr data dump to album folder structure with embedded EXIF metadata."
       },
       {
          "name":"FeedReader",
