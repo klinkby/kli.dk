@@ -26,7 +26,7 @@ See more on my [LinkedIn profile](https://linkedin.com/in/klinkby/), check out m
 
 ## Contact
 
-You can reach me on [Twitter](https://twitter.com/klinkby), [Mastodon](https://fosstodon.org/@klinkby) or [email](mailto:m@kli.dk).
+You can reach me on [Mastodon](https://fosstodon.org/@klinkby) or [email](mailto:m@kli.dk).
 
 ---
 
