@@ -5,4 +5,4 @@ Disallow: /css/?
 Disallow: /404/
 Disallow: /post/.archive/?
 
-Sitemap: https://www.kli.dk/sitemap.xml
+Sitemap: https://www.kli.dk/index.xml
