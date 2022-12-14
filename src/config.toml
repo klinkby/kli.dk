@@ -20,9 +20,10 @@ copyright = "Klinkby"
 #  images = ["/images/tw-def.png"]
   authors = ["@klinkby"]
 
-  [[params.social]]
-  name = "twitter"
-  link = "https://www.twitter.com/klinkby"
+  # [[params.social]]
+  # name = "twitter"
+  # link = "https://www.twitter.com/klinkby"
+
 
   [[params.social]]
   name = "mastodon"
@@ -35,6 +36,10 @@ copyright = "Klinkby"
   [[params.social]]
   name = "linkedin"
   link = "https://www.linkedin.com/in/klinkby"
+
+  [[params.social]]
+  name = "rss"
+  link = "https://www.kli.dk/index.xml"
 
 # Main menu which appears below site header.
 [[menu.main]]
