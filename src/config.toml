@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.kli.dk"
 theme = "cactus"
 disablePathToLower = true
 languageCode = "en-us"
