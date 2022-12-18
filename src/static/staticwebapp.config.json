@@ -10,5 +10,13 @@
         "404": {
             "rewrite": "/404/index.html"
         }
+    },
+    "globalHeaders": {
+        "Content-Type": "charset=UTF-8",
+        "content-security-policy": "default-src https: 'self'; object-src 'none'; frame-src 'self'; img-src 'self'",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "referrer-policy": "same-origin"
     }
 }
