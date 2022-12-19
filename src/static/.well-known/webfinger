@@ -1,0 +1,25 @@
+{
+    "subject":"acct:fosstodon.org/@klinkby",
+    "aliases":
+    [
+        "https://fosstodon.org/@klinkby",
+        "https://fosstodon.org/users/klinkby"
+    ],
+    "links":
+    [
+        {
+            "rel":"http://webfinger.net/rel/profile-page",
+            "type":"text/html",
+            "href":"https://fosstodon.org/@klinkby"
+        },
+        {
+            "rel":"self",
+            "type":"application/activity+json",
+            "href":"https://fosstodon.org/users/klinkby"
+        },
+        {
+            "rel":"http://ostatus.org/schema/1.0/subscribe",
+            "template":"https://fosstodon.org/authorize_interaction?uri={uri}"
+        }
+    ]
+}
