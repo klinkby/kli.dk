@@ -16,7 +16,6 @@ copyright = "Klinkby"
   showProjectsList = true
   projectsUrl = "https://github.com/klinkby"
   rss = true
-  themeVersion = "v3"
 #  images = ["/images/tw-def.png"]
   authors = ["@klinkby"]
 
