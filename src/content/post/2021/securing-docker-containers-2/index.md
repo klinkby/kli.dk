@@ -37,6 +37,8 @@ over the host to deploy persistent backdoors, clean up audit logs.
 
 # Rootless containers
 
+> Update 2023-03-22: Microsoft is ~~finally~~ also making this default for .NET 8, see the [announcement](https://devblogs.microsoft.com/dotnet/securing-containers-with-rootless/). Great news!
+
 Your `Dockerfile` can specify a low privilege user to be used to run the service. The following snippet from a 
 Aspnet Core service create a new `appuser` that owns the `app` directory, where the service binaries are deployed. The 
 last `USER` command drops `root` privileges by changing to `appuser` security context.
