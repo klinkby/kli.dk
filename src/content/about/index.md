@@ -12,7 +12,7 @@ Since Gradualizing B.Sc in 1999, I have had the pleasure of creating digitizatio
 
 ![Mads](/images/klinkby.jpg)
 
-Recent 14 years as an independent, self-employed consultant with focus on enterprise- and solution architecture and advising on cloud-based collaboration solutions like Office 365 or enterprise architecture.
+Recent 15 years as an independent, self-employed consultant with focus on enterprise- and solution architecture and advising on cloud-based collaboration solutions like Office 365 or enterprise architecture.
 
 
 Often, I participate in communication with the business on analysis and documentation of processes and agile requirements specification, and either have an enterprise architect / strategic technical lead, or as solution architect that translate requirements into solid design decisions in a final solution.
@@ -32,6 +32,6 @@ You can reach me on [Mastodon](https://fosstodon.org/@klinkby) or [email](mailto
 
 ## Privacy policy
 
-This site adds no analytics or tracking cookies and [does not collect](https://2gdpr.com/705267172) information about you. Some "Strictly Necessary cookies" are set by CloudFlare CDN to serve the pages:
+This site adds no 3rd party analytics or tracking cookies and [does not collect](https://2gdpr.com/705267172) information about you. Some "Strictly Necessary cookies" are set by CloudFlare CDN to serve the pages:
 
 > ...as part of our Services, we may place "`_cfduid`" cookies, bot detection cookies (such as "`_cf_bm`" and cookies for CAPTCHA), and a load balancing cookie (`_cflb`) on the computers of visitors to our Websites and of our End Users. We do this in order to identify malicious visitors to our Websites and our Customers’ websites, to assist with web-traffic filtration, and to reduce the chance of blocking legitimate users. You can learn more about these cookies [here](https://support.cloudflare.com/hc/en-us/articles/200170156-Understanding-the-Cloudflare-Cookies). You cannot turn off Strictly Necessary cookies.
