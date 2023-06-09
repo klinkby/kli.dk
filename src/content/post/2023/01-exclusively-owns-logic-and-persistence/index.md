@@ -9,9 +9,6 @@ tags:
 - architecture
 ---
 
-<!-- 
--->
-
 # Quality attributes for microservices - part 1
 
 > This is the first post in [the series](../quality-attributes-for-microservices/) about some ideal characteristics about
@@ -28,7 +25,7 @@ Number of code lines is not a good measure of the size of a service, but the ser
 
 Dividing the system into too many services can lead to a distributed monolith, where the services get tightly coupled and changes in one service requires changes in other services. "Nano services" can also lead to a lot of overhead in terms of deployment and operations.
 
-![image](/images/2023/parcels.jpg)
+![Parcels photo by George Hodan](/images/2023/parcels.jpg)
 
 ## Entities
 
@@ -76,4 +73,3 @@ Thank you for reading and have a wonderful day!
 - [What are microservices?](https://learn.microsoft.com/en-us/devops/deliver/what-are-microservices) by Microsoft
 - [Microservices](https://martinfowler.com/articles/microservices.html) by Martin Fowler
 - [Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) by Eric Evans
-
