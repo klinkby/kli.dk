@@ -15,7 +15,8 @@ tags:
 microservices, both from the architect's perspective as well as developer's and operations
 perspective. In this post we will have a look on the scope and responsibility of a microservice.
 
-# "1. Exclusively owns logic and persistence for a narrow coherent set of business entities"
+_In my humble opinion a good microservice..._
+# "Exclusively owns logic and persistence for a narrow coherent set of business entities"
 
 ## Micro
 
