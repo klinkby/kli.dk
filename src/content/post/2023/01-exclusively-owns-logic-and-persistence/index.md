@@ -19,7 +19,7 @@ perspective. In this post we will have a look on the scope and responsibility of
 
 ## Micro
 
-As the microservice name suggests, the service should be small and focused on a single business entity or resource, and compound related entities that can only be understood in the context of the primary entity.
+As the microservice name suggests, the service should be small. The scope is focused to a single business entity or resource, and compound related entities that can only be understood in the context of the primary entity.
 
 Number of code lines is not a good measure of the size of a service, but the service should be small enough to be build and managed by a single team.
 
