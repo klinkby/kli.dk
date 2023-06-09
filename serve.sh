@@ -1,4 +1,4 @@
 #! /bin/bash
-cd src 
-hugo server 
+cd src
+hugo server -D
 cd ..
