@@ -36,11 +36,13 @@ linear scale in performance and availability.
 
 ## Independently deployable
 
-To be able to scale out microservices must be independently deployable. This means that each service node can be
-deployed without affecting other services and join the load balancer pool when ready to take requests. This enables
-dynamic scaling, where more nodes are added dynamically at peak load times and stopped again when load decreases.
-In the cloud service that only charge for running time this is a cost-effective solution for handling dynamic load,
-as opposed to paying for a group of idle servers, just waiting for that peak day of the month.  
+As stated in the previous post, a microservice should not have dependencies to other services. This is the first step
+towards safe deploys, where a service can be updated and redeployed without affecting consumers.
+
+This can also enable independent scaling, or elasticity, where a service behind a network load balancer can be scaled
+up or down without affecting other services. More nodes can be added dynamically at peak load times and stopped again
+when load decreases. In the cloud service that only charge for running time this is a very cost-effective solution
+for handling dynamic load. As opposed to paying for a group of idle servers, just waiting for that peak day of the month.  
 
 ## Deterministic and stateless
 
