@@ -14,7 +14,7 @@ tags:
 In my humble opinion a good microservice...
 
 1. [Exclusively owns logic and persistence for a narrow coherent set of business entities](../01-exclusively-owns-logic-and-persistence/)
-1. Is independently deployable and scalable.
+1. [Is independently deployable and scalable](../02-independently-deployable-and-scalable/)
 1. Provides a well-defined, interoperable resource-centric interface.
 1. Guarantee atomicity and idempotency for simple operations.
 1. Guarantee eventual consistency for complex operations.

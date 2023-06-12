@@ -54,7 +54,7 @@ A physical database engine cluster can be shared between services if databases a
 
 A resource microservice should not have any dependencies to other services. Tight coupling between services should be avoided as it leads to a distributed monolith.
 
-Decoupling can be achieved by using asynchronous messaging, like RabbitMQ or Kafka, shared between the services in a publisher/subscriber pattern. For example, a customer service could publish a customer created event, which is consumed by other services that need to know about the customer.
+Decoupling can be achieved by using asynchronous messaging, like RabbitMQ or Kafka, shared between the services in a publisher/subscriber pattern. For example, a customer service could publish a customer created event, which is consumed by other services that need to know about the new customer.
 
 Aggregating services, also called "backend-for-frontend" services can be used to combine data from multiple services into a single response. This is useful to supply a facade for a specific client, like a mobile app or a web page. This type of service is always stateless and does not have persistent data.
 
@@ -64,7 +64,7 @@ Ok, just to wrap up microservices should be focused on a single business entity 
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will have a look on how microservices can be deployed.
+In the next post we will have a look on [how microservices can be deployed](../02-independently-deployable-and-scalable/).
 Thank you for reading and have a wonderful day!
 
 ---
