@@ -15,6 +15,8 @@ As I was interested in how far standards-based frontend web development has come
 component that displays a nice little nixie tube. A nixie tube is a display device that was used in the 1950s and 
 1960s to display information using gas-filled tubes, before new-fangled LEDs was developed.
 
+![image](/images/2025/nixie.jpg)
+
 In my role as architect, I have been working with large SPA applications with huge stacks of npm 
 dependencies that cause sluggish build times and bloated maintenance. I'm looking at you Angular, React and Vue and 
 webpack.
@@ -28,7 +30,11 @@ browser simply load the original module directly and use the shadow DOM to encap
 The result can be seen in this [sample page](https://klinkby.github.io/nixie-digit/src/) that includes the custom 
 element `<nixie-digit>` to display a clock.
 
-My conclusion is that native web components are a viable alternativ to the traditional SPA frameworks for building 
+My conclusion is that native web component is a viable alternative to the traditional SPA frameworks for building 
 custom elements. 
 
 Check out my MIT licensed [Github repo](https://github.com/klinkby/nixie-digit).
+
+The beautiful image sprites are 
+[The real Nixie tube indicator a set of decimal digits](https://depositphotos.com/photo/the-real-nixie-tube-indicator-a-set-of-decimal-digits-45965467.html) 
+by LLEPOD. [Licensed](https://depositphotos.com/license.html) royalty-free for personal and commercial purposes.
