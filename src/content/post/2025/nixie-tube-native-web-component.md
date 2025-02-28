@@ -15,7 +15,7 @@ As I was interested in how far standards-based frontend web development has come
 component that displays a nice little nixie tube. A nixie tube is a display device that was used in the 1950s and 
 1960s to display information using gas-filled tubes, before new-fangled LEDs was developed.
 
-![image](/images/2025/nixie.jpg)
+![Nixie tubes](/images/2025/nixie.jpg)
 
 In my role as architect, I have been working with large SPA applications with huge stacks of npm 
 dependencies that cause sluggish build times and bloated maintenance. I'm looking at you Angular, React and Vue and 
