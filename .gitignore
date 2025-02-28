@@ -2,3 +2,5 @@
 src/public/
 src/resources/
 src/themes/
+.idea/
+src/.hugo_build.lock
