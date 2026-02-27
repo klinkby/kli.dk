@@ -1,7 +1,7 @@
 # Build stage: install Hugo and produce static files
 FROM alpine:3.22 AS builder
 ARG HUGO_VERSION=0.145.0
-RUN apk add --no-cache wget tar git
+RUN apk add --no-cache wget tar
 RUN wget -q "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
     && tar -xzf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" hugo \
     && mv hugo /usr/local/bin/ \
