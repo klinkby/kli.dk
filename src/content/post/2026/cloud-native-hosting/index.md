@@ -18,15 +18,22 @@ For one of my customers, I have been working with [cloud-native](https://www.cnc
 The open souce licence model also gives the benefits of DevOps, zero-trust and modern technologies, while providing unlimited
 flexibility and freedom to host anywhere, in the cloud or on-premises.
 
-This blog is a static web site, compiled from [Markdown-files](https://github.com/klinkby/kli.dk) 
-with the Hugo, to the tiny Lighttd web server on the minimal Alpine Docker base image. 
+This blog is a static website, compiled from [Markdown-files](https://github.com/klinkby/kli.dk) 
+with the [Hugo](https://gohugo.io/), to the tiny Lighttd web server on the minimal Alpine Docker base image. 
 The image is around ~10 MB and consumes ~1½ MB of RAM.
 
 The web server hosts the static pages via unencrypted HTTP/2 (H2C, prior knowledge) via an efficient 
 Unix socket to [HAProxy](https://www.haproxy.org/) that provides TLS termination and traffic sanitization. SSL-certificates are 
 generated via [Let's Encrypt](https://letsencrypt.org/)'s free ACME script.
 
-I chose to hostthe service at [Hetzner](https://www.hetzner.com/), a popular provider for cloud-native hosting as it has a datacenter I Scandinavian, it's cheap, reliable and it has a convenient
-control plane.
+I chose to host the service at [Hetzner](https://www.hetzner.com/), a popular provider for cloud-native hosting as it has a local datacenter 
+here in Scandinavia, it's cheap, reliable, and has a convenient control plane.
 
-With the right middleware, a single small Linux server can handle an impressive amount of traffic. This setup is just as simple and easy to maintain as my previous Azure-bound service, and can be scaled and hosted anywhere.
+With the right middleware, a single small Linux server can handle an impressive amount of traffic. This setup is just as 
+easy to maintain as my previous Azure-bound service and can be scaled and hosted anywhere.
+
+Still, US tech completely dominates my tech stack. The source code and CI pipeline is still on feature rich GitHub 
+[klinkby/kli.dk](https://github.com/klinkby/kli.dk), the container image available conveniently on Docker Hub), and the conversion was implemented in an hour 
+by Antrophic's [Claude](https://claude.io/) LLM. 
+
+One small step. Alas, Europe has some way to go.
