@@ -41,9 +41,9 @@ Key behaviour:
 
 `.github/workflows/docker-image.yml` (GitHub Actions):
 
-- Triggers on push **and** PR to `master`.
+- Triggers on push **and** PR to `main`.
 - Builds with Docker Buildx; uses GitHub Actions cache (`type=gha`).
-- Pushes image `klinkby/kli.dk` to Docker Hub on merge to `master` (skipped for Dependabot).
+- Pushes image `klinkby/kli.dk` to Docker Hub on merge to `main` (skipped for Dependabot).
 - Tags: build run number + commit SHA.
 - Requires repository secret `DOCKERHUB_PAT`.
 
