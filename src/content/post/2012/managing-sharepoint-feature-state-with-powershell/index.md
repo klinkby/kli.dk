@@ -14,7 +14,10 @@ title: Managing SharePoint feature state
 ---
 
 
-This is a small function that wraps the [Get-SPFeature](http://technet.microsoft.com/en-us/library/ff607945.aspx), [Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803.aspx) and [Disable-SPFeature](http://technet.microsoft.com/en-us/library/ff607879.aspx) to control state of farm, site or web scoped features.
+This is a small function that wraps
+the [Get-SPFeature](http://technet.microsoft.com/en-us/library/ff607945.aspx), [Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803.aspx)
+and [Disable-SPFeature](http://technet.microsoft.com/en-us/library/ff607879.aspx) to control state of farm, site or web
+scoped features.
 
 I makes it a breeze to set the state of the built-in SharePoint features during a PowerShell deployment.
 
@@ -51,7 +54,6 @@ I makes it a breeze to set the state of the built-in SharePoint features during 
      }
  } 
  ```
-  
 
 Here is an example that enables two farm features.
 

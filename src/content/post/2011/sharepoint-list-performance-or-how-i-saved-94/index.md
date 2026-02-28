@@ -16,7 +16,9 @@ title: SharePoint List Performance
 ---
 
 
-In a recent performance test session, I had created a thousand documents in a document library. They all had a 20 custom metadata fields filled out with data. The unit under test read all this data along with the common file information like this:   
+In a recent performance test session, I had created a thousand documents in a document library. They all had a 20 custom
+metadata fields filled out with data. The unit under test read all this data along with the common file information like
+this:
 
 ```C#
 SPUser user = listItem.File.CheckedOutByUser;
@@ -27,7 +29,10 @@ result.Link = m_serverUrl + listItem.File.ServerRelativeUrl;
 result.Version = listItem.File.UIVersionLabel;
 ```
 
-  Using SPList.GetItems(SPQuery) it took 5042 mS. The data was used in request/response scenario so this delay was totally unacceptable as this obviously meant the user should be waiting for five seconds while SlugPoint™ was digging through the list. First thought was to avoid the repeatedly creation of SPUser instances for the first three properties. Usually only a dozen users creates all the documents so a bit of caching can be applied with this class:   
+Using SPList.GetItems(SPQuery) it took 5042 mS. The data was used in request/response scenario so this delay was totally
+unacceptable as this obviously meant the user should be waiting for five seconds while SlugPoint™ was digging through
+the list. First thought was to avoid the repeatedly creation of SPUser instances for the first three properties. Usually
+only a dozen users creates all the documents so a bit of caching can be applied with this class:
 
 <pre class="csharpcode"><code><span class="kwrd">class</span> UserCache
 {
@@ -52,7 +57,8 @@ result.Version = listItem.File.UIVersionLabel;
         <span class="kwrd">return</span> loginName;
     }
 }</code></pre>
-  Replacing the first couple of lines in the original code with the following code snippet reduced the execution time to 3017 mS saving 42%.  
+Replacing the first couple of lines in the original code with the following code snippet reduced the execution time to
+3017 mS saving 42%.
 
 ```C#
 class UserCache
@@ -80,17 +86,21 @@ class UserCache
 }
 ```
 
-  The Link property can be resolved by reading the FileRef field directly instead of creating the SPFile instance. Replacing that line with the following reduced the execution time to 2903 mS saving a further 2%.   
+The Link property can be resolved by reading the FileRef field directly instead of creating the SPFile instance.
+Replacing that line with the following reduced the execution time to 2903 mS saving a further 2%.
 
 ```C#
 result.Link = m_serverUrl + listItem[SPBuiltInFieldId.FileRef];
 ```
 
-  The last line looks much like the preceding one, so I was expecting a similar saving when replacing it with:   
+The last line looks much like the preceding one, so I was expecting a similar saving when replacing it with:
 
 ```C#
 result.Version = (string)listItem["_UIVersionString"];
 ```
 
-  Instead the operation now took 286 mS a further saving of 52%, which means it now only took 6% of the original processing time. I did not have the time to Reflector the SPFile.UIVersionLabel property but will propably stay away from that one in the near future. My conlusion is for performance you should pull values from the list item fields directly instead of reading properties from the object model.
+Instead the operation now took 286 mS a further saving of 52%, which means it now only took 6% of the original
+processing time. I did not have the time to Reflector the SPFile.UIVersionLabel property but will propably stay away
+from that one in the near future. My conlusion is for performance you should pull values from the list item fields
+directly instead of reading properties from the object model.
 

@@ -12,7 +12,9 @@ title: class Cached - Part 2
 ---
 
 
-Here's another useful little helper class that implements a thread safe generic lazy factory that's real easy to use. Create a readonly instance in your constructor, providing the factory method. The factory takes a parameter, that is as parameter to create the value, as well as look up the value the next time it is requested.
+Here's another useful little helper class that implements a thread safe generic lazy factory that's real easy to use.
+Create a readonly instance in your constructor, providing the factory method. The factory takes a parameter, that is as
+parameter to create the value, as well as look up the value the next time it is requested.
 
 <pre class="csharpcode"><code><span class="kwrd">internal</span> <span class="kwrd">class</span> Cached&lt;T, U&gt;
 {

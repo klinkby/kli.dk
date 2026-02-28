@@ -12,7 +12,11 @@ title: Check if a file is locked
 ---
 
 
-One notable feature that is missing from the IO section of the .NET base class library is a way to check if a file is locked. When opening a file the [ OpenFile](http://msdn.microsoft.com/en-us/library/aa365430(v=vs.85).aspx) et al API methods does actually provide the information, we just have to [ dig a little](http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.marshal.gethrforexception.aspx) to discover it.   
+One notable feature that is missing from the IO section of the .NET base class library is a way to check if a file is
+locked. When opening a file the [ OpenFile](http://msdn.microsoft.com/en-us/library/aa365430(v=vs.85).aspx) et al API
+methods does actually provide the information, we just have
+to [ dig a little](http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.marshal.gethrforexception.aspx)
+to discover it.
 
 ```C#
 static bool IsFileLocked(string filename)

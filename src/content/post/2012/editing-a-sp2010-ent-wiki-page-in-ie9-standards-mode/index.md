@@ -18,7 +18,8 @@ title: SP2010 vs IE
 
 SharePoint 2010 is not really compatible with IE9. The master page forces it in IE8 compatibility mode.
 
-One of the odd quirks you will experience if you change the master page to IE9 mode is when editing an enterprise wiki page. When you press the '[' key, the cursor jumps to the end of the paragraph.
+One of the odd quirks you will experience if you change the master page to IE9 mode is when editing an enterprise wiki
+page. When you press the '[' key, the cursor jumps to the end of the paragraph.
 
 The code below will let SharePoint know that IE9 is just like any other browser and prevent this behavior.
 

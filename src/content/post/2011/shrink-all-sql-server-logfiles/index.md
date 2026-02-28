@@ -12,7 +12,8 @@ title: Shrink all SQL Server logfiles
 ---
 
 
-After backing up the log files on a SQL server, the logs are truncated and you might want to reclaim the disk space held by those empty log files. This little Transact-SQL script will do just that.  
+After backing up the log files on a SQL server, the logs are truncated and you might want to reclaim the disk space held
+by those empty log files. This little Transact-SQL script will do just that.
 
 ```SQL
 DBCC SQLPERF(logspace)

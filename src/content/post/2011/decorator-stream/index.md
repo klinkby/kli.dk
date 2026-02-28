@@ -14,7 +14,9 @@ title: DecoratorStream
 ---
 
 
-In scenarios where you want to extend functionality of a simple [ System.IO.Stream](http://msdn.microsoft.com/en-us/library/system.io.stream.aspx) instance, it is convenient to have a [decorator](http://en.wikipedia.org/wiki/Decorator_pattern).   <div>  
+In scenarios where you want to extend functionality of a
+simple [ System.IO.Stream](http://msdn.microsoft.com/en-us/library/system.io.stream.aspx) instance, it is convenient to
+have a [decorator](http://en.wikipedia.org/wiki/Decorator_pattern).<div>
  </div>  <div>Neither the original stream or the client instance will have to know anything about the extension as it is still just a Stream. This can be used to add position tracking or to manage lifetime. For instance you might want to dispose a [ System.Net.HttpWebResponse](http://msdn.microsoft.com/en-us/library/system.net.httpwebresponse.aspx) instance that created the stream when the stream is being closed. The most straightforward way to achieve this is to copy/paste the code below and inherit that class to create your stream extender. </div>  <div>  
  </div>  <div>Of course you could also have done this with a [dynamic proxy](http://www.castleproject.org/dynamicproxy/index.html) plus [interceptor](http://en.wikipedia.org/wiki/Interceptor_pattern).</div>  <div>    
 

@@ -16,5 +16,7 @@ title: Live Mesh (part 2)
 ---
 
 
-Microsoft just opened up for another sign-up batch for the tech preview of [mesh.com](http://mesh.com). But for US residents only! So my MSN profile and I briefly moved to The States and was able to sign up! :-) I look very much forward to getting checking out the APIs. More to come...
+Microsoft just opened up for another sign-up batch for the tech preview of [mesh.com](http://mesh.com). But for US
+residents only! So my MSN profile and I briefly moved to The States and was able to sign up! :-) I look very much
+forward to getting checking out the APIs. More to come...
 

@@ -14,7 +14,8 @@ title: WCF Client Channel snippet
 ---
 
 
-Generally I use WCF client channels with the code snippet below that handles channel lifetime, failed channel states and context required for nested WCF calls.
+Generally I use WCF client channels with the code snippet below that handles channel lifetime, failed channel states and
+context required for nested WCF calls.
 
 ```C#
 static TReturn WithChannel<TChannel, TReturn>(Func<TChannel, TReturn> func)

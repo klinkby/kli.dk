@@ -12,7 +12,9 @@ title: Changing the querystring in an Uri
 ---
 
 
-Here's a nice little [fluent](http://en.wikipedia.org/wiki/Fluent_interface) [extension method](http://msdn.microsoft.com/en-us/library/bb383977.aspx) that changes a querystring parameter in an [Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx).
+Here's a nice
+little [fluent](http://en.wikipedia.org/wiki/Fluent_interface) [extension method](http://msdn.microsoft.com/en-us/library/bb383977.aspx)
+that changes a querystring parameter in an [Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx).
 
 <pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">class</span> UriExtensions
 {

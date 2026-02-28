@@ -12,7 +12,7 @@ title: Events a la C# 3.0
 ---
 
 
-The new language features makes it possible to minimize much of that nasty boiler plate code. With these helpers:   
+The new language features makes it possible to minimize much of that nasty boiler plate code. With these helpers:
 
 <pre class="csharpcode"><code><span class="kwrd">delegate</span> <span class="kwrd">void</span> EventHandler&lt;T&gt;(<span class="kwrd">object</span> sender, T e); 
 
@@ -36,7 +36,7 @@ The new language features makes it possible to minimize much of that nasty boile
 }
 </code></pre>
 
-  I can raise thread safe events with a generic typed event argument as simple as this:   
+I can raise thread safe events with a generic typed event argument as simple as this:
 
 <pre class="csharpcode"><code><span class="kwrd">class</span> MyClass 
 { 
@@ -47,5 +47,5 @@ The new language features makes it possible to minimize much of that nasty boile
     : 
 }</code></pre>
 
-  I currently find much inspiration in functional programming and the [F#](http://research.microsoft.com/fsharp/) project.
+I currently find much inspiration in functional programming and the [F#](http://research.microsoft.com/fsharp/) project.
 

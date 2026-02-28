@@ -14,9 +14,11 @@ title: Enumerate user's permissions
 ---
 
 
-To manage authorization in SharePoint you define a set of roles with permissions that is assigned to groups and users. It is a versatile model with many possibilities.
+To manage authorization in SharePoint you define a set of roles with permissions that is assigned to groups and users.
+It is a versatile model with many possibilities.
 
-But because of its complexity it is a not as easy as one might think to get a list of what each user can do with a SP object. This little snippet will help a long way to provide that overview.
+But because of its complexity it is a not as easy as one might think to get a list of what each user can do with a SP
+object. This little snippet will help a long way to provide that overview.
 
 <pre class="csharpcode"><code><span class="kwrd">class</span> UserPermission
 {

@@ -14,14 +14,23 @@ title: 'How to: Simple Facebook login in ASP.NET'
 ---
 
 
-I've been looking all over the net for a simple and efficient way to use [Facebook](http://developers.facebook.com/docs/authentication) to handle authentication of users on my ASP.NET web site. I've looked at the [DotNetOpenAuth](http://www.dotnetopenauth.net/) project that has implemented an feature rich implementation of [OpenID](http://openid.net/developers/) and [OAuth](http://oauth.net/documentation/), and sample code for Twitter. I didn't find an easy way to bend it for Facebook, and it looked a bit complex, so I wrote my own little implementation.
+I've been looking all over the net for a simple and efficient way to
+use [Facebook](http://developers.facebook.com/docs/authentication) to handle authentication of users on my ASP.NET web
+site. I've looked at the [DotNetOpenAuth](http://www.dotnetopenauth.net/) project that has implemented an feature rich
+implementation of [OpenID](http://openid.net/developers/) and [OAuth](http://oauth.net/documentation/), and sample code
+for Twitter. I didn't find an easy way to bend it for Facebook, and it looked a bit complex, so I wrote my own little
+implementation.
 
-To try it out register an application with Facebook, it's important that the site authority you provide matches the server you run the code from, so for a dev machine you might need an entry in your hosts file. Then create an ASP.NET project and drop these lines in an aspx page:
+To try it out register an application with Facebook, it's important that the site authority you provide matches the
+server you run the code from, so for a dev machine you might need an entry in your hosts file. Then create an ASP.NET
+project and drop these lines in an aspx page:
 
 <pre class="csharpcode"><code><span class="kwrd">&lt;</span><span class="html">asp:HyperLink</span> <span class="attr">runat</span><span class="kwrd">="server"</span> <span class="attr">Text</span><span class="kwrd">="Log in with Facebook"</span> <span class="attr">id</span><span class="kwrd">="fbLogin"</span><span class="kwrd">/&gt;</span>
 <span class="kwrd">&lt;</span><span class="html">asp:LoginName</span> <span class="attr">runat</span><span class="kwrd">="server"</span> <span class="kwrd">/&gt;</span></code></pre>
 
-The idea is to send the user to a Facebook dialog for authentication and authorization. Facebook sends the user back again with an authorization code. This code is then exchanged for a graph token, that can be used to query for the user's details. See the FacebookUser class at the bottom.
+The idea is to send the user to a Facebook dialog for authentication and authorization. Facebook sends the user back
+again with an authorization code. This code is then exchanged for a graph token, that can be used to query for the
+user's details. See the FacebookUser class at the bottom.
 
 Merge the following code in the code behind, and replace the app key with the ones from your app registration.
 

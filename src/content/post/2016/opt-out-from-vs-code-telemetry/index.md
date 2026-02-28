@@ -15,10 +15,13 @@ tags:
 - security
 title: Opt out from VS Code telemetry
 ---
+
 ![image](/images/2017/09/et_phone_home_extra_terrestrial.jpg)
+
 # Opt out from VS Code telemetry
 
-[Visual Studio Code](https://code.visualstudio.com/) defaults to automatically gather information about how you use the cross platform open source code editor, and send it back to Microsoft. 
+[Visual Studio Code](https://code.visualstudio.com/) defaults to automatically gather information about how you use the
+cross platform open source code editor, and send it back to Microsoft.
 
 If you like to opt out from this, add the following to your user preferences (File > Preferences > User).
 

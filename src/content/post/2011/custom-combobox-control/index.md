@@ -12,7 +12,10 @@ title: Custom DropDown Control
 ---
 
 
-Extensibility is not the strongest feature of Windows Forms. I recently required a custom drop down control like the common color picker or date picker control. I started out with [http://www.logresource.com/Question/1080206/showall/](http://www.logresource.com/Question/1080206/showall/) and modified it to properly handle usercontrols and keyboard control.  
+Extensibility is not the strongest feature of Windows Forms. I recently required a custom drop down control like the
+common color picker or date picker control. I started out
+with [http://www.logresource.com/Question/1080206/showall/](http://www.logresource.com/Question/1080206/showall/) and
+modified it to properly handle usercontrols and keyboard control.
 
 ```C#
 // based on http://www.logresource.com/Question/1080206/showall/

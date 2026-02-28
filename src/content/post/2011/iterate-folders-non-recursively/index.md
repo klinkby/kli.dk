@@ -14,7 +14,9 @@ title: Iterate folders non-recursively
 ---
 
 
-Here are a few methods to help iterate complete directory trees and the files in them without using recursive method calls. The directories are read one at a time to keep memory usage at a minimum. These restrictions enables iterating trees in very large file shares.   
+Here are a few methods to help iterate complete directory trees and the files in them without using recursive method
+calls. The directories are read one at a time to keep memory usage at a minimum. These restrictions enables iterating
+trees in very large file shares.
 
 ```C#
 static IEnumerable<string> GetDirectories(string startDirectory)

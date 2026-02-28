@@ -12,7 +12,11 @@ title: Native x64
 ---
 
 
-Your managed code will by default take advange of the extra processor functionality when running under Windows x64. This means a nice "free" performance boost. Except if your process depends on native Win32 dlls, as these cannot be loaded. Only dlls compiled for x64 can be loaded into a 64 bit process. This little C++.NET example shows how to determine the library to load at runtime depending of the process bitness. I.e. on Win32 and x64 it will use Interopx86.dll and Interopx64.dll respectively.   
+Your managed code will by default take advange of the extra processor functionality when running under Windows x64. This
+means a nice "free" performance boost. Except if your process depends on native Win32 dlls, as these cannot be loaded.
+Only dlls compiled for x64 can be loaded into a 64 bit process. This little C++.NET example shows how to determine the
+library to load at runtime depending of the process bitness. I.e. on Win32 and x64 it will use Interopx86.dll and
+Interopx64.dll respectively.
 
 <pre class="csharpcode"><code>#include <span class="str">"StdAfx.h"</span> 
 #include &lt;tchar.h&gt; 

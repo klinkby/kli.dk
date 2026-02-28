@@ -12,8 +12,8 @@ title: Convert Unix Time from/to System.DateTime
 ---
 
 
-A pair of simple methods for working with [Unix time](http://en.wikipedia.org/wiki/Unix_epoch) in .NET. The code uses a 64 bit integer datatype so is not affected by [2038 problem](http://en.wikipedia.org/wiki/Year_2038_problem).   
-
+A pair of simple methods for working with [Unix time](http://en.wikipedia.org/wiki/Unix_epoch) in .NET. The code uses a
+64 bit integer datatype so is not affected by [2038 problem](http://en.wikipedia.org/wiki/Year_2038_problem).
 
 ```C#
 static class DateTimeExtensions
