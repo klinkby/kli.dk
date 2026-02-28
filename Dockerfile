@@ -19,6 +19,7 @@ RUN apk add --no-cache lighttpd
 RUN addgroup -S web && adduser -S -G web -h /app -s /sbin/nologin web
 COPY --from=builder /src/public /app
 RUN chown -R web:web /app && mkdir -p /var/run/lighttpd && chown web:web /var/run/lighttpd
+VOLUME /var/run/lighttpd
 COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
 USER web:web
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]

@@ -53,6 +53,6 @@ Key behaviour:
 ./serve.sh
 ```
 
-Builds the image locally, starts the container, polls until the Unix socket is ready, then bridges it to `localhost:3000` via `socat`. Cleans up on exit.
+Builds the image locally, starts the container with a Docker volume for the Unix socket, polls until the socket is ready, then bridges it to `localhost:3000` via a socat sidecar container. Cleans up on exit.
 
-Requires: `docker`, `socat`.
+Requires: `docker`.
