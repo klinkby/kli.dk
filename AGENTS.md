@@ -41,18 +41,18 @@ Key behaviour:
 
 `.github/workflows/docker-image.yml` (GitHub Actions):
 
-- Triggers on push **and** PR to `master`.
+- Triggers on push **and** PR to `main`.
 - Builds with Docker Buildx; uses GitHub Actions cache (`type=gha`).
-- Pushes image `klinkby/kli.dk` to Docker Hub on merge to `master` (skipped for Dependabot).
+- Pushes image `klinkby/kli.dk` to Docker Hub on merge to `main` (skipped for Dependabot).
 - Tags: build run number + commit SHA.
 - Requires repository secret `DOCKERHUB_PAT`.
 
 ## Local development
 
 ```sh
-./serve.sh
+docker compose -f redist/docker-compose.yml up --build
 ```
 
-Builds the image locally, starts the container, polls until the Unix socket is ready, then bridges it to `localhost:3000` via `socat`. Cleans up on exit.
+Builds the image and starts two containers via Compose: `web` (lighttpd) and `socat` (bridges the Unix socket to TCP). A named Docker volume shares the socket between them. Site is served at `http://localhost:3000`.
 
-Requires: `docker`, `socat`.
+Requires: `docker` with Compose plugin.
