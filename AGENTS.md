@@ -50,9 +50,9 @@ Key behaviour:
 ## Local development
 
 ```sh
-./serve.sh
+docker compose -f redist/docker-compose.yml up --build
 ```
 
-Builds the image locally, starts the container with a Docker volume for the Unix socket, polls until the socket is ready, then bridges it to `localhost:3000` via a socat sidecar container. Cleans up on exit.
+Builds the image and starts two containers via Compose: `web` (lighttpd) and `socat` (bridges the Unix socket to TCP). A named Docker volume shares the socket between them. Site is served at `http://localhost:3000`.
 
-Requires: `docker`.
+Requires: `docker` with Compose plugin.
