@@ -34,7 +34,7 @@ easy to maintain as my previous Azure-bound service and can be scaled and hosted
 
 Still, US tech completely dominates my tech stack. The source code and CI pipeline is still on feature rich GitHub 
 [klinkby/kli.dk](https://github.com/klinkby/kli.dk), the container image available conveniently on 
-[Docker Hub](https://hub.docker.com/repository/docker/klinkby/kli.dk), and the code conversion was implemented in an hour 
+[Docker Hub](https://hub.docker.com/repository/docker/klinkby/kli.dk), DNS is CloudFlare (not proxied though), and the code conversion was implemented in an hour 
 by Antrophic's [Claude](https://claude.ai/) LLM. 
 
 One small step. Alas, Europe has some way to go.
