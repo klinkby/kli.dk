@@ -12,7 +12,8 @@ title: Stream.CopyTo
 ---
 
 
-Here's a small snippet I use a lot when working with streams. It simply copies content from one stream to the other in chunks of 4 KB. It is so handy that the BCL team added it to the stream class in .NET 4.0.
+Here's a small snippet I use a lot when working with streams. It simply copies content from one stream to the other in
+chunks of 4 KB. It is so handy that the BCL team added it to the stream class in .NET 4.0.
 
 <pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">long</span> CopyTo(<span class="kwrd">this</span> Stream input, Stream output)
 {

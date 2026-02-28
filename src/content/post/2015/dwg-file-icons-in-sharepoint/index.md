@@ -14,9 +14,13 @@ title: DWG File Icons in SharePoint
 ---
 
 
-SharePoint does not recognize .DWG AutoCAD files in document libraries, so will display a default "blank file" icon for those files. If you are comfortable with hacking it into the Docicon.xml file in the 14 hive, an on-premise farm enables you to do that. SharePoint Online, not so much.
+SharePoint does not recognize .DWG AutoCAD files in document libraries, so will display a default "blank file" icon for
+those files. If you are comfortable with hacking it into the Docicon.xml file in the 14 hive, an on-premise farm enables
+you to do that. SharePoint Online, not so much.
 
-Instead you can add the below CSS-snippet to a custom style sheet on you site, or you can paste in into a Script Editor Web Part on a specific page, typically by editing a list view page. Obviously it performs better than JavaScript hacks, but it also plays nicely with the Minimal Download Strategy (MDS) feature.
+Instead you can add the below CSS-snippet to a custom style sheet on you site, or you can paste in into a Script Editor
+Web Part on a specific page, typically by editing a list view page. Obviously it performs better than JavaScript hacks,
+but it also plays nicely with the Minimal Download Strategy (MDS) feature.
 
 ```HTML
 <style type="text/css">

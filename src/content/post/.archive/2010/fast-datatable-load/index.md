@@ -16,10 +16,16 @@ title: Fast (dynamic) DataTable load
 ---
 
 
-When you stuff data in a DataTable you need to first build the columns with, then add the rows containing all of the field values. To map properties from strongly typed objects to DataTables involves either tedious error prone mapping code or a more versatile and CPU hungry way using Reflection. 
+When you stuff data in a DataTable you need to first build the columns with, then add the rows containing all of the
+field values. To map properties from strongly typed objects to DataTables involves either tedious error prone mapping
+code or a more versatile and CPU hungry way using Reflection.
 
-The small code snippet below is a combination of these, using reflection just once then a fast mapping code from then on based on [ Gerhard Stephan's code emitting method](http://jachman.wordpress.com/2006/08/22/2000-faster-using-dynamic-method-calls/). It is used with a DataTable like this: <code>dt.Columns.AddRange(TableMapper<MyDTO>.Columns); : dt.LoadDataRow(TableMapper<MyDTO>.GetPropertyValues(item), true);</code> 
-Now for the actual code. Have fun!   
+The small code snippet below is a combination of these, using reflection just once then a fast mapping code from then on
+based
+on [ Gerhard Stephan's code emitting method](http://jachman.wordpress.com/2006/08/22/2000-faster-using-dynamic-method-calls/).
+It is used with a DataTable like this: <code>dt.Columns.AddRange(TableMapper<MyDTO>.Columns); : dt.LoadDataRow(
+TableMapper<MyDTO>.GetPropertyValues(item), true);</code>
+Now for the actual code. Have fun!
 
 <pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">class</span> TableMapper&lt;T&gt;
 {

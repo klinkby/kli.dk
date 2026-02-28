@@ -14,7 +14,11 @@ title: NLog configuration file
 ---
 
 
-I often use NLog for diagnostic tracing in e.g. services. [NLog](http://nlog-project.org/) is very much like [log4net (log4j for .net)](http://logging.apache.org/log4net/) except that it is still being maintained, was written for .NET and features a very flexible end extensible logging framework. See also the post about [interceptors](/2011/01/25/aop-logging/). This is an example of a nlog.config I recently used for a service to get asynchronous logging and detailed exception information in a concise and structured format.   
+I often use NLog for diagnostic tracing in e.g. services. [NLog](http://nlog-project.org/) is very much
+like [log4net (log4j for .net)](http://logging.apache.org/log4net/) except that it is still being maintained, was
+written for .NET and features a very flexible end extensible logging framework. See also the post
+about [interceptors](/2011/01/25/aop-logging/). This is an example of a nlog.config I recently used for a service to get
+asynchronous logging and detailed exception information in a concise and structured format.
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>

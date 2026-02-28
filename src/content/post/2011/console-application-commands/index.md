@@ -16,7 +16,9 @@ title: Commands in console application
 ---
 
 
-Here is a simple template for creating C# console applications that take a parameter that controls what the application should do. The example code has one (exciting) command "sayhello", but you can add new commands simply by creating a new public static method in the class. Central of course is GoF command pattern, and .NET Reflection gives the dynamics.   
+Here is a simple template for creating C# console applications that take a parameter that controls what the application
+should do. The example code has one (exciting) command "sayhello", but you can add new commands simply by creating a new
+public static method in the class. Central of course is GoF command pattern, and .NET Reflection gives the dynamics.
 
 ```C#
 using System;

@@ -37,5 +37,6 @@ Get-ChildItem $filePattern |% {
 }
 ```
 
-The great open source tool GhostScript is a dependency so [download its installer from here](http://www.ghostscript.com/download/gsdnld.html).
+The great open source tool GhostScript is a dependency
+so [download its installer from here](http://www.ghostscript.com/download/gsdnld.html).
 

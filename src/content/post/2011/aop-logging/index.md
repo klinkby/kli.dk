@@ -14,9 +14,13 @@ title: AOP logging
 ---
 
 
-I still see code with tracing and logging statements scattered all over the code. This of course violates the separation of concerns design philosophy, as all classes gets a secondary role, i.e. to log. Also it becomes a challenge to avoid referencing a specific logging API all over the code.
+I still see code with tracing and logging statements scattered all over the code. This of course violates the separation
+of concerns design philosophy, as all classes gets a secondary role, i.e. to log. Also it becomes a challenge to avoid
+referencing a specific logging API all over the code.
 
-It you have yet to look into aspect oriented programming (AOP) I will encouraged you to look into it and consider it whenever you have to add cross cutting functionality. Here's an example of an Interceptor for Castle Windsor that traces all (virtual) method calls with its parameters and return values.
+It you have yet to look into aspect oriented programming (AOP) I will encouraged you to look into it and consider it
+whenever you have to add cross cutting functionality. Here's an example of an Interceptor for Castle Windsor that traces
+all (virtual) method calls with its parameters and return values.
 
 Very handy thingy for the occational bug hunting.
 

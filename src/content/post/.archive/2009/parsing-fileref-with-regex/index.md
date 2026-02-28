@@ -16,7 +16,8 @@ Custom List items in SharePoint lacks an "ego-link field". The closes is the Fil
 
 > <code>1;#weblog/Lists/Blogmeddelelser/1_.000</code>
 
-You can mix the fields EncodedAbsUrl with parts of FileRef, add an aspx page name and actually get the real deal. This simple regular expression will match the ID and the list path relative to the site collection:
+You can mix the fields EncodedAbsUrl with parts of FileRef, add an aspx page name and actually get the real deal. This
+simple regular expression will match the ID and the list path relative to the site collection:
 
 > <code>(?'id'\d+)(?:\;\#)(?'path'.*?)\d+_\.</code>
 

@@ -13,13 +13,17 @@ tags:
 - microsoft
 title: Most awesome SharePoint resources
 ---
+
 ![image](/images/2018/01/Sharepoint-Logo-Puzzle-Feature_1290x688_KL-e1481570115141.jpg)
+
 # Most awesome SharePoint resources
 
-SharePoint has been around for more than 15 years and has grown into a highly complex ~~~beast~~~ product with an incredibly wide range of use.
+SharePoint has been around for more than 15 years and has grown into a highly complex ~~~beast~~~ product with an
+incredibly wide range of use.
 
 Over that time the web has been collecting tons of information on the topic.
-Below is a curated list of authorative resources that I reguarly consult for reference. The list was last updated in *Feb 2019*.
+Below is a curated list of authorative resources that I reguarly consult for reference. The list was last updated in
+*Feb 2019*.
 
 ## Architecture & design
 

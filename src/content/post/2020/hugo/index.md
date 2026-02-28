@@ -21,6 +21,7 @@ keywords:
 # Hugo
 
 ## My problem with Ghost
+
 My blog has been served from the NodeJS based [Ghost](https://ghost.org/)
 platform for [some years](../../2016/ghost-blogging-platform/) from a small
 Linux VM in Azure.
@@ -30,8 +31,8 @@ components, and to have a safer repository that does not require backing up page
 content on the VM.
 
 ## Now meet...
-![HUGO](/images/2020/hugo-logo-wide.svg)
 
+![HUGO](/images/2020/hugo-logo-wide.svg)
 
 The new setup is based on maintaining the content pages as markdown files in Git.
 Static site framework [Hugo](https://gohugo.io/) eventually compiles the
@@ -41,10 +42,13 @@ website. In front of that I added a free Cloudflare reverse proxy service to
 manage DNS, edge caching, transport security and DDOS resilience.
 
 ## Resources
-The following  helped me convert the site:
+
+The following helped me convert the site:
 
 - https://dwmkerr.com/migrating-from-ghost-to-hugo
 - https://github.com/jbarone/ghostToHugo
-- ~~At some point I might add [CD like Andrew Connell suggests](https://www.andrewconnell.com/blog/automated-hugo-releases-with-github-actions/)~~ That is now [built into Azure Static Webapps](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-hugo).
+- ~~At some point I might
+  add [CD like Andrew Connell suggests](https://www.andrewconnell.com/blog/automated-hugo-releases-with-github-actions/)~~
+  That is now [built into Azure Static Webapps](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-hugo).
 
 Comments? Please reach me at [@klinkby](https://www.twitter.com/klinkby).

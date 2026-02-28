@@ -1,24 +1,24 @@
 {
-   "list": [
-      {
-         "name":"ClamdScan",
-         "url":"https://github.com/klinkby/clamdscan",
-         "desc":"Non-blocking .NET Standard client for ClamAV daemon."
-      },
-      {
-         "name":"ClamdScan-REST",
-         "url":"https://github.com/klinkby/clamdscan-rest",
-         "desc":"Using ClamdScan, a dockerized REST API with a single endpoint for on-demand anti-malware."
-      },
-      {
-         "name":"Frickr",
-         "url":"https://github.com/klinkby/Frickr",
-         "desc":"Unwrap Flickr data dump to album folder structure with embedded EXIF metadata."
-      },
-      {
-         "name":"FeedReader",
-         "url":"https://bitbucket.org/klinkby/spapp-feedreader",
-         "desc":"SharePoint 2013 App that contains a simple and efficient App Part for displaying an RSS/Atom feed."
-      },
-   ]
+  "list": [
+    {
+      "name": "ClamdScan",
+      "url": "https://github.com/klinkby/clamdscan",
+      "desc": "Non-blocking .NET Standard client for ClamAV daemon."
+    },
+    {
+      "name": "ClamdScan-REST",
+      "url": "https://github.com/klinkby/clamdscan-rest",
+      "desc": "Using ClamdScan, a dockerized REST API with a single endpoint for on-demand anti-malware."
+    },
+    {
+      "name": "Frickr",
+      "url": "https://github.com/klinkby/Frickr",
+      "desc": "Unwrap Flickr data dump to album folder structure with embedded EXIF metadata."
+    },
+    {
+      "name": "FeedReader",
+      "url": "https://bitbucket.org/klinkby/spapp-feedreader",
+      "desc": "SharePoint 2013 App that contains a simple and efficient App Part for displaying an RSS/Atom feed."
+    },
+  ]
 }

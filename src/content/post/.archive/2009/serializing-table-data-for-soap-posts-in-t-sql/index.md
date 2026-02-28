@@ -12,7 +12,10 @@ title: Serializing table data for SOAP posts in T-SQL
 ---
 
 
-In an integration setup where a SQL Server trigger uses a CLR method with a generic WS client to publish changes to table data, you need to transform the 'inserted' table data to a serialized XML. In this example the CLR method simply wraps the xml content in the common SOAP envelope, and uses HttpWebRequest to post it to the specified  SOAP action and endpoint URL. 
+In an integration setup where a SQL Server trigger uses a CLR method with a generic WS client to publish changes to
+table data, you need to transform the 'inserted' table data to a serialized XML. In this example the CLR method simply
+wraps the xml content in the common SOAP envelope, and uses HttpWebRequest to post it to the specified SOAP action and
+endpoint URL.
 
 <pre class="csharpcode"><code><span class="kwrd">CREATE</span> <span class="kwrd">TRIGGER</span> oncustomermodified
  <span class="kwrd">   ON</span> dbo.[CRONUS Danmark A_S$Customer]

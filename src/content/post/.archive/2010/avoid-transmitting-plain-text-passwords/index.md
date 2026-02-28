@@ -12,10 +12,73 @@ title: Avoid transmitting plain text passwords
 ---
 
 
-First I would like to spell out in bold capital letters that this **nowhere as safe as SSL**. It is prone to [man-in the-middle attack](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) such as session hijacking. Okay, that said, here is an easy way to avoid transmitting plain text passwords with basic authentication forms. The idea is that the server initially generates a salt for the session and sends it to the client. The client then provides a password that is [SHA1-hashed](http://en.wikipedia.org/wiki/SHA_hash_functions) with the salt client side, and only this hash is sent back to server. The server also computes the hash from a stored password and then matches the two. Thanks to Chris Veness for providing the Javascript SHA-1 implementation. Here goes the View:   
+First I would like to spell out in bold capital letters that this **nowhere as safe as SSL**. It is prone
+to [man-in the-middle attack](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) such as session hijacking. Okay,
+that said, here is an easy way to avoid transmitting plain text passwords with basic authentication forms. The idea is
+that the server initially generates a salt for the session and sends it to the client. The client then provides a
+password that is [SHA1-hashed](http://en.wikipedia.org/wiki/SHA_hash_functions) with the salt client side, and only this
+hash is sent back to server. The server also computes the hash from a stored password and then matches the two. Thanks
+to Chris Veness for providing the Javascript SHA-1 implementation. Here goes the View:
 
- <%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang='en-US'> <head> <title></title> <script src="/Scripts/jquery-1.3.2.min.js" type="text/javascript"></script> <script type="text/javascript"> function hashify() { $('#password').val(hash($('#salt').val() + hash($('#passplain').val()))); } <%-- // © 2002-2005 Chris Veness // http://www.movable-type.co.uk/scripts/sha1.html --%> function hash(msg) { var K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6]; msg += String.fromCharCode(0x80); var l = Math.ceil(msg.length / 4) + 2; var N = Math.ceil(l / 16); var M = new Array(N); for (var i = 0; i < N; i++) { M[i] = new Array(16); for (var j = 0; j < 16; j++) { M[i][j] = (msg.charCodeAt(i * 64 + j * 4) << 24) | (msg.charCodeAt(i * 64 + j * 4 + 1) << 16) | (msg.charCodeAt(i * 64 + j * 4 + 2) << 8 ) | (msg.charCodeAt(i * 64 + j * 4 + 3)); } } M[N - 1][14] = ((msg.length - 1) * 8 ) / Math.pow(2, 32); M[N - 1][14] = Math.floor(M[N - 1][14]) M[N - 1][15] = ((msg.length - 1) * 8 ) & 0xffffffff; var H0 = 0x67452301; var H1 = 0xefcdab89; var H2 = 0x98badcfe; var H3 = 0x10325476; var H4 = 0xc3d2e1f0; var W = new Array(80); var a, b, c, d, e; for (var i = 0; i < N; i++) { for (var t = 0; t < 16; t++) W[t] = M[i][t]; for (var t = 16; t < 80; t++) W[t] = ROTL(W[t - 3] ^ W[t - 8] ^ W[t - 14] ^ W[t - 16], 1); a = H0; b = H1; c = H2; d = H3; e = H4; for (var t = 0; t < 80; t++) { var s = Math.floor(t / 20); var T = (ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[t]) & 0xffffffff; e = d; d = c; c = ROTL(b, 30); b = a; a = T; } H0 = (H0 + a) & 0xffffffff; H1 = (H1 + b) & 0xffffffff; H2 = (H2 + c) & 0xffffffff; H3 = (H3 + d) & 0xffffffff; H4 = (H4 + e) & 0xffffffff; } return H0.toHexStr() + H1.toHexStr() + H2.toHexStr() + H3.toHexStr() + H4.toHexStr(); } function f(s, x, y, z) { switch (s) { case 0: return (x & y) ^ (~x & z); case 1: return x ^ y ^ z; case 2: return (x & y) ^ (x & z) ^ (y & z); case 3: return x ^ y ^ z; } } function ROTL(x, n) { return (x << n) | (x >>> (32 - n)); } Number.prototype.toHexStr = function () { var s = "", v; for (var i = 7; i >= 0; i--) { v = (this >>> (i * 4)) & 0xf; s += v.toString(16); } return s; } </script> </head> <body> <% using (Html.BeginForm()) { %> <input id="passplain" /> <input name="password" id="password" type="hidden" /> <input id="salt" type="hidden" value="<%=Html.Encode(ViewData["salt"]) %>" /> <input type="submit" onclick="hashify();" /> <% } %> </body> </html> 
-  -- and the example MVC controller code:   
+<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang='en-US'> <head> <title></title> <script src="/Scripts/jquery-1.3.2.min.js" type="text/javascript"></script> <script type="text/javascript">
+function hashify() { $('#password').val(hash($('#salt').val() + hash($('#passplain').val()))); } <%-- // © 2002-2005
+Chris Veness // http://www.movable-type.co.uk/scripts/sha1.html --%> function hash(msg) { var
+K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6]; msg += String.fromCharCode(0x80); var l = Math.ceil(msg.length /
+4) + 2; var N = Math.ceil(l / 16); var M = new Array(N); for (var i = 0; i < N; i++) { M[i] = new Array(16); for (var
+j = 0; j < 16; j++) { M[i][j] = (msg.charCodeAt(i * 64 + j * 4) << 24) | (msg.charCodeAt(i * 64 + j * 4 + 1) << 16) | (
+msg.charCodeAt(i * 64 + j * 4 + 2) << 8 ) | (msg.charCodeAt(i * 64 + j * 4 + 3)); } } M[N - 1][14] = ((msg.length - 1) *
+8 ) / Math.pow(2, 32); M[N - 1][14] = Math.floor(M[N - 1][14]) M[N - 1][15] = ((msg.length - 1) * 8 ) & 0xffffffff; var
+H0 = 0x67452301; var H1 = 0xefcdab89; var H2 = 0x98badcfe; var H3 = 0x10325476; var H4 = 0xc3d2e1f0; var W = new Array(
+80); var a, b, c, d, e; for (var i = 0; i < N; i++) { for (var t = 0; t < 16; t++) W[t] = M[i][t]; for (var t = 16; t <
+80; t++) W[t] = ROTL(W[t - 3] ^ W[t - 8] ^ W[t - 14] ^ W[t - 16], 1); a = H0; b = H1; c = H2; d = H3; e = H4; for (var
+t = 0; t < 80; t++) { var s = Math.floor(t / 20); var T = (ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[t]) & 0xffffffff;
+e = d; d = c; c = ROTL(b, 30); b = a; a = T; } H0 = (H0 + a) & 0xffffffff; H1 = (H1 + b) & 0xffffffff; H2 = (H2 + c) &
+0xffffffff; H3 = (H3 + d) & 0xffffffff; H4 = (H4 + e) & 0xffffffff; } return H0.toHexStr() + H1.toHexStr() +
+H2.toHexStr() + H3.toHexStr() + H4.toHexStr(); } function f(s, x, y, z) { switch (s) { case 0: return (x & y) ^ (~x &
+z); case 1: return x ^ y ^ z; case 2: return (x & y) ^ (x & z) ^ (y & z); case 3: return x ^ y ^ z; } } function ROTL(x,
+n) { return (x << n) | (x >>> (32 - n)); } Number.prototype.toHexStr = function () { var s = "", v; for (var i = 7; i >=
+0; i--) { v = (this >>> (i * 4)) & 0xf; s += v.toString(16); } return s; } </script> </head> <body> <% using (
+Html.BeginForm()) { %> <input id="passplain" /> <input name="password" id="password" type="hidden" /> <input id="salt"
+type="hidden" value="<%=Html.Encode(
+ViewData["salt"]) %>" /> <input type="submit" onclick="hashify();" /> <% } %> </body> </html>
+-- and the example MVC controller code:
 
- <span class="kwrd">using</span> System; <span class="kwrd">using</span> System.Globalization; <span class="kwrd">using</span> System.Linq; <span class="kwrd">using</span> System.Web.Mvc; <span class="kwrd">namespace</span> MvcApplication1.Controllers {     <span class="kwrd">public</span> <span class="kwrd">class</span> AccountController : Controller     {         <span class="kwrd">public</span> ActionResult LogOn()         {             <span class="kwrd">byte</span>[] salt;             <span class="kwrd">if</span> ((salt = (<span class="kwrd">byte</span>[])Session[<span class="str">"salt"</span>]) == <span class="kwrd">null</span>)                 <span class="kwrd">using</span> (var sha1 = System.Security.Cryptography.SHA1Managed.Create())                 {                     salt = <span class="kwrd">new</span> <span class="kwrd">byte</span>[64];                     <span class="kwrd">new</span> Random().NextBytes(salt);                     Session[<span class="str">"salt"</span>] = sha1.ComputeHash(salt);                 }             ViewData.Add(<span class="str">"salt"</span>, ToHex((<span class="kwrd">byte</span>[])Session[<span class="str">"salt"</span>]));             <span class="kwrd">return</span> View();         }         <span class="kwrd">static</span> <span class="kwrd">string</span> ToHex(<span class="kwrd">byte</span>[] buf)         {             <span class="kwrd">return</span> buf.Aggregate(<span class="kwrd">string</span>.Empty, (a, b) => a += b.ToString(<span class="str">"x2"</span>));         }         <span class="kwrd">static</span> <span class="kwrd">byte</span>[] FromHex(<span class="kwrd">string</span> hex)         {             <span class="kwrd">byte</span>[] buf = <span class="kwrd">new</span> <span class="kwrd">byte</span>[hex.Length / 2];             <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i < buf.Length; i++)             {                 <span class="kwrd">string</span> ch = <span class="kwrd">string</span>.Empty + hex[i * 2] + hex[i * 2 + 1];                 buf[i] = <span class="kwrd">byte</span>.Parse(ch, NumberStyles.HexNumber);             }             <span class="kwrd">return</span> buf;         }         <span class="kwrd">string</span> GetStoredPassword()         {             <span class="kwrd">return</span> <span class="str">"test"</span>; <span class="rem">// read from somewhere safe</span>         }         [AcceptVerbs(HttpVerbs.Post)]         <span class="kwrd">public</span> ActionResult LogOn(<span class="kwrd">string</span> password)         {             <span class="kwrd">byte</span>[] providedPass = FromHex(password);             <span class="kwrd">byte</span>[] actualPass = System.Text.Encoding.UTF8.GetBytes(GetStoredPassword());             <span class="kwrd">using</span> (var sha1 = System.Security.Cryptography.SHA1Managed.Create())             {                 <span class="kwrd">byte</span>[] salt = (<span class="kwrd">byte</span>[])Session[<span class="str">"salt"</span>];                 <span class="kwrd">byte</span>[] actualHash = sha1.ComputeHash(actualPass);                 <span class="kwrd">byte</span>[] actualPassword = sha1.ComputeHash(                     System.Text.Encoding.UTF8.GetBytes(                     ToHex(salt.Concat(actualHash).ToArray())                     )                     );                 <span class="kwrd">if</span> (ToHex(actualPassword) != password)                 {                     ViewData.Add(<span class="str">"salt"</span>, ToHex(salt));                     <span class="kwrd">return</span> View(); <span class="rem">// Password refused</span>                 }                 <span class="kwrd">else</span>                 {                     Session.Add(<span class="str">"loggedin"</span>, DateTime.Now);                     <span class="kwrd">return</span> RedirectToAction(<span class="str">"Index"</span>, <span class="str">"Home"</span>); <span class="rem">// Password accepted</span>                 }             }         }     } }
+<span class="kwrd">using</span> System; <span class="kwrd">using</span> System.Globalization; <span class="kwrd">
+using</span> System.Linq; <span class="kwrd">using</span> System.Web.Mvc; <span class="kwrd">namespace</span>
+MvcApplication1.Controllers {     <span class="kwrd">public</span> <span class="kwrd">class</span> AccountController :
+Controller {         <span class="kwrd">public</span> ActionResult LogOn()         {             <span class="kwrd">
+byte</span>[] salt;             <span class="kwrd">if</span> ((salt = (<span class="kwrd">byte</span>[])
+Session[<span class="str">"salt"</span>]) == <span class="kwrd">null</span>)                 <span class="kwrd">
+using</span> (var sha1 = System.Security.Cryptography.SHA1Managed.Create())                 { salt = <span class="kwrd">
+new</span> <span class="kwrd">byte</span>[64];                     <span class="kwrd">new</span> Random().NextBytes(
+salt); Session[<span class="str">"salt"</span>] = sha1.ComputeHash(salt); } ViewData.Add(<span class="str">"
+salt"</span>, ToHex((<span class="kwrd">byte</span>[])
+Session[<span class="str">"salt"</span>]));             <span class="kwrd">return</span>
+View(); }         <span class="kwrd">static</span> <span class="kwrd">string</span> ToHex(<span class="kwrd">
+byte</span>[] buf)         {             <span class="kwrd">return</span> buf.Aggregate(<span class="kwrd">string</span>
+.Empty, (a, b) => a += b.ToString(<span class="str">"x2"</span>)); }         <span class="kwrd">
+static</span> <span class="kwrd">byte</span>[] FromHex(<span class="kwrd">string</span>
+hex)         {             <span class="kwrd">byte</span>[] buf = <span class="kwrd">new</span> <span class="kwrd">
+byte</span>[hex.Length / 2];             <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i <
+buf.Length; i++)             {                 <span class="kwrd">string</span> ch = <span class="kwrd">string</span>
+.Empty + hex[i * 2] + hex[i * 2 + 1]; buf[i] = <span class="kwrd">byte</span>.Parse(ch,
+NumberStyles.HexNumber); }             <span class="kwrd">return</span> buf; }         <span class="kwrd">string</span>
+GetStoredPassword()         {             <span class="kwrd">return</span> <span class="str">"
+test"</span>; <span class="rem">// read from somewhere
+safe</span>         }         [AcceptVerbs(HttpVerbs.Post)]         <span class="kwrd">public</span> ActionResult
+LogOn(<span class="kwrd">string</span> password)         {             <span class="kwrd">byte</span>[] providedPass =
+FromHex(password);             <span class="kwrd">byte</span>[] actualPass = System.Text.Encoding.UTF8.GetBytes(
+GetStoredPassword());             <span class="kwrd">using</span> (var sha1 =
+System.Security.Cryptography.SHA1Managed.Create())             {                 <span class="kwrd">byte</span>[]
+salt = (<span class="kwrd">byte</span>[])Session[<span class="str">"salt"</span>];                 <span class="kwrd">
+byte</span>[] actualHash = sha1.ComputeHash(actualPass);                 <span class="kwrd">byte</span>[]
+actualPassword = sha1.ComputeHash(                     System.Text.Encoding.UTF8.GetBytes(                     ToHex(
+salt.Concat(actualHash).ToArray())                     )                     );                 <span class="kwrd">
+if</span> (ToHex(actualPassword) != password)                 { ViewData.Add(<span class="str">"salt"</span>, ToHex(
+salt));                     <span class="kwrd">return</span> View(); <span class="rem">// Password
+refused</span>                 }                 <span class="kwrd">else</span>                 {
+Session.Add(<span class="str">"loggedin"</span>, DateTime.Now);                     <span class="kwrd">return</span>
+RedirectToAction(<span class="str">"Index"</span>, <span class="str">"Home"</span>); <span class="rem">// Password
+accepted</span>                 } } } } }
 

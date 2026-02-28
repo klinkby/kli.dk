@@ -14,7 +14,8 @@ title: Gravatar
 ---
 
 
-Just a little method to get an url to a [public avatar image](http://en.wikipedia.org/wiki/Avatar_(computing)) from [gravatar.com](http://gravatar.com).
+Just a little method to get an url to a [public avatar image](http://en.wikipedia.org/wiki/Avatar_(computing))
+from [gravatar.com](http://gravatar.com).
 
 <pre class="csharpcode"><code><span class="kwrd">readonly</span> <span class="kwrd">static</span> MD5CryptoServiceProvider _md5 = <span class="kwrd">new</span> MD5CryptoServiceProvider();
 <span class="kwrd">static</span> Uri GetGravatar(<span class="kwrd">string</span> email)

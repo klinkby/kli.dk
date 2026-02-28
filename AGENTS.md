@@ -2,12 +2,12 @@
 
 ## Static site
 
-| What | Detail |
-|---|---|
-| Generator | [Hugo Extended](https://gohugo.io/) v0.145.0 |
-| Content source | `src/` (TOML config, Markdown posts, YAML data) |
-| Theme | `src/themes/cactus` — git submodule → `github.com/klinkby/hugo-theme-cactus` |
-| Build output | `src/public/` (produced inside Docker, never committed) |
+| What           | Detail                                                                       |
+|----------------|------------------------------------------------------------------------------|
+| Generator      | [Hugo Extended](https://gohugo.io/) v0.145.0                                 |
+| Content source | `src/` (TOML config, Markdown posts, YAML data)                              |
+| Theme          | `src/themes/cactus` — git submodule → `github.com/klinkby/hugo-theme-cactus` |
+| Build output   | `src/public/` (produced inside Docker, never committed)                      |
 
 Hugo is invoked with `--minify`. Config lives in `src/config.toml`.
 
@@ -23,19 +23,20 @@ Multi-stage `Dockerfile` (Alpine 3.22):
 [lighttpd](https://www.lighttpd.net/) — config at `lighttpd.conf`.
 
 Key behaviour:
+
 - Binds to a **Unix socket** at `/var/run/lighttpd/sock` (no TCP port inside the container).
 - `GET /sitemap.xml` → 301 redirect → `/index.xml` (RSS feed).
 - Custom 404 page: `/404/index.html`.
-- Security headers: `Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy`.
+- Security headers: `Content-Security-Policy`, etc.
 - Cache-Control: static assets 180 days (`immutable`); HTML/XML/JSON 1 day.
 
 ## Protocols & endpoints
 
-| Protocol | Notes |
-|---|---|
-| HTTP/1.1 | Served by lighttpd; TLS is terminated upstream (reverse proxy / load balancer) |
-| RSS 2.0 | `/index.xml` |
-| Sitemap redirect | `/sitemap.xml` → `/index.xml` (301) |
+| Protocol         | Notes                                                                          |
+|------------------|--------------------------------------------------------------------------------|
+| HTTP/1.1         | Served by lighttpd; TLS is terminated upstream (reverse proxy / load balancer) |
+| RSS 2.0          | `/index.xml`                                                                   |
+| Sitemap redirect | `/sitemap.xml` → `/index.xml` (301)                                            |
 
 ## CI/CD
 
@@ -50,9 +51,8 @@ Key behaviour:
 ## Local development
 
 ```sh
-docker compose -f redist/docker-compose.yml up --build
+podman-compose -f redist/docker-compose.yml up --build
 ```
 
-Builds the image and starts two containers via Compose: `web` (lighttpd) and `socat` (bridges the Unix socket to TCP). A named Docker volume shares the socket between them. Site is served at `http://localhost:3000`.
-
-Requires: `docker` with Compose plugin.
+Builds the image and starts two containers via Compose: `web` (lighttpd) and `socat` (bridges the Unix socket to TCP).
+A named Docker volume shares the socket between them. Site is served at `http://localhost:3000`.

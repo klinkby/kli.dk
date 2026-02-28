@@ -16,7 +16,9 @@ title: ProcessItems UX pattern
 ---
 
 
-Here's a general implementation for the common UX scenario where a items in a list should be processed, and that processing might fail, so reprocessing might be needed for those items. This used e.g. when copying a bunch of files or collecting data from loosely connected distributed systems.   
+Here's a general implementation for the common UX scenario where a items in a list should be processed, and that
+processing might fail, so reprocessing might be needed for those items. This used e.g. when copying a bunch of files or
+collecting data from loosely connected distributed systems.
 
 ```C#
 /// <summary>

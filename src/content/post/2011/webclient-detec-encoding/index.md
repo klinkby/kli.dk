@@ -16,7 +16,9 @@ title: Read from WebClient with the right encoding
 ---
 
 
-I've had some encoding trouble with the [DownloadString](http://msdn.microsoft.com/en-us/library/fhd1f0sw.aspx)(Async) method on the [ WebClient class](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx), so I wrote my own encoding detection to get a string with the correct encoding.   
+I've had some encoding trouble with the [DownloadString](http://msdn.microsoft.com/en-us/library/fhd1f0sw.aspx)(Async)
+method on the [ WebClient class](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx), so I wrote my own
+encoding detection to get a string with the correct encoding.
 
 ```C#
 readonly static Regex m_enc = new Regex(

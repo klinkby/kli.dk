@@ -14,9 +14,13 @@ title: SelectParallel for .NET 3.5
 ---
 
 
-A simple method that does exactly what Select LINQ function does, except the items are processed as work items on the thread pool. The implementation here is best for items that takes about an equal amount of processing time, and do avoid using it for tiny work items. If an exception occurs during processing of an item, the exception is rethrown on the caller's thread. 
+A simple method that does exactly what Select LINQ function does, except the items are processed as work items on the
+thread pool. The implementation here is best for items that takes about an equal amount of processing time, and do avoid
+using it for tiny work items. If an exception occurs during processing of an item, the exception is rethrown on the
+caller's thread.
 
-Please note this implementation is very different from how the Parallel LINQ library works, and I would always recommend using the implementation in NET 4.0 if your application can take dependency of that.   
+Please note this implementation is very different from how the Parallel LINQ library works, and I would always recommend
+using the implementation in NET 4.0 if your application can take dependency of that.
 
 ```C#
 static IEnumerable<TD> SelectParallel<TS, TD>(

@@ -12,7 +12,10 @@ title: Impersonation.RevertToSelf()
 ---
 
 
-In a SharePoint web.config you will find the line <identity impersonate="true"/> that causes all server code to be run in the context of the requesting client. So if you need your webpart to e.g. look up a user in the active directory (i.e. on the domain controller) you have [ a double hop issue](http://blogs.msdn.com/knowledgecast/archive/2007/01/31/the-double-hop-problem.aspx).
+In a SharePoint web.config you will find the line <identity impersonate="true"/> that causes all server code to be run
+in the context of the requesting client. So if you need your webpart to e.g. look up a user in the active directory (
+i.e. on the domain controller) you
+have [ a double hop issue](http://blogs.msdn.com/knowledgecast/archive/2007/01/31/the-double-hop-problem.aspx).
 
 You can use credentials of the app pool account to overcome this using the following code snippet:
 

@@ -16,7 +16,8 @@ title: URL Rewriting Module for WCF
 
 Your WCF services have the .svc extension. So a request could be http://yourserver/golden.svc/echo/helloworld
 
-With this simple HTTP module for the IIS pipeline you can avoid the .svc extension, as it automagically adds it to redirects requests with no extension specified.
+With this simple HTTP module for the IIS pipeline you can avoid the .svc extension, as it automagically adds it to
+redirects requests with no extension specified.
 
 <pre class="csharpcode"><code><span class="kwrd">public</span> <span class="kwrd">class</span> ServiceRedirectorHttpModule : IHttpModule
 {    

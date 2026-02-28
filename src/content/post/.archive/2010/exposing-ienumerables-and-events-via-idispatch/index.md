@@ -12,7 +12,10 @@ title: Exposing IEnumerables and events via IDispatch
 ---
 
 
-No doubt in my mind. The world would be a better place without COM (sorry @donbox). Just spent some time relearning *s* the best practices for exposing an enumeration to IDispatch affected applications (like Dynamics NAV). One of the gotchas is .NET exposes the IEnumerable.GetEnumerator() as DispId(-4), that returns IEnumVARIANT, which doesn't implement IDispatch.
+No doubt in my mind. The world would be a better place without COM (sorry @donbox). Just spent some time relearning *s*
+the best practices for exposing an enumeration to IDispatch affected applications (like Dynamics NAV). One of the
+gotchas is .NET exposes the IEnumerable.GetEnumerator() as DispId(-4), that returns IEnumVARIANT, which doesn't
+implement IDispatch.
 
 <pre class="csharpcode"><code>[ComVisible(<span class="kwrd">true</span>),
     Guid(<span class="str">"6BBEFFA7-4215-40B1-AC27-65C093C1D9A8"</span>),
@@ -67,7 +70,9 @@ No doubt in my mind. The world would be a better place without COM (sorry @donbo
     }
 }   </code></pre>
 
-Also remember to put a GuidAttribute on the assembly scope. The AssemblyDescriptionAttribute is used for typelib title i.e. "MyTypelib 1.0 Type Library", and the assembly name set in project properties defines the type library name used for "typelibid.progid".
+Also remember to put a GuidAttribute on the assembly scope. The AssemblyDescriptionAttribute is used for typelib title
+i.e. "MyTypelib 1.0 Type Library", and the assembly name set in project properties defines the type library name used
+for "typelibid.progid".
 
 Events, or so called connection point, can be exposed by defining a dispatch interface like:
 
@@ -81,7 +86,9 @@ Events, or so called connection point, can be exposed by defining a dispatch int
     <span class="kwrd">void</span> AddCompleted(<span class="kwrd">object</span> sender, AsyncCompletedEventArgs e);
 }</code></pre>
 
-And adding a [ComSourceInterfaces(typeof(_ClientsEvents))] attribute to the class with an event which name and delegate corresponds exactly to each method in the interface.
+And adding a [ComSourceInterfaces(typeof(_ClientsEvents))] attribute to the class with an event which name and delegate
+corresponds exactly to each method in the interface.
 
-Note that generic types cannot be exported, and ALL types that i marshalled (even if they are only exposed though an interface) must have ComVisible(true).
+Note that generic types cannot be exported, and ALL types that i marshalled (even if they are only exposed though an
+interface) must have ComVisible(true).
 

@@ -12,5 +12,8 @@ title: WinFX command pattern
 ---
 
 
-Finally a standardized [ command pattern](http://www.microsoft.com/belux/msdn/nl/community/columns/jdruyts/wpf_commandpattern.mspx) in .NET which is nice - it just bugs me there is no memento implementation for undo/redo functionality. Well apparently you can't have it all. :-)
+Finally a
+standardized [ command pattern](http://www.microsoft.com/belux/msdn/nl/community/columns/jdruyts/wpf_commandpattern.mspx)
+in .NET which is nice - it just bugs me there is no memento implementation for undo/redo functionality. Well apparently
+you can't have it all. :-)
 

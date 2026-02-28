@@ -12,7 +12,8 @@ title: Are we alone?
 ---
 
 
-Simple way to make sure there is only one instance of your application running in the window session. If you need there to be only one instance on the machine, change 'Local' to 'Global'.
+Simple way to make sure there is only one instance of your application running in the window session. If you need there
+to be only one instance on the machine, change 'Local' to 'Global'.
 
  <pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">void</span> Main()
 {

@@ -16,7 +16,8 @@ title: ASP.NET XSLT Control
 ---
 
 
-Here's a highly scalable ASP.NET control that uses the fast Data Contract Serializer to generate XML for an object and transforms it using a cached instance of XslCompiledTransforms.
+Here's a highly scalable ASP.NET control that uses the fast Data Contract Serializer to generate XML for an object and
+transforms it using a cached instance of XslCompiledTransforms.
 
 I find it a very versatile little tool for generating content that doesn't post back.
 

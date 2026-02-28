@@ -12,7 +12,9 @@ title: Rotate.NET
 ---
 
 
-One of the remarkable missing CPU instructions from the .NET BCL is bitwise rotation. The shift operators are there: <code>&lt;&lt;</code>, <code>&gt;&gt;</code>. The following implementation fills out the blanks (based on RCA Lab's RC5 reference implementation).
+One of the remarkable missing CPU instructions from the .NET BCL is bitwise rotation. The shift operators are
+there: <code>&lt;&lt;</code>, <code>&gt;&gt;</code>. The following implementation fills out the blanks (based on RCA
+Lab's RC5 reference implementation).
 
 <pre class="csharpcode"><code><span class="kwrd">static</span> <span class="kwrd">class</span> Spinner
 {

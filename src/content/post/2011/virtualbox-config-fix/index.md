@@ -10,7 +10,9 @@ title: VirtualBox Config Workaround
 ---
 
 
-I have been having some [trouble with VirtualBox](http://www.virtualbox.org/ticket/8948) since I upgraded some time ago. Every time I close a VM VirtualBox places an invalid character (for an XML-parser anyway) in the config file, rendering the file unreadable for VirtualBox the next time I want to start it. So I did this naïve Python script to fix it.   
+I have been having some [trouble with VirtualBox](http://www.virtualbox.org/ticket/8948) since I upgraded some time ago.
+Every time I close a VM VirtualBox places an invalid character (for an XML-parser anyway) in the config file, rendering
+the file unreadable for VirtualBox the next time I want to start it. So I did this naïve Python script to fix it.
 
 ```PYTHON
 filename = "/home/user/VirtualBox VMs/MyMachine/MyMachine.vbox" 

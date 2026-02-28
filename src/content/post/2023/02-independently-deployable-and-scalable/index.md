@@ -12,15 +12,17 @@ tags:
 # Quality attributes for microservices - part 2
 
 > This is the second post in [the series](../quality-attributes-for-microservices/) about some ideal characteristics
-about microservices, both from the architect's perspective as well as developer's and operations perspective. In this
-post we will have a look on deployment and scalability of microservices.
+> about microservices, both from the architect's perspective as well as developer's and operations perspective. In this
+> post we will have a look on deployment and scalability of microservices.
 
 _In my humble opinion a good microservice..._
+
 # "Is independently deployable and scalable"
 
 ## Scaling up or out
 
-For systems that may experience growing load, or demands high availability, it is important to be able to scale the system.
+For systems that may experience growing load, or demands high availability, it is important to be able to scale the
+system.
 
 More load can be managed by either vertical (up) or horizontal (out) scaling. Vertical scaling is achieved by adding
 more resources to the existing system, like purchasing beefier servers with more memory or CPU cores. Raising
@@ -42,7 +44,8 @@ towards safe deploys, where a service can be updated and redeployed without affe
 This can also enable independent scaling, or elasticity, where a service behind a network load balancer can be scaled
 up or down without affecting other services. More nodes can be added dynamically at peak load times and stopped again
 when load decreases. In the cloud service that only charge for running time this is a very cost-effective solution
-for handling dynamic load. As opposed to paying for a group of idle servers, just waiting for that peak day of the month.  
+for handling dynamic load. As opposed to paying for a group of idle servers, just waiting for that peak day of the
+month.
 
 ## Deterministic and stateless
 
@@ -75,5 +78,6 @@ Again, thank you for reading and have a wonderful day!
 ## References
 
 - [Independent deployment](https://martinfowler.com/articles/microservice-trade-offs.html#deployment) by Martin Fowler
-- [Containers and microservices — a perfect pair](https://developer.ibm.com/learningpaths/get-started-application-modernization/intro-microservices/containers-and-microservices/) by IBM
+- [Containers and microservices — a perfect pair](https://developer.ibm.com/learningpaths/get-started-application-modernization/intro-microservices/containers-and-microservices/)
+  by IBM
 - [Scaling Stateful Services](https://www.infoq.com/news/2015/11/scaling-stateful-services/) by InfoQ

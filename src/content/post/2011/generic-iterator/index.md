@@ -14,7 +14,9 @@ title: Generic Iterator
 ---
 
 
-I just generalized the iterator implemented in my [previous blog post](http://kli.dk/2011/05/25/iterate-folders-non-recursively) to non-recursively iterate **any** object tree.   
+I just generalized the iterator implemented in
+my [previous blog post](http://kli.dk/2011/05/25/iterate-folders-non-recursively) to non-recursively iterate **any**
+object tree.
 
 ```C#
 static IEnumerable<T> Iterate<T>(T rootNode, Func<T, IEnumerable<T>> getChildren)
