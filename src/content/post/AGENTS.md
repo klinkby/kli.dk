@@ -18,7 +18,9 @@ before inventing it. Analyze text for possible cross references to my old blog p
 ## File layout
 
 - One post per folder: `post/<year>/<slug>/index.md` (page bundle).
-- Images for the post live alongside `index.md` or under `/static/images/<year>/`.
+- Images for the post live alongside `index.md` or under `src/static/images/<year>/`,
+  referenced in Markdown as `/images/<year>/<file>` (Hugo serves `src/static/` at the
+  site root).
 - `slug` is lowercase, hyphenated.
 
 ## Front matter (YAML)
@@ -104,8 +106,20 @@ When in doubt, match the tone and shape of these:
 ## Mechanics
 
 - Markdown indent is 4 spaces (`.editorconfig`); body lines are hard-wrapped.
-- Prefer relative links for internal pages, absolute for external.
+- Prefer relative links for internal pages, absolute for external. Cross-year internal
+  links need `../../<year>/<slug>/` (a series index and a post can live in different years).
 - No build step needed to preview prose; run Hugo locally to check rendering.
+
+## Images
+
+- Keep post images small: **~640px wide, under ~100 KB** (existing ones are 44–62 KB).
+  Don't ship multi-megabyte originals.
+- No ImageMagick or PIL in this environment. Resize with sharp-cli via npx:
+  `npx --yes sharp-cli -i <file> -o <dir>/ resize 640 --withoutEnlargement --`
+  (it overwrites in place when input and output dir match).
+- Source images CC0 / public-domain to match the blog. Wikimedia Commons works well and
+  is fetchable; Pixabay/Unsplash pages block automated download (HTTP 403). Credit the
+  author in the image alt text, e.g. `![... , photo by Daderot (CC0)](/images/...)`.
 
 ## Proofreading
 

@@ -15,12 +15,9 @@ RUN hugo --minify
 
 # Runtime stage: serve static files with lighttpd on Alpine Linux
 FROM alpine:3.22
-RUN apk add --no-cache lighttpd
+RUN apk add --no-cache lighttpd su-exec
 RUN addgroup -S web && adduser -S -G web -h /app -s /sbin/nologin web
 COPY --from=builder /src/public /app
-RUN chown -R web:web /app && mkdir -p /var/run/lighttpd && chown web:web /var/run/lighttpd
-# Make sure to bind the socket folder a volume 
-# VOLUME /var/run/lighttpd 
+RUN chown -R web:web /app && mkdir -p /var/run/lighttpd
 COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
-USER web:web
-CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
+CMD ["sh", "-c", "chown web:web /var/run/lighttpd && rm -f /var/run/lighttpd/sock && exec su-exec web lighttpd -D -f /etc/lighttpd/lighttpd.conf"]
