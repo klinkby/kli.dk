@@ -142,7 +142,7 @@ contract turns "interoperable" into "self-service".
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will look at how a microservice can guarantee atomicity and idempotency for simple operations.
+In the next post we will look at how a microservice can [guarantee atomicity and idempotency for simple operations](../04-atomicity-and-idempotency/).
 Thank you for reading and have a wonderful day!
 
 ---
