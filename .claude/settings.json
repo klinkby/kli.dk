@@ -1,0 +1,19 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "network": {
+      "allowedDomains": ["api.github.com"]
+    }
+  },
+  "permissions": {
+    "deny": [
+      "Read(**/.env*)",
+      "Read(**/.ssh/**)",
+      "Write(**/.env*)",
+      "Write(**/.ssh/**)",
+      "Write(.github/workflows/*)",
+      "Write(**/.claude/**)"
+    ]
+  }
+}
