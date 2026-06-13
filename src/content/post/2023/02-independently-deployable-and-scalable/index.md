@@ -70,7 +70,7 @@ and join the load balancer during dynamic peak system load.
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will explore how to expose a useful REST interface for the resource.
+In the next post we will explore [how to expose a useful REST interface for the resource](../2026/03-well-defined-resource-centric-interface).
 Again, thank you for reading and have a wonderful day!
 
 ---

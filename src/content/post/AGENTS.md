@@ -84,7 +84,12 @@ conclusion plainly ("My conclusion is..."), then links and credits. ~300–500 w
 **Sectioned deep-dive** (e.g. the microservices series): `##` sections, each a
 single facet, ending with a `## Conclusion`, then `---`, then `## References` as a
 linked list. Series posts open with a `>` blockquote linking the series index and
-cross-link prev/next with relative links.
+cross-link prev/next with relative links. 
+
+**Linking series posts**: Publishing a new post in a series means going *back* to
+wire the previous post's closing "next post" link and turn the series-index line into a
+link — easily forgotten. Leave a post's own "next post" sentence unlinked until that
+post exists.
 
 Common to both:
 
