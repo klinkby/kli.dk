@@ -2,6 +2,8 @@
 date: "2026-06-13T08:00:00Z"
 title: "4. Guarantee atomicity and idempotency for simple operations"
 description: "Why simple microservice operations should be atomic and safe to retry."
+images:
+- "/images/2026/cheque.jpg"
 tags:
 - microservice
 - architecture
@@ -77,6 +79,8 @@ the wiser that its first attempt was ever in doubt.
 This is how serious payment APIs avoid charging your card twice; Stripe has shipped an
 `Idempotency-Key` header for years. It is still an IETF draft rather than a ratified RFC, but the
 pattern is settled enough that I would not build a create endpoint that touches money without it.
+
+![A handwritten cheque — the original idempotency key, void once cashed](/images/2026/cheque.jpg)
 
 ## Atomic: all or nothing
 
