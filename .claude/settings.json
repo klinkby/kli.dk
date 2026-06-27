@@ -8,12 +8,8 @@
   },
   "permissions": {
     "deny": [
-      "Read(**/.env*)",
-      "Read(**/.ssh/**)",
-      "Write(**/.env*)",
-      "Write(**/.ssh/**)",
-      "Write(.github/workflows/*)",
-      "Write(**/.claude/**)"
+      "Edit(.claude/settings.json)",
+      "Write(.claude/settings.json)"
     ]
   }
 }
