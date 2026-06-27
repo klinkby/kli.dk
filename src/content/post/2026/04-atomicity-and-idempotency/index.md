@@ -144,7 +144,7 @@ and atomicity is off the table — which is where the next post goes.
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will look at how a microservice can guarantee eventual consistency for complex operations.
+In the next post we will look at how a microservice can [guarantee eventual consistency for complex operations](../05-eventual-consistency/).
 Thank you for reading and have a wonderful day!
 
 ---
