@@ -1,5 +1,5 @@
 ---
-date: "2026-08-14T08:00:00Z"
+date: "2026-08-13T18:00:00Z"
 title: "6. Can tell its healthiness, and is observable"
 description: "Health probes, structured logs, metrics and distributed tracing — how a service explains itself."
 images:
