@@ -121,7 +121,8 @@ It is a genuinely good pattern, and it has genuinely sharp edges, so a few thing
 
 - **Decoupling cuts both ways.** Nobody owns the end-to-end flow any more. The order was placed, but did
   the ledger ever hear about it? In a pub/sub system the answer lives in logs and traces across half a
-  dozen services — which is precisely why the next post is about observability and distributed tracing.
+  dozen services — which is precisely why [the next post](../06-healthiness-and-observability/) is about
+  observability and distributed tracing.
 - **Out-of-order and duplicate delivery are normal.** A bus gives you at-least-once and rarely strict
   ordering, so consumers must tolerate duplicates (idempotency, below) and not assume event B arrives after
   event A.
@@ -193,8 +194,9 @@ for distributing only the module that genuinely demands it.
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will look at how a microservice can tell its own healthiness and stay observable through
-distributed tracing and streaming logs. Thank you for reading and have a wonderful day!
+In the next post we will look at how a microservice can [tell its own healthiness and stay observable through
+distributed tracing and streaming logs](../06-healthiness-and-observability/). Thank you for reading and
+have a wonderful day!
 
 ---
 

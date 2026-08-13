@@ -19,7 +19,7 @@ In my humble opinion a good microservice...
 1. [Provides a well-defined, interoperable resource-centric interface](../../2026/03-well-defined-resource-centric-interface/)
 1. [Guarantee atomicity and idempotency for simple operations](../../2026/04-atomicity-and-idempotency/)
 1. [Guarantee eventual consistency for complex operations](../../2026/05-eventual-consistency/)
-1. Can tell its healthiness, and is observable from distributed tracing and streaming logging.
+1. [Can tell its healthiness, and is observable from distributed tracing and streaming logging](../../2026/06-healthiness-and-observability/)
 1. Implement operations that are stateless, non-blocking (I/O) and handle blobs unbuffered.
 1. Externalize cross-cutting policies to upstream infrastructure services.
 
