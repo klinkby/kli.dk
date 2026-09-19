@@ -38,3 +38,5 @@ Still, US tech completely dominates my tech stack. The source code and CI pipeli
 by Antrophic's [Claude](https://claude.ai/) LLM. 
 
 One small step. Alas, Europe has some way to go.
+
+**Update:** convenience later won out and the blog [moved to GitHub Pages]({{< ref "/post/2026/hosting-on-github-pages" >}}), so the self-hosted setup described above is no longer how it runs.
