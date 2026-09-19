@@ -39,7 +39,8 @@ no `DOCKERHUB_PAT`.
 - Custom domain `www.kli.dk` is kept by `src/static/CNAME`; set the same domain (and DNS) once
   in the repo's **Settings → Pages**, and set the Pages source to **GitHub Actions**.
 - `/sitemap.xml` is Hugo's native sitemap. `/index.xml` is the RSS 2.0 feed.
-- Custom 404 page: `/404/index.html`.
+- Custom 404 page: `/404.html`, rendered from `src/layouts/404.html` (GitHub Pages only
+  serves a root `404.html`, not `/404/index.html`).
 - GitHub Pages does **not** serve custom response headers (the old lighttpd
   `Content-Security-Policy` and `Cache-Control` tuning) or 301 redirects. If those are needed,
   they must be handled by a CDN/proxy in front of Pages.
