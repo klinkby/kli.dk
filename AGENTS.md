@@ -7,52 +7,40 @@
 | Generator      | [Hugo Extended](https://gohugo.io/) v0.145.0                                 |
 | Content source | `src/` (TOML config, Markdown posts, YAML data)                              |
 | Theme          | `src/themes/cactus` — git submodule → `github.com/klinkby/hugo-theme-cactus` |
-| Build output   | `src/public/` (produced inside Docker, never committed)                      |
+| Build output   | `src/public/` (produced by the build, never committed)                       |
+| Hosting        | GitHub Pages, custom domain `www.kli.dk` (`src/static/CNAME`)                 |
 
 Hugo is invoked with `--minify`. Config lives in `src/config.toml`.
 
-## Container
+## Commands
 
-Multi-stage `Dockerfile` (Alpine 3.22):
+```sh
+git submodule update --init --recursive          # fetch the cactus theme
+hugo -s src server -D                             # dev, localhost:1313
+hugo -s src --gc --minify --baseURL "https://www.kli.dk/"   # build to src/public/
+```
 
-1. **builder** — downloads Hugo, copies `src/`, runs `hugo --minify`.
-2. **runtime** — installs lighttpd, copies `src/public/` into `/app`, runs as non-root user `web`.
-
-## Web server
-
-[lighttpd](https://www.lighttpd.net/) — config at `lighttpd.conf`.
-
-Key behaviour:
-
-- Binds to a **Unix socket** at `/var/run/lighttpd/sock` (no TCP port inside the container).
-- `GET /sitemap.xml` → 301 redirect → `/index.xml` (RSS feed).
-- Custom 404 page: `/404/index.html`.
-- Security headers: `Content-Security-Policy`, etc.
-- Cache-Control: static assets 180 days (`immutable`); HTML/XML/JSON 1 day.
-
-## Protocols & endpoints
-
-| Protocol         | Notes                                                                          |
-|------------------|--------------------------------------------------------------------------------|
-| HTTP/1.1         | Served by lighttpd; TLS is terminated upstream (reverse proxy / load balancer) |
-| RSS 2.0          | `/index.xml`                                                                   |
-| Sitemap redirect | `/sitemap.xml` → `/index.xml` (301)                                            |
+Hugo Extended is required by the cactus theme. The theme is a git submodule, so
+a fresh clone needs `--recursive` (or `git submodule update --init`) before it will build.
 
 ## CI/CD
 
-`.github/workflows/docker-image.yml` (GitHub Actions):
+GitHub Actions, mirroring the sanselig pipeline:
 
-- Triggers on push **and** PR to `main`.
-- Builds with Docker Buildx; uses GitHub Actions cache (`type=gha`).
-- Pushes image `klinkby/kli.dk` to Docker Hub on merge to `main` (skipped for Dependabot).
-- Tags: build run number + commit SHA.
-- Requires repository secret `DOCKERHUB_PAT`.
+- `.github/workflows/build.yml` — builds the site on every PR to `main` (and `workflow_dispatch`).
+- `.github/workflows/deploy.yml` — on push to `main` (and `workflow_dispatch`), builds and
+  deploys to GitHub Pages via `actions/upload-pages-artifact` + `actions/deploy-pages`.
 
-## Local development
+Both check out submodules recursively and pin `HUGO_VERSION`. No Docker image, no Docker Hub,
+no `DOCKERHUB_PAT`.
 
-```sh
-podman-compose -f redist/docker-compose.yml up --build
-```
+## Hosting notes
 
-Builds the image and starts two containers via Compose: `web` (lighttpd) and `socat` (bridges the Unix socket to TCP).
-A named Docker volume shares the socket between them. Site is served at `http://localhost:3000`.
+- Custom domain `www.kli.dk` is kept by `src/static/CNAME`; set the same domain (and DNS) once
+  in the repo's **Settings → Pages**, and set the Pages source to **GitHub Actions**.
+- `/sitemap.xml` is Hugo's native sitemap. `/index.xml` is the RSS 2.0 feed.
+- Custom 404 page: `/404.html`, rendered from `src/layouts/404.html` (GitHub Pages only
+  serves a root `404.html`, not `/404/index.html`).
+- GitHub Pages does **not** serve custom response headers (the old lighttpd
+  `Content-Security-Policy` and `Cache-Control` tuning) or 301 redirects. If those are needed,
+  they must be handled by a CDN/proxy in front of Pages.
