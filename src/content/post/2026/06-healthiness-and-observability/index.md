@@ -195,8 +195,8 @@ observable — it is a mute black box.
 
 If you have any comments or questions, please send me a note on [Mastodon](https://fosstodon.org/@klinkby).
 
-In the next post we will look at why a microservice should implement operations that are stateless,
-non-blocking and handle blobs unbuffered. Thank you for reading and have a wonderful day!
+In the next post we will look at why a microservice should implement operations that are [stateless,
+non-blocking and handle blobs unbuffered](../07-stateless-non-blocking-unbuffered/). Thank you for reading and have a wonderful day!
 
 ---
 
